@@ -1,0 +1,87 @@
+.lunchBox {
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    display: block;
+    padding: 20px;
+}
+
+.allBox {
+    overflow: hidden;
+    height: 500px;
+}
+
+.homeVideoContainer {
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: auto;
+    height: 205px;
+}
+
+.videoText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 205px;
+    color: #ffffff;
+    font-size: 26px;
+    transform: translateY(-355px);
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+.videoButton {
+    font-size: 16px;
+    line-height: 54.72px;
+    height: 54.72px;
+    padding: 0 40px;
+    margin-top: 35px;
+    background-color: #f26226;
+    border-color: #f26226;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.transformContainer {
+    display: inline-block;
+    transition: transform 1s ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+    .allBox {
+        height: 585px;
+    }
+
+    .box {
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .allBox {
+        height: 447.5px;
+    }
+
+    .box {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .allBox {
+        height: 189.5px;
+    }
+
+    .box {
+        width: 220px;
+    }
+}
