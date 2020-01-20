@@ -3,7 +3,8 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const User = require('../../models/User');
 const jwt = require('jsonwebtoken');
-const keys = require('../../config/keys');
+// const keys = require('../../config/keys');
+const secretOrKey = process.env.SECRET_OR_KEY || require('../config/keys').secretOrKey;
 const passport = require('passport');
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
@@ -82,7 +83,7 @@ router.post('/login', (req, res) => {
 
                         jwt.sign(
                             payload,
-                            keys.secretOrKey,
+                            secretOrKey,
                             // Tell the key to expire in one hour
                             { expiresIn: 3600 },
                             (err, token) => {
