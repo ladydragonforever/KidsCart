@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require("express");
 const db = process.env.DB_URI || require('./config/keys').mongoURI;
 const app = express();
