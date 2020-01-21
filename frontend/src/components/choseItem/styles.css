@@ -1,6 +1,7 @@
 .lunchBox {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .box {
@@ -11,20 +12,11 @@
 .allBox {
     overflow: hidden;
     height: 500px;
+    padding-left: 20px;
 }
 
 .homeVideoContainer {
-    display: block;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    padding: 0;
-    margin: auto;
-    height: 205px;
+
 }
 
 .videoText {
@@ -49,11 +41,115 @@
     border-color: #f26226;
     text-decoration: none;
     color: #ffffff;
+    border-radius: 5px;
 }
 
 .transformContainer {
     display: inline-block;
     transition: transform 1s ease-in;
+}
+
+.box-title {
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f26226;
+    border-color: #f26226;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+.box-title-select {
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #e61717;
+    border-color: #e61717;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+.text-box {
+    width: 400px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.text-box-content {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+.top-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-title {
+    display: flex;
+}
+
+.bar-text {
+    margin: 0px 65px;
+    background: #c1c1c1;
+    padding: 7px 25px;
+    border-radius: 5px;
+    color: white;
+}
+
+.bar-text-select {
+    margin: 0px 65px;
+    background: #53a657;
+    padding: 7px 25px;
+    border-radius: 5px;
+    color: white;
+}
+
+.drop-down-box {
+    padding-top: 45px;
+} 
+
+.drop-down-box-item {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.food-dropdown-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    width: 150px;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+.food-img {
+    width: 60px;
+    height: 50px;
+}
+
+.bento-wrapper {
+    position: relative;
+}
+
+.side-box {
+    position: absolute;
+}
+
+.entree-box {
+    position: absolute;
+}
+
+.veggie-box {
+    position: absolute;
 }
 
 @media only screen and (min-width: 768px) {
@@ -63,6 +159,27 @@
 
     .box {
         width: 800px;
+    }
+
+    .side-box {
+        width: 369px;
+        height: 481px;
+        top: 52px;
+        left: 52px;
+    }
+
+    .entree-box {
+        top: 52px;
+        left: 432px;
+        height: 236px;
+        width: 358px;
+    }
+
+    .veggie-box {
+        left: 432px;
+        top: 298px;
+        height: 234px;
+        width: 358px;
     }
 }
 
@@ -74,6 +191,27 @@
     .box {
         width: 600px;
     }
+
+    .side-box {
+        width: 277px;
+        height: 360px;
+        top: 44px;
+        left: 44px;
+    }
+
+    .entree-box {
+        top: 44px;
+        left: 329px;
+        width: 268px;
+        height: 176px;
+    }
+
+    .veggie-box {
+        top: 229px;
+        left: 329px;
+        width: 268px;
+        height: 174px;
+    }
 }
 
 @media only screen and (max-width: 340px) {
@@ -83,5 +221,26 @@
 
     .box {
         width: 220px;
+    }
+
+    .side-box {
+        width: 102px;
+        height: 132px;
+        top: 29px;
+        left: 29px;
+    }
+
+    .entree-box {
+        top: 29px;
+        left: 133px;
+        height: 65px;
+        width: 98px;
+    }
+
+    .veggie-box {
+        width: 98px;
+        height: 64px;
+        top: 96px;
+        left: 133px;
     }
 }

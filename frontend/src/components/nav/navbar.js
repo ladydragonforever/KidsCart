@@ -1,12 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
-// import './navbar.css'
+import './navbar.css'
 
 class NavBar extends React.Component {
     constructor(props) {
         super(props);
         this.logoutUser = this.logoutUser.bind(this);
         this.getLinks = this.getLinks.bind(this);
+        this.backToHome = this.backToHome.bind(this)
+    }
+
+    backToHome(){
+        this.props.history.push("/")
     }
 
     logoutUser(e) {
@@ -27,8 +32,8 @@ class NavBar extends React.Component {
         } else {
             return (
                 <div>
-                    <NavLink to={'/signup'}>Signup</NavLink>
-                    <NavLink to={'/login'}>Login</NavLink>
+                    <NavLink to={'/signup'} className="loginButton">SIGN UP</NavLink>
+                    <NavLink to={'/login'} className="loginButton">LOG IN</NavLink>
                 </div>
             );
         }
@@ -36,8 +41,11 @@ class NavBar extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Welcome to our KidsCart App!</h1>
+            <div className="nav-bar-container">
+                <img src={process.env.PUBLIC_URL + '/kidscart_logo.png'} className="logo" onClick={this.backToHome}/>
+                {/* <div>
+                    <input type="text" />
+                </div> */}
                 {this.getLinks()}
             </div>
         );
