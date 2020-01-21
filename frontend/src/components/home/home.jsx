@@ -10,7 +10,7 @@ class Home extends React.Component {
         return (
             <div>
                 <div className="homeVideoContainer">
-                    <video poster="https://media.blueapron.com/home_page/Splash/website_header_201911.png?quality=80" preload="auto" autoplay="" loop="true" muted="">
+                    <video poster="https://media.blueapron.com/home_page/Splash/website_header_201911.png?quality=80" preload="auto" autoplay="" loop="true" muted="" style={{width:"100%"}}>
                         <source src="https://media.blueapron.com/home_page/Splash/BA_Holiday_201911.mp4" type="video/mp4" />
                     </video>
                     <div className="videoText">
