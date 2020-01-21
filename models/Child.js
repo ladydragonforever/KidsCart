@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.schema;
 
+
+
 const Child = new Schema({
     user: {
         type: Schema.Types.objectId,
@@ -13,7 +15,16 @@ const Child = new Schema({
     age: {
         type: Number,
         required: true
-    }
+    },
+
+    category: {
+        type: [String],
+        required: false
+    },
+    ingredient: {
+        type: [String],
+        required: false
+    },
 
 })
 

@@ -18,10 +18,6 @@ const UserSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    category: {
-        type: [String],
-        required: false
-    },
     firstName: {
         type: String,
         required: false

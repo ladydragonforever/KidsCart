@@ -8,7 +8,7 @@ const MealSchema = new Schema({
     },
     category: {
         type: String,
-        required: true
+        required: false
     },
     ingredients: {
         type: String,
@@ -16,11 +16,11 @@ const MealSchema = new Schema({
     },
     photoUrl: {
         type: String,
-        required: true
+        required: false
     },
     cookingInstruction: {
         type: String,
-        required: true
+        required: false
     },
     creator: {
         type: Schema.Types.ObjectId,
