@@ -5,7 +5,7 @@ import { withRouter } from 'react-router'
 import Box from './box';
 
 const mapStateToProps = state => ({
-    type: state.lunchType
+    type: state.ui.lunchType
 });
 
 const mapDispatchToProps = dispatch => ({
