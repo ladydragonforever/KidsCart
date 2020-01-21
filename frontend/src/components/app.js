@@ -7,11 +7,15 @@ import SignupFormContainer from './session/signup_form_container';
 import ChoseItemIndex from "./choseItem/choseItemIndex"
 import Home from "./home/home"
 import Footer from './footer'
+import Modal from './modal/modal';
 
 
 const App = () => (
     <div> 
-        <NavBarContainer/>
+      <Modal />
+      <header>
+         <NavBarContainer />
+      </header>
         <Switch>
             <Route exact path="/lunchBoxSelect" component={ChoseItemIndex} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
