@@ -15,7 +15,7 @@ const mapDispatchToProps = dispatch => ({
    demoLogin: (demoUser) => dispatch(login(demoUser))
 });
 
-export default connect(
+export default withRouter(connect(
    mapStateToProps,
    mapDispatchToProps
-)(NavBar);
+)(NavBar));
