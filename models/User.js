@@ -17,7 +17,11 @@ const UserSchema = new Schema({
     date: {
         type: Date,
         default: Date.now
-    }
+    },
+    category: {
+        type: [String],
+        required: true
+    },
 })
 
 module.exports = User = mongoose.model('users', UserSchema);

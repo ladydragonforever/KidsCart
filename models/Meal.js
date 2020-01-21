@@ -21,7 +21,12 @@ const MealSchema = new Schema({
     cookingInstruction: {
         type: String,
         required: true
-    }
+    },
+    creator: {
+        type: Schema.Types.ObjectId,
+        required: false
+    },
+    private: Boolean
 })
 
 module.exports = Meal = mongoose.model("meals", MealSchema)
