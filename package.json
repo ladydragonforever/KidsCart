@@ -12,7 +12,6 @@
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ladydragonforever/LunchBoxMernProject.git"
@@ -33,6 +32,7 @@
     "mongoose": "^5.3.15",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
+    "react-draggable": "^4.2.0",
     "validator": "^10.9.0"
   },
   "devDependencies": {

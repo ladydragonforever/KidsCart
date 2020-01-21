@@ -41,7 +41,11 @@ router.post('/register', (req, res) => {
                 const newUser = new User({
                     handle: req.body.handle,
                     email: req.body.email,
-                    password: req.body.password
+                    password: req.body.password,
+                    category: req.body.category,
+                    firstName: req.body.firstName,
+                    lastName: req.body.lastName
+
                 })
 
                 bcrypt.genSalt(10, (err, salt) => {
@@ -93,10 +97,40 @@ router.post('/login', (req, res) => {
                                 });
                             });
                     } else {
-                        return res.status(400).json({ password: 'Incorrect password' });
+                        res.status(400).json({ password: 'Incorrect password' });
+                        return;
                     }
                 })
         })
 })
+
+
+
+router.post("/profile", passport.authenticate('jwt', { session: false }),(req, res) => {
+
+
+    if (req.body.category){
+        req.user.category = req.body.category;
+    }
+    if (req.body.firstName){
+        req.user.firstName = req.body.firstName;
+    }
+    if (req.body.lastName){
+        req.user.lastName = req.body.lastName;
+    }
+
+    req.user.save()
+        .then(user => res.json(user))
+        .catch(err => console.log(err));
+
+})
+router.delete("/profile", passport.authenticate('jwt', { session: false }),(req, res) => {
+    return req.user.delete()
+        .then(user => res.json(user))
+        .catch(err => console.log(err));
+
+})
+
+
 
 module.exports = router;
