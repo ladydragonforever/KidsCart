@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import Draggable from 'react-draggable';
+import './session.css'
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -54,27 +56,50 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <br />
+         <Draggable handle="h1">
+          <div className="session-form">
+              <h1>Login</h1>
+              <button className="close-form" type="button" onClick={this.props.closeModal}>×</button>
+                 <form onSubmit={this.handleSubmit} className="signup-form">
+                    <div className="session-inputs">
+                        {/* <br /> */}
                         <input type="text"
                             value={this.state.email}
                             onChange={this.update('email')}
                             placeholder="Email"
+                            className="login-input"
                         />
-                        <br />
+                        {/* <br /> */}
                         <input type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
                             placeholder="Password"
+                            className="login-input"
                         />
-                        <br />
-                        <input type="submit" value="Submit" />
-                        {this.renderErrors()}
+                        {/* <br /> */}
+                        <input type="submit" value="Submit" className="session-submit"/>
+                        <div className="session-errors">{this.renderErrors()}</div>
                     </div>
+                    <p className="session-footer">Don't have an accont? &nbsp;
+                       <button
+                          className="session-footer-button"
+                          type="button"
+                          onClick={() => this.props.openModal('SIGNUP')}>Sign up
+                       </button>.
+                   </p>
+                    <p className="session-footer">
+                       Can't commit? Explore our site with a &nbsp;
+                    <button
+                          className="session-footer-button"
+                          type="button"
+                        //   onClick={(e) => this.demo(e)}
+                       >
+                          demo login
+                  </button>.
+                  </p>
                 </form>
             </div>
+           </Draggable>
         );
     }
 }
