@@ -17,7 +17,16 @@ const UserSchema = new Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    firstName: {
+        type: String,
+        required: false
+    },
+    lastName: {
+        type: String,
+        required: false
     }
+
 })
 
 module.exports = User = mongoose.model('users', UserSchema);
