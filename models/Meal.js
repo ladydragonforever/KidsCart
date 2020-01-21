@@ -25,8 +25,8 @@ const MealSchema = new Schema({
     creator: {
         type: Schema.Types.ObjectId,
         required: false
-    },
-    private: Boolean
+    }
+    
 })
 
 module.exports = Meal = mongoose.model("meals", MealSchema)

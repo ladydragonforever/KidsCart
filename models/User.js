@@ -20,8 +20,17 @@ const UserSchema = new Schema({
     },
     category: {
         type: [String],
-        required: true
+        required: false
     },
+    firstName: {
+        type: String,
+        required: false
+    },
+    lastName: {
+        type: String,
+        required: false
+    }
+
 })
 
 module.exports = User = mongoose.model('users', UserSchema);
