@@ -4,7 +4,7 @@ import { withRouter } from 'react-router'
 import TopBar from './topBar';
 
 const mapStateToProps = state => ({
-    typeFood: state.lunchType
+    typeFood: state.ui.lunchType
 });
 
 export default withRouter(connect(
