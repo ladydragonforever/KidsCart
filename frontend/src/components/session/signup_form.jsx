@@ -10,12 +10,11 @@ class SignupForm extends React.Component {
             email: '',
             handle: '',
             password: '',
-            password2: '',
-            errors: {}
+            password2: ''
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.clearedErrors = false;
+        // this.clearedErrors = false;
     }
 
     // componentWillReceiveProps(nextProps) {
@@ -30,10 +29,18 @@ class SignupForm extends React.Component {
         return e => this.setState({
             [field]: e.currentTarget.value
         });
+    };
+
+    componentWillUnmount() {
+        this.props.clearErrors();
     }
+
+
 
     handleSubmit(e) {
         e.preventDefault();
+        if (this.state.length === 0) return null;
+        // console.log(this.state)
         let user = {
             email: this.state.email,
             handle: this.state.handle,
@@ -41,15 +48,21 @@ class SignupForm extends React.Component {
             password2: this.state.password2
         };
 
-        this.props.signup(user, this.props.history);
+        this.props.signup(user)
+        // if (this.props.signedIn === undefined) return null;
+        // // console.log(this.props.signedIn)
+        // if (this.props.signedIn) {this.props.closeModal()}
     }
 
+    
+
     renderErrors() {
+        // console.log(this.props.errors)
         return (
             <ul>
-                {Object.keys(this.state.errors).map((error, i) => (
+                {Object.keys(this.props.errors).map((error, i) => (
                     <li key={`error-${i}`}>
-                        {this.state.errors[error]}
+                        {this.props.errors[error]}
                     </li>
                 ))}
             </ul>
@@ -63,6 +76,7 @@ class SignupForm extends React.Component {
                  <h1>Sign up</h1>
                  <button className="close-form" type="button" onClick={this.props.closeModal}>×</button>
                  <form onSubmit={this.handleSubmit} className="signup-form">
+                    <div className="session-errors">{this.renderErrors()}</div>
                     <div className="session-inputs">
                         {/* <br /> */}
                         <input type="text"
@@ -94,7 +108,7 @@ class SignupForm extends React.Component {
                         />
                         {/* <br /> */}
                        <input type="submit" value="Submit" className="session-submit"/>
-                       <div className="session-errors">{this.renderErrors()}</div>
+                       
                        <p className="session-footer">Already have an account? &nbsp;
                        <button
                              className="session-footer-button"
@@ -110,7 +124,7 @@ class SignupForm extends React.Component {
                           //   onClick={(e) => this.demo(e)}
                           >
                              demo login
-                  </button>.
+                       </button>
                   </p>
                     </div>
                 </form>
