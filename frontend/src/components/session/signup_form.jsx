@@ -14,16 +14,9 @@ class SignupForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.clearedErrors = false;
     }
 
-    // componentWillReceiveProps(nextProps) {
-    //     if (nextProps.signedIn === true) {
-    //         this.props.history.push('/login');
-    //     }
-
-    //     this.setState({ errors: nextProps.errors })
-    // }
+   
 
     update(field) {
         return e => this.setState({
@@ -49,9 +42,6 @@ class SignupForm extends React.Component {
         };
 
         this.props.signup(user)
-        // if (this.props.signedIn === undefined) return null;
-        // // console.log(this.props.signedIn)
-        // if (this.props.signedIn) {this.props.closeModal()}
     }
 
     
