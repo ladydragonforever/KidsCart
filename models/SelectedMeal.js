@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.schema;
+const Schema = mongoose.Schema;
 
-const SingleSelectedMeal = new Schema ({
+const SingleSelectedMealSchema = new Schema ({
     meal: {
         type: Schema.Types.ObjectId,
         ref: "meals"
@@ -20,14 +20,14 @@ const SingleSelectedMeal = new Schema ({
         required: true
     }, 
 })
-const SelectedMeal = new Schema ({
+const SelectedMealSchema = new Schema ({
 
     child: {
         type: Schema.Types.ObjectId,
         ref: 'chidren'
     },
     meals: {
-        type: [SingleSelectedMeal],
+        type: [SingleSelectedMealSchema],
         required: true
     },
     date: {
@@ -37,4 +37,4 @@ const SelectedMeal = new Schema ({
 
 })
 
-module.exports = SelectedMeal = mongoose.model('selectedMeals', SelectedMeal);
+module.exports = SelectedMeal = mongoose.model('selectedMeals', SelectedMealSchema);
