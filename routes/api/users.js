@@ -42,7 +42,7 @@ router.post('/register', (req, res) => {
                     handle: req.body.handle,
                     email: req.body.email,
                     password: req.body.password,
-                    category: req.body.category,
+                    // category: req.body.category,
                     firstName: req.body.firstName,
                     lastName: req.body.lastName
 
@@ -109,9 +109,9 @@ router.post('/login', (req, res) => {
 router.post("/profile", passport.authenticate('jwt', { session: false }),(req, res) => {
 
 
-    if (req.body.category){
-        req.user.category = req.body.category;
-    }
+    // if (req.body.category){
+    //     req.user.category = req.body.category;
+    // }
     if (req.body.firstName){
         req.user.firstName = req.body.firstName;
     }
