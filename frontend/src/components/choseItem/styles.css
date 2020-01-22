@@ -291,4 +291,17 @@
         flex-direction: column;
         align-items: center;
     }
+    
 }
+
+.lunch-box-title {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    padding: 100px ;
+    font-family: monospace;
+    background-position: 25% 75%;
+    text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
+    background: url(https://media.blueapron.com/assets/signup/landing/background-landing-signup.jpg?quality=80&width=1440) no-repeat scroll center;
+}
+

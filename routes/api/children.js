@@ -14,15 +14,11 @@ router.get('/:id',
          );
 });
 
+
+
 router.post('/:user_id',
    passport.authenticate('jwt', { session: false }),
    (req, res) => {
-      // const { errors, isValid } = validateChildInput(req.body);
-
-      // if (!isValid) {
-      //    return res.status(400).json(errors);
-      // }
-      console.log(req.body);
       const newChild = new Child({
          user: req.params.user_id,
          name: req.body.name,
@@ -38,12 +34,8 @@ router.post('/:user_id',
 router.get('/:child_id/selected-meals', (req, res) => {
    const child = Child.find({ child: req.params.child_id });
    const category = child.category;
-   // const ingredient = child.ingredient;
-   Meal.find(
-      { $text: { $search: category } },
-      { score: { $meta: "score" } }
-   ).sort({ score: { $meta: "score" } })
-      .then(select_meals => res.json(select_meals))
+   const ingredient = child.ingredient
+   Meal.find()
       .catch(err =>
          res.status(404).json({ noselectmealsfound: 'No meals found for child' })
       );

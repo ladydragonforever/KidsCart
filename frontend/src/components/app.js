@@ -5,7 +5,7 @@ import NavBarContainer from "./nav/navbar_container";
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import ChoseItemIndex from "./choseItem/choseItemIndex";
-import Home from "./home/home";
+import HomeContainer from "./home/home_container";
 import Footer from './footer';
 import Modal from './modal/modal';
 import MealSearchContainer from "../components/meal/meal_search_container";
@@ -23,7 +23,7 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <Route path="/search/:query" component={MealSearchContainer} />
             <Route path="/search/" component={MealSearchContainer} />
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={HomeContainer} />
         </Switch>
         <Footer />
     </div>

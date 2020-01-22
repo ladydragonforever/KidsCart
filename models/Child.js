@@ -20,9 +20,9 @@ const ChildSchema = new Schema({
         required: false
     },
     ingredient: {
-        type: String,
+        type: [String],
         required: false
-    },
+    }
 
 })
 
