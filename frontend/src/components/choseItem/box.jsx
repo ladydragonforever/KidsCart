@@ -16,6 +16,7 @@ class Box extends React.Component {
 
     componentDidMount() {
         window.addEventListener('resize', this.onResize);
+        this.props.changeType(this.state.selectType)
     }
 
     componentWillUnmount() {
@@ -44,6 +45,7 @@ class Box extends React.Component {
     }
 
     switchIndex(e) {
+        this.props.changeType(e.target.innerText)
         let index;
         if (e.target.innerText === "AMERICAN") {
             index = 0;

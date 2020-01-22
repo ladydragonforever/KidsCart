@@ -1,6 +1,7 @@
 import React from "react"
 import Box from "./box"
-import TopBar from './topBar'
+import TopBarContainer from './topBar_container'
+import BoxContainer from './box_container'
 
 class ChoseItemIndex extends React.Component {
     constructor(props){
@@ -10,8 +11,8 @@ class ChoseItemIndex extends React.Component {
     render() {
         return(
             <div>
-                <TopBar />
-                <Box/>
+                <TopBarContainer />
+                <BoxContainer/>
             </div>
         )
     }
