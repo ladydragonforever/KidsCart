@@ -21,7 +21,7 @@ const ChildSchema = new Schema({
     },
 
     category: {
-        type: String,
+        type: [String],
         required: false
     },
     ingredient: {
