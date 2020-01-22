@@ -1,11 +1,9 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.schema;
+const Schema = mongoose.Schema;
 
-
-
-const Child = new Schema({
+const ChildSchema = new Schema({
     user: {
-        type: Schema.Types.objectId,
+        type: Schema.Types.ObjectId,
         ref: "users"
     },
     name: {
@@ -18,15 +16,15 @@ const Child = new Schema({
     },
 
     category: {
-        type: [String],
+        type: String,
         required: false
     },
     ingredient: {
-        type: [String],
+        type: String,
         required: false
     },
 
 })
 
 
-module.exports = Meal = mongoose.model("children", Child)
+module.exports = Child = mongoose.model("children", ChildSchema)
