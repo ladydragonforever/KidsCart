@@ -135,6 +135,27 @@
     width: 60px;
     height: 50px;
 }
+.food-img-box-item {
+    width: 60%;
+    height: 45%;
+    padding-top: 10px;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 0.8s;
+
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 
 .bento-wrapper {
     position: relative;
@@ -166,6 +187,9 @@
         height: 481px;
         top: 52px;
         left: 52px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .entree-box {
@@ -173,6 +197,9 @@
         left: 432px;
         height: 236px;
         width: 358px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .veggie-box {
@@ -180,6 +207,9 @@
         top: 298px;
         height: 234px;
         width: 358px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -197,6 +227,9 @@
         height: 360px;
         top: 44px;
         left: 44px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .entree-box {
@@ -204,6 +237,9 @@
         left: 329px;
         width: 268px;
         height: 176px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .veggie-box {
@@ -211,6 +247,9 @@
         left: 329px;
         width: 268px;
         height: 174px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -228,6 +267,9 @@
         height: 132px;
         top: 29px;
         left: 29px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .entree-box {
@@ -235,6 +277,9 @@
         left: 133px;
         height: 65px;
         width: 98px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .veggie-box {
@@ -242,5 +287,8 @@
         height: 64px;
         top: 96px;
         left: 133px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

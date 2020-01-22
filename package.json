@@ -26,12 +26,13 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
-    "concurrently": "^4.1.0",
+    "concurrently": "^4.1.2",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
     "mongoose": "^5.3.15",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
+    "react-draggable": "^4.2.0",
     "validator": "^10.9.0"
   },
   "devDependencies": {
