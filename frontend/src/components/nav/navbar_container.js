@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
+import {fetchSearchMeals} from '../../actions/meal_actions';
 import { logout, login } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
-import { withRouter } from 'react-router'
+
 
 import NavBar from './navbar';
 
@@ -10,12 +11,10 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-   logout: () => dispatch(logout()),
-   openModal: modal => dispatch(openModal(modal)),
-   demoLogin: (demoUser) => dispatch(login(demoUser))
-});
+    logout: () => dispatch(logout()),
+    fetchSearchMeals: (keyword) => dispatch(fetchSearchMeals(keyword)),
+    openModal: modal => dispatch(openModal(modal)),
+    demoLogin: (demoUser) => dispatch(login(demoUser))
+})
 
-export default withRouter(connect(
-   mapStateToProps,
-   mapDispatchToProps
-)(NavBar));
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

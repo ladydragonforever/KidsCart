@@ -7,6 +7,10 @@ import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
+import {getMeals,searchMeals} from './util/meal_util';
+
+import {fetchMeals, fetchSearchMeals} from './actions/meal_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
     let store;
 
@@ -27,6 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore({});
     }
+
+    //test start
+    // window.getMeals = getMeals
+    // window.searchMeals = searchMeals
+    window.dispatch = store.dispatch
+    window.getState = store.getState
+    window.fetchMeals = fetchMeals
+    window.fetchSearchMeals = fetchSearchMeals
+    //test end
     const root = document.getElementById('root');
 
     ReactDOM.render(<Root store={store} />, root);

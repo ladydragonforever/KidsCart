@@ -12,6 +12,14 @@ router.get('/', (req, res) => {
         .catch(err => res.status(404).json({ nomealsfound: 'No meals found' }));
 });
 
+router.get('/search', (req, res) => {
+    var re = new RegExp(req.query.keyword, "i");
+    Meal.find({category: re})
+        .sort({ date: -1 })
+        .then(meals => res.json(meals))
+        .catch(err => res.status(404).json({ nomealsfound: 'No meals found' }));
+});
+
 router.post('/',
     (req, res) => {
         
@@ -26,5 +34,6 @@ router.post('/',
         newMeal.save().then(meal => res.json(meal));
     }
 );
+
 
 module.exports = router;
