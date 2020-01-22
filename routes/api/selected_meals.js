@@ -1,17 +1,23 @@
-// const express = require('express');
-// const router = express.Router();
+const express = require('express');
+const router = express.Router();
 // const mongoose = require('mongoose');
-// const Child = require('../../models/Child');
-// const SelectedMeal = require('../../models/SelectedMeal');
+const Child = require('../../models/Child');
+const SelectedMeal = require('../../models/SelectedMeal');
+// const SingleSelectedMeal = require("../../models/SelectedMeal")
+
+router.get('/:child_id',
+        (req, res) => {
+            debugger;
+            SelectedMeal.find({child: req.params.child_id})
+                .then(selmeals => res.json(selmeals))
+                .catch(err =>
+                    res.status(404).json({ nochildfound: 'No meals for this child were found' })
+                );
+        });
+
+module.exports = router;
 
 
-// router.get('/:child_id/selected-meals', (req, res) => {
-//    const child = Child.find({ child: req.params.child_id });
-//    const category = child.category;
-//    const ingredient = child.ingredient;
 
-//    Meals.find(
-//       {$text: {$search: category + ingredient}},
-//       {score: {$meta: "score" }}
-//    ).sort({ score: { $meta: "score" } } )
-// });
+
+    
