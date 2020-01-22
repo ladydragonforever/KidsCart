@@ -88,61 +88,121 @@ class Box extends React.Component {
                             <div className="bento-wrapper">
                                 <img src={process.env.PUBLIC_URL + '/bento1.svg'} className="box" />
                                 <div className="side-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                     {this.props.ASideBox.map((item, i) => {
+                                         return(
+                                             <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("ASideBox",i)}/>
+                                         )
+                                     })}
                                 </div>
                                 <div className="entree-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                    {this.props.AEntreeBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("AEntreeBox", i)} />
+                                        )
+                                    })}
                                 </div>
                                 <div className="veggie-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                    {this.props.AVegBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("AVegBox", i)}/>
+                                        )
+                                    })}
                                 </div>
                             </div>
                             <div className="bento-wrapper">
                                 <img src={process.env.PUBLIC_URL + '/bento2.svg'} className="box" />
                                 <div className="side-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                    {this.props.CSideBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("CSideBox", i)}/>
+                                        )
+                                    })}
                                 </div>
                                 <div className="entree-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                    {this.props.CEntreeBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("CEntreeBox", i)}/>
+                                        )
+                                    })}
                                 </div>
                                 <div className="veggie-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                     {this.props.CVegBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("CVegBox", i)}/>
+                                        )
+                                    })}
                                 </div>
                             </div>
                             <div className="bento-wrapper">
                                 <img src={process.env.PUBLIC_URL + '/bento3.svg'} className="box" />
                                 <div className="side-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                    {this.props.ISideBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("ISideBox", i)}/>
+                                        )
+                                    })}
                                 </div>
                                 <div className="entree-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                    {this.props.IEntreeBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("IEntreeBox", i)}/>
+                                        )
+                                    })}
                                 </div>
                                 <div className="veggie-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                    {this.props.IVegBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("IVegBox", i)}/>
+                                        )
+                                    })}
                                 </div>
                             </div>
                             <div className="bento-wrapper">
                                 <img src={process.env.PUBLIC_URL + '/bento4.svg'} className="box" />
                                 <div className="side-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                    {this.props.JSideBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("JSideBox", i)}/>
+                                        )
+                                    })}
                                 </div>
                                 <div className="entree-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                    {this.props.JEntreeBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("JEntreeBox", i)} />
+                                        )
+                                    })}
                                 </div>
                                 <div className="veggie-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                {this.props.JVegBox.map((item, i) => {
+                                    return (
+                                        <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("JVegBox", i)} />
+                                    )
+                                })}
                                 </div>
                             </div>
                             <div className="bento-wrapper">
                                 <img src={process.env.PUBLIC_URL + '/bento5.svg'} className="box" />
                                 <div className="side-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                    {this.props.MSideBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("MSideBox", i)}/>
+                                        )
+                                    })}
                                 </div>
                                 <div className="entree-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                    {this.props.MEntreeBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("MEntreeBox", i)}/>
+                                        )
+                                    })}
                                 </div>
                                 <div className="veggie-box">
-                                    <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" />
+                                    {this.props.MVegBox.map((item, i) => {
+                                        return (
+                                            <img src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("MVegBox", i)}/>
+                                        )
+                                    })}
                                 </div>
                             </div>
                         </div>
