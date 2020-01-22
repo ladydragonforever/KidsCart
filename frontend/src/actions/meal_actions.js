@@ -1,11 +1,17 @@
-import { getMeals, searchMeals } from "../util/meal_util";
+import { getMeals, searchMeals, fetchMeal } from "../util/meal_util";
 
 export const RECEIVE_ALL_MEALS = "RECEIVE_ALL_MEALS";
 export const RECEIVE_SEARCH_MEALS = "RECEIVE_SEARCH_MEALS";
+export const RECEIVE_MEAL = "RECEIVE_MEAL";
 
 export const receiveAllMeals = meals => ({
     type: RECEIVE_ALL_MEALS,
     meals
+})
+
+export const receiveMeal = meal => ({
+   type: RECEIVE_MEAL,
+   meal
 })
 
 export const receiveSearchMeals = meals => ({
@@ -25,8 +31,10 @@ export const fetchSearchMeals = keyword => dispatch => (
         .catch(err => console.log(err))
 );
 
+export const fetchSingleMeal = childId => dispatch => (
+   fetchMeal(childId)
+      .then(meal => dispatch(receiveMeal(meal)))
+      .catch(err => console.log(err))
+);
 
-// edit/update mael 
-// delete meal 
-//  creat meal -> later
-//
+
