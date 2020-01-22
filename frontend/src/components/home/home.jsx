@@ -9,7 +9,7 @@ class Home extends React.Component {
 
     requireLogin() {
         if(this.props.requireLogin) {
-            return "/lunchBoxSelect"
+            return "/choseGender"
         } else {
             return "/login"
         }
