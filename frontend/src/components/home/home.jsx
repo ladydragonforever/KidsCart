@@ -9,9 +9,9 @@ class Home extends React.Component {
 
     requireLogin() {
         if(this.props.requireLogin) {
-            return "/choseGender"
+            this.props.history.push('/choseGender')
         } else {
-            return "/login"
+            this.props.openModal('LOGIN')
         }
     }
 
@@ -28,7 +28,7 @@ class Home extends React.Component {
                         <button
                             className="videoButton"
                             type="button"
-                            onClick={() => this.props.openModal('LOGIN')}>Get Started
+                            onClick={this.requireLogin}>Get Started
                        </button>
                     </div>
                 </div>
