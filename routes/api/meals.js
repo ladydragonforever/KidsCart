@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
 });
 
 router.get('/search', (req, res) => {
-    // var re = new RegExp(req.query.keyword, "i");
     var keywords_re = req.query.keyword.split(" ").join("|");
     var re = new RegExp(keywords_re, "i");
     Meal.find({category: re})
