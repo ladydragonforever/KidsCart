@@ -37,4 +37,12 @@ router.post('/',
     }
 );
 
+router.get('/:id', (req, res) => {
+    Meal.findById(req.params.id)
+        .then(meal => res.json(meal))
+        .catch(err =>
+            res.status(404).json({ notmealfound: 'this meal no longer exist' })
+        );
+});
+
 module.exports = router;
