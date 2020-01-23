@@ -27,14 +27,12 @@ class MealSearch extends React.Component {
                 <ul>
                     {
                         meals.map(meal => (
-                            <li key={meal.id}
-                                onClick={() => this.routeChange(`/meals/${meal.id}`)}
+                            <li key={meal._id}
+                                onClick={() => this.routeChange(`/meals/${meal._id}`)}
                             >
                                 <div>Title:{meal.title}</div>
                                 <div>Category:{meal.category}</div>
-                                <div>Ingredients:{meal.ingredients}</div>
-                                <div>Photo:{meal.photoUrl}</div>
-                                <div>Cooking Instruction:{meal.cookingInstruction}</div>
+                                <div><img src={meal.photoUrl}/></div>
                             </li>
                         ))
                     }
