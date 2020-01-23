@@ -2,6 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbar.css';
 import { withRouter } from 'react-router';
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -10,18 +12,22 @@ class NavBar extends React.Component {
         if (res) {
             const query = res[1]
             this.state = {
-                word: query
+                word: query,
+                iconClassName: "search-icon"
             }
             this.startSearch(query)
         } else {
             this.state = {
-                word: ''
+                word: '',
+                iconClassName: "search-icon"
             }
         }
         this.logoutUser = this.logoutUser.bind(this);
         this.getLinks = this.getLinks.bind(this);
         this.backToHome = this.backToHome.bind(this)
         this.startSearch = this.startSearch.bind(this)
+        this.inputFocus = this.inputFocus.bind(this)
+        this.inputUnFocus = this.inputUnFocus.bind(this)
     }
 
     componentDidUpdate(prevProps) {
@@ -63,7 +69,7 @@ class NavBar extends React.Component {
                     {/* <NavLink to={'/meals'}>All Meals</NavLink> */}
                     {/* <NavLink to={'/profile'}>Profile</NavLink> */}
                     {/* <NavLink to={'/new_meal'}>Create a Meal</NavLink> */}
-                    <button onClick={this.logoutUser}>Logout</button>
+                    <button className="loginButton" onClick={this.logoutUser}>Logout</button>
                 </div>
             );
         } else {
@@ -76,19 +82,34 @@ class NavBar extends React.Component {
         }
     }
 
+    inputFocus() {
+        this.setState({
+            iconClassName: "search-icon-open"
+        })
+    }
+
+    inputUnFocus() {
+        this.setState({
+            iconClassName: "search-icon"
+        })
+    }
+
     render() {
         return (
             <div className="nav-bar-container">
                 <img src={process.env.PUBLIC_URL + '/kidscart_logo.png'} className="logo" onClick={this.backToHome}/>
-                <div>
-                    <input 
-                        type="text"
-                        className = "search-bar"
-                        placeholder="Search..."
-                        value={this.state.word}
-                        onChange={this.update()}
-                        onKeyPress={this.searchFunc()} 
-                    />
+                <div style={{ flex: "0.7"}}>
+                    <label className="search-label">
+                        <input className="search-input" type="text" placeholder="Search for anything" 
+                            onFocus={this.inputFocus} 
+                            onBlur={this.inputUnFocus} 
+                            onKeyUp={this.getSearchInput}   
+                            value={this.state.word}
+                            onChange={this.update()}
+                            onKeyPress={this.searchFunc()}
+                         />
+                        <FontAwesomeIcon icon={faSearch} className={this.state.iconClassName}  />
+                    </label>
                 </div>
                 {this.getLinks()}
             </div>
