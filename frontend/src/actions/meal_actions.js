@@ -20,7 +20,6 @@ export const receiveSearchMeals = meals => ({
 })
 
 
-
 export const fetchMeals = id => dispatch => (
     getMeals()
         .then(meals => dispatch(receiveAllMeals(meals)))
@@ -40,7 +39,3 @@ export const fetchSearchMeals = keyword => dispatch => (
 );
 
 
-// edit/update mael 
-// delete meal 
-//  creat meal -> later
-//
