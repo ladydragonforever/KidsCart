@@ -255,6 +255,7 @@ class ChoseItemIndex extends React.Component {
     render() {
         return (
             <div>
+                <div className="lunch-box-title">What type of food or ingredients are you craving this week?</div>
                 <div className="top-container">
                     <div className="top-title">
                         <div onClick={this.switchTopBar} className={this.selectClassName("Side")}>Side</div>
