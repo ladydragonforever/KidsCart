@@ -80,7 +80,6 @@ router.get("/seed", async (req, res)=>{
     });
 });
 
-/*
 router.get("/clear_db", async (req, res)=>{
     const collections = await mongoose.connection.db.collections()
 
@@ -92,6 +91,5 @@ router.get("/clear_db", async (req, res)=>{
 
     res.status(200).json({collections_dropped: names});
 });
-*/
 
 module.exports = router
