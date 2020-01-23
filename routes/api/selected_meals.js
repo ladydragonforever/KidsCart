@@ -5,11 +5,24 @@ const Child = require('../../models/Child');
 const SelectedMeal = require('../../models/SelectedMeal');
 // const SingleSelectedMeal = require("../../models/SelectedMeal")
 
-//const getChildMeals(childId) {
-//    return Child.findById(childId).populate
-//}
+
 
 // when meals already selected and fetch the selected meals
+
+router.post('/:child_id/selectedMeals', 
+            async (req, res) => {
+
+                const matchedMeals = new SelectedMeal({
+                    child: req.params.child_id,
+                    meals: req.body.meals
+                });
+            
+                const selectedMeals = await matchedMeals.save();
+
+                res.status(200).json({selectedMeals})
+
+        });
+
 router.get('/:child_id',
         async (req, res) => {
             let child_id = req.params.child_id;
@@ -33,7 +46,7 @@ router.put('/:child_id/:meal_id',
             singleSelectedmeal.ingredients = req.body.ingredients || singleSelectedmeal.ingredients;
             singleSelectedmeal.title = req.body.title || singleSelectedmeal.title ;
             singleSelectedmeal.category = req.body.category || singleSelectedmeal.category ;
-             // replace by a new seached meal
+             // replace by a new searched meal
             singleSelectedmeal.meal = req.body.mealId;
 
             const newSelectedMeal = await selectedMeal.save()
@@ -43,6 +56,7 @@ router.put('/:child_id/:meal_id',
         }
 )  
 
+//  user can delete the meal they don't like
 router.delete('/:child_id/:meal_id'),
         async (req, res) => {
             let selectedMeal = await SelectedMeal.findOne({ child: req.params.child_id });
