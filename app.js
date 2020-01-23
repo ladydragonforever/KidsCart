@@ -10,9 +10,10 @@ const users = require("./routes/api/users");
 const meals = require("./routes/api/meals");
 const children = require("./routes/api/children");
 const selectedMeals = require("./routes/api/selected_meals");
+const admin = require('./routes/api/admin');
 
 mongoose
-    .connect(db, { useNewUrlParser: true })
+    .connect(db, { useNewUrlParser: true, auto_reconnect: true})
     .then(() => console.log("Connected to MongoDB successfully"))
     .catch(err => console.log(err));
 
@@ -35,6 +36,7 @@ app.use("/api/users", users);
 app.use("/api/meals", meals);
 app.use("/api/children", children);
 app.use("/api/selected-meals", selectedMeals)
+app.use("/api/admin", admin);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
