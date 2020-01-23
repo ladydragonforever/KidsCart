@@ -17,7 +17,7 @@ const ChildSchema = new Schema({
 
     gender: {
         type: String,
-        required: true
+        required: false
     },
 
     category: {
