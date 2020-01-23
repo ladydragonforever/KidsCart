@@ -13,11 +13,27 @@ const validateLoginInput = require('../../validation/login');
 
 router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
 
-router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
-    res.json({
-        id: req.user.id,
-        handle: req.user.handle,
-        email: req.user.email
+//router.get('/current', passport.authenticate('jwt', { session: false }), async(req, res) => {
+router.get('/:user_id', async(req, res) => {
+    //let childs = await Child.find({ user: req.user.id});
+    let childs = await Child.find({ user: req.params.user_id}).lean();
+
+    for (let child of childs) {
+        let selectedMeal = await SelectedMeal.findOne({ child: child._id }).lean();
+        child.selectedMeal = selectedMeal;
+        if(selectedMeal){
+            for (let selectedSingleMeal of selectedMeal.meals){
+                let meal = await Meal.findById(selectedSingleMeal.meal).lean();
+                selectedSingleMeal.meal_relation = meal;
+            }
+        }
+    }
+
+    res.status(200).json({
+        //id: req.user.id,
+        //handle: req.user.handle,
+        //email: req.user.email,
+        childs,
     });
 })
 
