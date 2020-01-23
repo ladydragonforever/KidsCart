@@ -31,6 +31,28 @@ class ChoseItemIndex extends React.Component {
         this.addToEntreeBox = this.addToEntreeBox.bind(this)
         this.addToVegBox = this.addToVegBox.bind(this)
         this.deleteItem = this.deleteItem.bind(this)
+        this.submitChild = this.submitChild.bind(this)
+    }
+
+    submitChild() {
+        if (this.props.type === "AMERICAN") {
+            let arr = this.state.ASideBox.concat(this.state.AEntreeBox, this.state.AVegBox).map((item) => item.slice(1, item.length - 4))
+            this.props.receiveChildIngredient(arr)
+        } else if (this.props.type === "CHINESE") {
+            let arr = this.state.CSideBox.concat(this.state.CEntreeBox, this.state.CVegBox).map((item) => item.slice(1, item.length - 4))
+            this.props.receiveChildIngredient(arr)
+        } else if (this.props.type === "ITALIAN") {
+            let arr = this.state.ISideBox.concat(this.state.IEntreeBox, this.state.IVegBox).map((item) => item.slice(1, item.length - 4))
+            this.props.receiveChildIngredient(arr)
+        } else if (this.props.type === "JAPANESE") {
+            let arr = this.state.JSideBox.concat(this.state.JEntreeBox, this.state.JVegBox).map((item) => item.slice(1, item.length - 4))
+            this.props.receiveChildIngredient(arr)
+        } else if (this.props.type === "MEXICAN") {
+            let arr = this.state.MSideBox.concat(this.state.MEntreeBox, this.state.MVegBox).map((item) => item.slice(1, item.length - 4))
+            this.props.receiveChildIngredient(arr)
+        }
+
+        this.props.createAChild(this.props.child, this.props.user.id)
     }
 
     deleteItem(filed,index) {
@@ -282,6 +304,9 @@ class ChoseItemIndex extends React.Component {
                 JVegBox={this.state.JVegBox}
                 MVegBox={this.state.MVegBox}
                 />
+                <div className="next-button">
+                    <button className="gender-button" style={{width:"25%"}} onClick={this.submitChild}>Next</button>
+                </div>
             </div>
         )
     }

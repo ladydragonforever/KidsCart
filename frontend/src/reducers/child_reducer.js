@@ -1,10 +1,17 @@
-import { RECEIVE_CHILD_NAME, RECEIVE_CHILD_AGE, RECEIVE_CHILD_CATEGORY, RECEIVE_CHILD_INGREDIENT, RECEIVE_CHILD_GENDER } from '../actions/child_actions';
+import { RECEIVE_CHILD,
+        RECEIVE_CHILD_NAME,
+        RECEIVE_CHILD_AGE, 
+        RECEIVE_CHILD_CATEGORY, 
+        RECEIVE_CHILD_INGREDIENT, 
+        RECEIVE_CHILD_GENDER 
+    } from '../actions/child_actions';
+    
 const defaultState = {
     name: "",
     age: "",
     gender: "",
     category: "",
-    ingredient: ""
+    ingredient: []
 }
 
 const childReducer = (state = defaultState, action) => {
@@ -25,6 +32,9 @@ const childReducer = (state = defaultState, action) => {
             return nextState
         case RECEIVE_CHILD_INGREDIENT:
             nextState["ingredient"] = action.ingredient
+            return nextState
+        case RECEIVE_CHILD:
+            nextState = action.child
             return nextState
         default:
             return state;
