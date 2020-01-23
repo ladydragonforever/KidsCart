@@ -35,6 +35,7 @@ router.post('/:user_id',
          user: req.params.user_id,
          name: req.body.name,
          age: req.body.age,
+         gender: req.body.gender,
          category: req.body.category,
          ingredient: req.body.ingredient
       });
@@ -43,5 +44,30 @@ router.post('/:user_id',
    }
 );
 
+router.get('/:child_id/selected-meals', (req, res) => {
+   const child = Child.find({ child: req.params.child_id });
+   const category = child.category;
+   const ingredient = child.ingredient
+   Meal.find({
+      $limit:10,
+      $sort: [
+         {
+            category: category,
+            ingredient: {
+               $in: [ingredient]
+            }
+         }
+      ],
+      $query: {
+         category: category,
+         ingredient: {
+            $in: [ingredient]
+         }
+      }
+   })
+      .catch(err =>
+         res.status(404).json({ noselectmealsfound: 'No meals found for child' })
+      );
+});
 
 module.exports = router;

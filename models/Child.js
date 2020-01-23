@@ -15,6 +15,11 @@ const ChildSchema = new Schema({
         required: true
     },
 
+    gender: {
+        type: String,
+        required: true
+    },
+
     category: {
         type: [String],
         required: false
@@ -22,7 +27,7 @@ const ChildSchema = new Schema({
     ingredient: {
         type: [String],
         required: false
-    },
+    }
 
 })
 
