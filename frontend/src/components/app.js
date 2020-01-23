@@ -13,6 +13,7 @@ import MealItemContainer from '../components/meal/meal_item_container';
 import BoyOrGirlContainer from './childrenForm/boyOrGirl_container';
 import DetailFormContainer from './childrenForm/detail_form_container';
 import SelectMealContainer from './select_meals/select_meals_container';
+import UserHomeContainer from './profile/user_home_container'
 
 const App = () => (
     <div> 
@@ -21,6 +22,7 @@ const App = () => (
          <NavBarContainer />
       </header>
         <Switch>
+            <Route exact path="/user" component={UserHomeContainer} />
             <Route exact path="/lunchBoxSelect" component={ChoseItemIndexContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
