@@ -35,7 +35,7 @@ router.get("/seed", async (req, res)=>{
             category: "American",
             ingredients: "Sugar, a lot of it.",
             photoUrl: "https://images.app.goo.gl/G1vgJudyTAHjYHN59",
-            cookingInstruction: "Put sugar in a bowl and call it Bacon"
+            cookingInstruction: "Put sugar/nin a bowl and call it Bacon"
         },
         {
             title: "Oreo",
@@ -80,7 +80,7 @@ router.get("/seed", async (req, res)=>{
     });
 });
 
-/*
+
 router.get("/clear_db", async (req, res)=>{
     const collections = await mongoose.connection.db.collections()
 
@@ -92,6 +92,5 @@ router.get("/clear_db", async (req, res)=>{
 
     res.status(200).json({collections_dropped: names});
 });
-*/
 
 module.exports = router
