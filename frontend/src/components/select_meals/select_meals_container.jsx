@@ -15,6 +15,7 @@ const mapDispatchToProps = dispatch => {
       addSelectMeal: mealId => dispatch(addSelectMeal(mealId)),
       fetchSearchMeals: keyword => dispatch(fetchSearchMeals(keyword)),
       fetchMeal: mealId => dispatch(fetchMeal(mealId)),
+      postSelectMeals: childId => dispatch(postSelectMeals(childId)),
       // editSingleSelectMeal: singleSelectMealId => dispatch(editSingleSelectMeal(singleSelectMealId))'
    };
 };
