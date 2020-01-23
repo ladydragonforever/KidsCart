@@ -38,3 +38,9 @@ export const fetchSearchMeals = keyword => dispatch => (
         .then(meals => dispatch(receiveSearchMeals(meals)))
         .catch(err => console.log(err))
 );
+
+
+// edit/update mael 
+// delete meal 
+//  creat meal -> later
+//
