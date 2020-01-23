@@ -15,3 +15,5 @@ export const searchMeals = keyword => {
 export const getSingleMeal = id => {
     return axios.get(`/api/meals/${id}`);
 };
+
+

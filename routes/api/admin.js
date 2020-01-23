@@ -35,7 +35,7 @@ router.get("/seed", async (req, res)=>{
             category: "American",
             ingredients: "Sugar, a lot of it.",
             photoUrl: "https://images.app.goo.gl/G1vgJudyTAHjYHN59",
-            cookingInstruction: "Put sugar in a bowl and call it Bacon"
+            cookingInstruction: "Put sugar/nin a bowl and call it Bacon"
         },
         {
             title: "Oreo",

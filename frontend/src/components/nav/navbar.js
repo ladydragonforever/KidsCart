@@ -108,7 +108,7 @@ class NavBar extends React.Component {
                             onChange={this.update()}
                             onKeyPress={this.searchFunc()}
                          />
-                        <FontAwesomeIcon icon={faSearch} className={this.state.iconClassName}  />
+                        <FontAwesomeIcon icon={faSearch} className={this.state.iconClassName} onClick={() => this.startSearch(this.state.word)} />
                     </label>
                 </div>
                 {this.getLinks()}
