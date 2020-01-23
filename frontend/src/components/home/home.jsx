@@ -4,6 +4,15 @@ import { Link } from 'react-router-dom'
 class Home extends React.Component {
     constructor(props) {
         super(props)
+        this.requireLogin = this.requireLogin.bind(this)
+    }
+
+    requireLogin() {
+        if(this.props.requireLogin) {
+            return "/choseGender"
+        } else {
+            return "/login"
+        }
     }
 
     render() {
@@ -15,7 +24,7 @@ class Home extends React.Component {
                     </video>
                     <div className="videoText">
                         <h2>Order our top-rated recipes for your kids</h2>
-                        <Link to="/lunchBoxSelect" className="videoButton" >GET STARTED</Link>
+                        <Link to={this.requireLogin()} className="videoButton" >GET STARTED</Link>
                     </div>
                 </div>
                 <div className="text-box-content">
