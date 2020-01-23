@@ -3,7 +3,6 @@ import { getMeals, searchMeals, getSingleMeal } from "../util/meal_util";
 export const RECEIVE_ALL_MEALS = "RECEIVE_ALL_MEALS";
 export const RECEIVE_MEAL = "RECEIVE_MEAL";
 export const RECEIVE_SEARCH_MEALS = "RECEIVE_SEARCH_MEALS";
-export const RECEIVE_MEAL = "RECEIVE_MEAL";
 
 export const receiveAllMeals = meals => ({
     type: RECEIVE_ALL_MEALS,

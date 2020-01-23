@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import SelectMeals from './select_meals';
+import { fetchSelectMeals, deleteSelectMeal, addSelectMeal, postSelectMeals } from '../../actions/select_meals_actions';
 
 const mapStateToProps = (state, ownProps) => {
    return {
@@ -13,8 +14,8 @@ const mapDispatchToProps = dispatch => {
       fetchSelectMeals: childId => dispatch(fetchSelectMeals(childId)),
       deleteSelectMeal: (selectMealId) => dispatch(deleteSelectMeal(selectMealId)),
       addSelectMeal: mealId => dispatch(addSelectMeal(mealId)),
-      fetchSearchMeals: keyword => dispatch(fetchSearchMeals(keyword)),
-      fetchMeal: mealId => dispatch(fetchMeal(mealId)),
+      // fetchSearchMeals: keyword => dispatch(fetchSearchMeals(keyword)),
+      // fetchMeal: mealId => dispatch(fetchMeal(mealId)),
       postSelectMeals: childId => dispatch(postSelectMeals(childId)),
       // editSingleSelectMeal: singleSelectMealId => dispatch(editSingleSelectMeal(singleSelectMealId))'
    };

@@ -21,19 +21,19 @@ export const fetchSelectMeals = childId => dispatch => (
 );
 
 export const deleteSelectMeal = (mealId, childId)  => dispatch => (
-   SelectMealsApiUtil.deleteSelectMeals(mealId, childId)
+   SelectMealsApiUtil.deleteSelectMeal(mealId, childId)
       .then(() => dispatch(removeSelectMeal(mealId, childId)))
       .catch(err => console.log(err))
 );
 
-export const addSelectMeal = (mealId, childId) => dispatch => (
-   SelectMealsApiUtil.addSelectMeal(mealId, childId)
+export const addSelectMeal = (mealId, childId, data) => dispatch => (
+   SelectMealsApiUtil.addSelectMeal(mealId, childId, data)
       .then(meals => dispatch(receiveSelectMeals(meals)))
       .catch(err => console.log(err))
 );
 
-export const postSelectMeals = childId => dispatch => (
-   SelectMealsApiUtil.postSelectMeals(childId)
+export const postSelectMeals = (childId, data) => dispatch => (
+   SelectMealsApiUtil.postSelectMeals(childId, data)
       .then(selectMeals => dispatch(receiveSelectMeals(selectMeals)))
       .catch(err => console.log(err))
 );
