@@ -47,3 +47,10 @@
     width: 200px;
     height: 42px;
 }
+
+.search-bar{
+    border-width: 1px;
+    height: 32px;
+    border-color: lightgray;
+    border-radius: 3px;
+}
