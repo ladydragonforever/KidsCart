@@ -9,11 +9,11 @@ const SingleSelectedMealSchema = new Schema ({
 
     title: {
         type: String,
-        required: true
+        required: false
     },
     category: {
         type: String,
-        required: true
+        required: false
     },
     ingredients: {
         type: String,
@@ -30,10 +30,7 @@ const SelectedMealSchema = new Schema ({
         type: [SingleSelectedMealSchema],
         required: true
     },
-    date: {
-        type: Date,
-        default: Date.now
-    }
+   
 
 })
 

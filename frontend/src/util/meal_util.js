@@ -15,3 +15,6 @@ export const searchMeals = keyword => {
 export const fetchMeal = childId => {
    return axios.get(`/api/meals/${childId}`)
 };
+export const getSingleMeal = id => {
+    return axios.get(`/api/meals/${id}`);
+};

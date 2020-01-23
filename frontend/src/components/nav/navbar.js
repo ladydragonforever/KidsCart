@@ -83,6 +83,7 @@ class NavBar extends React.Component {
                 <div>
                     <input 
                         type="text"
+                        className = "search-bar"
                         placeholder="Search..."
                         value={this.state.word}
                         onChange={this.update()}

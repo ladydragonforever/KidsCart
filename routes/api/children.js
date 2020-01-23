@@ -5,6 +5,17 @@ const Meal = require('../../models/Meal');
 const Child = require('../../models/Child');
 const passport = require('passport');
 
+//fectch one child' matchingmeals 
+router.get('/:child_id/matching-meals', async (req, res) => {
+   const child = await Child.findById( req.params.child_id );
+   const childCategory = child.category;
+   // const ingredient = child.ingredient;
+   const select_meals = await Meal.find({category : { $in: childCategory }})
+
+   res.status(200).json(select_meals);
+});
+
+// fetch one child's info
 router.get('/:id',
    (req, res) => {
       Child.findById(req.params.id)
@@ -14,19 +25,17 @@ router.get('/:id',
          );
 });
 
+//create a child
 router.post('/:user_id',
    passport.authenticate('jwt', { session: false }),
    (req, res) => {
-      // const { errors, isValid } = validateChildInput(req.body);
-
-      // if (!isValid) {
-      //    return res.status(400).json(errors);
-      // }
+      
       console.log(req.body);
       const newChild = new Child({
          user: req.params.user_id,
          name: req.body.name,
          age: req.body.age,
+         gender: req.body.gender,
          category: req.body.category,
          ingredient: req.body.ingredient
       });
@@ -35,18 +44,6 @@ router.post('/:user_id',
    }
 );
 
-router.get('/:child_id/selected-meals', (req, res) => {
-   const child = Child.find({ child: req.params.child_id });
-   const category = child.category;
-   // const ingredient = child.ingredient;
-   Meal.find(
-      { $text: { $search: category } },
-      { score: { $meta: "score" } }
-   ).sort({ score: { $meta: "score" } })
-      .then(select_meals => res.json(select_meals))
-      .catch(err =>
-         res.status(404).json({ noselectmealsfound: 'No meals found for child' })
-      );
-});
+
 
 module.exports = router;
