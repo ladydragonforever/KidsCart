@@ -1,6 +1,7 @@
 import React from "react"
 import './styles.css'
 
+
 class Box extends React.Component {
     constructor(props) {
         super(props)
@@ -46,6 +47,7 @@ class Box extends React.Component {
 
     switchIndex(e) {
         this.props.changeType(e.target.innerText)
+        this.props.receiveChildCategory(e.target.innerText)
         let index;
         if (e.target.innerText === "AMERICAN") {
             index = 0;
