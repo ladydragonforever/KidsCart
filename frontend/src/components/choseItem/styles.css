@@ -305,3 +305,11 @@
     background: url(https://media.blueapron.com/assets/signup/landing/background-landing-signup.jpg?quality=80&width=1440) no-repeat scroll center;
 }
 
+
+.next-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 70px;
+    margin-top: 100px;
+}

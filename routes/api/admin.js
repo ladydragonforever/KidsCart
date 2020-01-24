@@ -196,7 +196,6 @@ router.get("/seed", async (req, res)=>{
     });
 });
 
-
 router.get("/clear_db", async (req, res)=>{
     const collections = await mongoose.connection.db.collections()
 

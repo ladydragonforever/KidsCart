@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { receiveLunchType } from '../../actions/lunch_type_actions';
+import { receiveChildCategory, receiveChildIngredient } from '../../actions/child_actions'
 import { withRouter } from 'react-router'
 
 import Box from './box';
@@ -9,7 +10,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    changeType: type => dispatch(receiveLunchType(type))
+    changeType: type => dispatch(receiveLunchType(type)),
+    receiveChildCategory: category => dispatch(receiveChildCategory(category)),
+    receiveChildIngredient: ingredient => dispatch(receiveChildIngredient(ingredient))
 })
 
 

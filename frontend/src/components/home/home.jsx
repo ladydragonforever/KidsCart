@@ -9,9 +9,9 @@ class Home extends React.Component {
 
     requireLogin() {
         if(this.props.requireLogin) {
-            return "/choseGender"
+            this.props.history.push('/choseGender')
         } else {
-            return "/login"
+            this.props.openModal('LOGIN')
         }
     }
 
@@ -24,7 +24,12 @@ class Home extends React.Component {
                     </video>
                     <div className="videoText">
                         <h2>Order our top-rated recipes for your kids</h2>
-                        <Link to={this.requireLogin()} className="videoButton" >GET STARTED</Link>
+                        {/* <Link to={this.requireLogin()} className="videoButton" >GET STARTED</Link> */}
+                        <button
+                            className="videoButton"
+                            type="button"
+                            onClick={this.requireLogin}>Get Started
+                       </button>
                     </div>
                 </div>
                 <div className="text-box-content">
