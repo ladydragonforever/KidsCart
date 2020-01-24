@@ -57,7 +57,7 @@ class SelectMeals extends React.Component {
                            <li key = {meal._id}>
                               <div>Title:{meal.title}</div>
                               <div>Category:{meal.category}</div>
-                              <div><img src={meal.photoUrl} /></div>
+                              {/* <div><img src={meal.photoUrl} /></div> */}
                            </li>
                         ))}
                      {/* { this.generatedMeals(this.props.childId) } */}
@@ -83,7 +83,7 @@ class SelectMeals extends React.Component {
                         <li key = {meal._id}>
                            <div>Title:{meal.title}</div>
                            <div>Category:{meal.category}</div>
-                           <div><img src={meal.photoUrl} /></div>
+                           {/* <div><img src={meal.photoUrl} /></div> */}
                         </li>
                      ))}
                   </ul>
