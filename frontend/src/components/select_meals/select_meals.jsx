@@ -42,43 +42,54 @@ class SelectMeals extends React.Component {
    render() {
       const {meals, selectMeals} = this.props;
       return(
-         <section className="selected-shell">
-            <form className="selected-meals-form">
-               {/* <button className="generate-input" type="text"
-                  // onClick={this.props.fetchSelectMeals(this.props.mathc.params.childId)}
+         <main className="selected-shell">
+            <p className="select-title">Alter this weeks meal selection below.</p>
+            <section className="child-select">
+               <form className="selected-meals-form">
+                  {/* <button className="generate-input" type="text"
+                     // onClick={this.props.fetchSelectMeals(this.props.mathc.params.childId)}
 
-               >
-                  Generate new meals
-               </button> */}
-               <ul className="selected-meals-list" >
-                  {selectMeals.map(meal => (
-                        <li key = {meal._id}>{meal.title}</li>
+                  >
+                     Generate new meals
+                  </button> */}
+                  <ul className="selected-meals-list" >
+                     {selectMeals.map(meal => (
+                           <li key = {meal._id}>
+                              <div>Title:{meal.title}</div>
+                              <div>Category:{meal.category}</div>
+                              <div><img src={meal.photoUrl} /></div>
+                           </li>
+                        ))}
+                     {/* { this.generatedMeals(this.props.childId) } */}
+                  </ul>
+                  <button className="generate-input" type="submit">
+                     Confim meals
+                  </button>
+               </form>
+               <aside className="search-select">
+                  <label className="discover-label">
+                     <input 
+                        className="discover-input" 
+                        type="text" 
+                        placeholder="Discover more options"
+                        value={this.state.word}
+                        onChange = {this.update()}
+                        onKeyPress={this.searchFunc()}
+                     />
+                     {/* <FontAwesomeIcon icon={faSearch} className={this.state.iconClassName} onClick={() => this.startSearch(this.state.word)} /> */}
+                  </label>
+                  <ul className="search-meals-list">
+                     {meals.map(meal => (
+                        <li key = {meal._id}>
+                           <div>Title:{meal.title}</div>
+                           <div>Category:{meal.category}</div>
+                           <div><img src={meal.photoUrl} /></div>
+                        </li>
                      ))}
-                  {/* { this.generatedMeals(this.props.childId) } */}
-               </ul>
-               <button className="generate-input" type="submit">
-                  Confim meals
-               </button>
-            </form>
-            <div className="search-select">
-               <label className="discover-label">
-                  <input 
-                      className="discover-input" 
-                      type="text" 
-                      placeholder="Discover more options"
-                      value={this.state.word}
-                      onChange = {this.update()}
-                      onKeyPress={this.searchFunc()}
-                  />
-                  {/* <FontAwesomeIcon icon={faSearch} className={this.state.iconClassName} onClick={() => this.startSearch(this.state.word)} /> */}
-               </label>
-               <ul className="search-meals-list">
-                  {meals.map(meal => (
-                     <li key = {meal._id}>{meal.title}</li>
-                  ))}
-               </ul>
-            </div>
-         </section>
+                  </ul>
+               </aside>
+            </section>
+         </main>
       );
    }
 }

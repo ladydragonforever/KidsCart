@@ -1,5 +1,6 @@
 .logo {
     width: 200px;
+    height: 100%;
 }
 
 .nav-bar-container {
@@ -9,6 +10,7 @@
     justify-content: space-between;
     border-bottom: 1px solid #dad9d9;
     padding-bottom: 20px;
+    align-items: center;
 }
 
 .loginButton {
@@ -28,7 +30,7 @@
     padding: 11px 20px;
     font-size: 15px;
     line-height: 1.35135;
-    border-radius: 2px;
+    border-radius: 10px;
     margin-right: 4px;
     font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
 }
@@ -46,7 +48,7 @@
 
 .logo-footer {
     width: 200px;
-    height: 42px;
+    height: 50%;
 }
 
 .search-bar{
@@ -117,3 +119,4 @@
     padding-bottom: 10px;
     padding-right: 85px;
  }
+
