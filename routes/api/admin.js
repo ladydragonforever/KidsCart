@@ -173,6 +173,28 @@ router.get("/seed", async (req, res)=>{
                 "Bake until lasagna noodles are tender and casserole is bubbling, about 50 minutes. Remove foil and bake until cheese topping is lightly browned, 15 to 20 more minutes. Let stand 15 minutes before serving."
             ],
             nutritionFacts: "Per Serving: 594 calories; 29.1 g fat; 43.4 g carbohydrates; 41.2 g protein; 115 mg cholesterol; 1898 mg sodium."
+        },
+        {
+            title: "Melissa's Chicken Cacciatore",
+            category: "Italian",
+            ingredients: [
+                "1 (12 ounce) jar marinated artichoke hearts", 
+                "2 large skinless, boneless chicken breast halves", 
+                "1 large onion", 
+                "3 cloves garlic",
+                "8 ounces fresh mushrooms",
+                "1 (14.5 ounce) can diced tomatoes in juice",
+                "⅓ cup black olives",
+                "8 ounces shredded mozzarella cheese"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/889256.jpg",
+            cookingInstruction: [
+                "Preheat oven to 350 degrees F (175 degrees C).",
+                "Place half the artichoke marinade into a large skillet over medium-high heat, and brown the chicken pieces until the liquid has almost evaporated, 8 to 10 minutes. Remove the chicken pieces with a slotted spoon, and place into a 9x13-inch baking dish.",
+                "Pour the remaining marinade into the same skillet, and cook and stir the onions, garlic, mushrooms, oregano, basil, salt, rosemary, and black pepper until the onions are translucent, 5 to 8 minutes. Mix in diced tomatoes with their juice, tomato sauce, black olives, and chopped artichoke hearts. Stir the sauce well, and pour over the chicken in the baking dish. Cover the dish with foil.",
+                "Bake the chicken until the sauce is bubbling, about 45 minutes. Uncover, and drizzle the Madeira wine over the dish; top with mozzarella cheese. Return to oven, uncovered, and bake until the cheese is melted, about 10 more minutes."
+            ],
+            nutritionFacts: "Per Serving: 320 calories; 12 g total fat; 63 mg cholesterol; 1428 mg sodium. 21.2 g carbohydrates; 29.2 g protein."
         }
     ].map(m => new Meal(m).save()));
 
