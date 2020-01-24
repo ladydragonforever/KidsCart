@@ -26,7 +26,11 @@ class UserHome extends React.Component {
     }
 
     addClass(e) {
-        console.log("hihihihi",e.target.parentNode.parentNode.childNodes[1])
+        const index = e.currentTarget.dataset.index;
+        const ele = this[`popout-${index}`];
+        ele.style.display = ele.style.display === 'none'
+            ? 'block'
+            : 'none';
     }
 
     render() {
@@ -42,22 +46,22 @@ class UserHome extends React.Component {
                                 <div className="user-text-handle">{this.props.user.email}</div>
                             </div>
                         </div>
-                        <div>
+                        <div className='children-container'>
                             {
                                 this.props.user.childs.map((child,i) => (
                                     <div key={i}>
-                                        <div className="baby-box" onClick={this.addClass}>
+                                        <div className="baby-box" onClick={this.addClass} data-index={i}>
                                             <div className="initial-baby">{child.name.slice(0,1).toUpperCase()}</div>
                                             <div className="baby-text">{child.name}</div>
                                             <div className="baby-text">{child.age} year old</div>
                                         </div>
-                                        <div >
+                                        <div ref={el => this[`popout-${i}`] = el} style={{display: 'none'}}>
                                                 {   
                                                     child.selectedMeal ? child.selectedMeal.meals.map((each,i) => (
-                                                        <div className="list-box">
+                                                        <div className="list-box" key={i}>
                                                             <div style={{ display: "flex", alignItems: "center", marginBottom:"20px"}}>
                                                                 <b style={{marginRight:"20px"}}>{i + 1}.</b>
-                                                                <img src={`${each.meal_relation.photoUrl}`} style={{ width: "100px", borderRadius: "10px", marginRight:"30px" }}></img>
+                                                                <img alt='' src={`${each.meal_relation.photoUrl}`} style={{ width: "100px", borderRadius: "10px", marginRight:"30px" }}></img>
                                                                 <div className="user-meal-text">{each.title}</div>
                                                             </div>
                                                         </div>

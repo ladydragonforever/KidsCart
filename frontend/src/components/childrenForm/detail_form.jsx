@@ -33,7 +33,7 @@ class DetailForm extends React.Component {
                     <div className="title-form-gender">Children Profile</div>
                     <div className="subtitle-form-gender">Please fill out your child's information</div>
                     <div className="child-form-container">
-                            <img src={process.env.PUBLIC_URL + "girl-form.png"} style={{ width: "130px"}} /> 
+                            <img alt='' src={process.env.PUBLIC_URL + "girl-form.png"} style={{ width: "130px"}} /> 
                             <div>
                                 <div>
                                     <div className="input-title">Children Name</div>
@@ -44,7 +44,7 @@ class DetailForm extends React.Component {
                                 <input type="text" className="input-child" onChange={this.getInputValue("age")}/>
                                 </div>
                             </div>
-                            <img src={process.env.PUBLIC_URL + "boy-form.png"} style={{ width: "180px" }} /> 
+                            <img alt='' src={process.env.PUBLIC_URL + "boy-form.png"} style={{ width: "180px" }} /> 
                     </div>
                     <button className="gender-button" onClick={this.nextToLunchBox}>Next</button>
                 </div>

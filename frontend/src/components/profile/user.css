@@ -14,17 +14,21 @@
  .profile-header {
      display: flex;
      align-items: center;
-     justify-content: center;
+     justify-content: start;
      width: 60%;
      margin-bottom: 50px;
      padding-bottom: 30px;
      border-bottom: 1px solid #dad9d9;
  }
 
+ .children-container {
+    width: 60%;
+ }
+
  .initial-baby {
     background-color: #686f7a; 
-    width: 46px;
     height: 46px;
+    width: 46px;
     border-radius: 50%;
     border: 1px solid #fff;
     color: #fff;
@@ -33,13 +37,13 @@
     line-height: 46px;
  }
 
- .baby-box {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     padding: 10px 60px;
-    border-radius: 50px;
- }
+.baby-box {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px 0px;
+   border-radius: 50px;
+}
  .baby-box:hover {
     background: #ececec;
     cursor: pointer;
