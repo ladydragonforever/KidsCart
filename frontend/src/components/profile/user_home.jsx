@@ -54,6 +54,8 @@ class UserHome extends React.Component {
                                             <div className="initial-baby">{child.name.slice(0,1).toUpperCase()}</div>
                                             <div className="baby-text">{child.name}</div>
                                             <div className="baby-text">{child.age} year old</div>
+                                            <button className="button-profile" onClick={() => this.props.history.push(`/generate-meals/${child._id}`)}>Edit the Lunch Plan</button>
+                                            <button className="button-profile">Delete the Child</button>
                                         </div>
                                         <div ref={el => this[`popout-${i}`] = el} style={{display: 'none'}}>
                                                 {   

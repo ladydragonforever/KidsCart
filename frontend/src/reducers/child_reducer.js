@@ -10,7 +10,7 @@ const defaultState = {
     name: "",
     age: "",
     gender: "",
-    category: "",
+    category: "AMERICAN",
     ingredient: []
 }
 
