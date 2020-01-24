@@ -19,7 +19,7 @@ router.get("/seed", async (req, res)=>{
         },
         {
             handle: "demo-user",
-            email: "demoUserA@demo.com",
+            email: "demoUser@demo.com",
             password: password_digest,
             firstName: "demo",
             lastName: "user" 
