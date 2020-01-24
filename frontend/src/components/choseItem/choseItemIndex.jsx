@@ -189,29 +189,29 @@ class ChoseItemIndex extends React.Component {
                 <div>
                     <div className="drop-down-box-item">
                         <div className="food-dropdown-item">
-                            <img src={process.env.PUBLIC_URL + '/rice.png'} className="food-img" onClick={this.addToSideBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/rice.png'} className="food-img" onClick={this.addToSideBox} />
                             <p>Rice</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img src={process.env.PUBLIC_URL + '/noodles.png'} className="food-img" onClick={this.addToSideBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/noodles.png'} className="food-img" onClick={this.addToSideBox} />
                             <p>Noodles</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img src={process.env.PUBLIC_URL + '/bread.png'} className="food-img" onClick={this.addToSideBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/bread.png'} className="food-img" onClick={this.addToSideBox} />
                             <p>Bread</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img src={process.env.PUBLIC_URL + '/French_fries.png'} className="food-img" onClick={this.addToSideBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/French_fries.png'} className="food-img" onClick={this.addToSideBox} />
                             <p>Fries</p>
                         </div>
                     </div>
                     <div className="drop-down-box-item">
                         <div className="food-dropdown-item" >
-                            <img src={process.env.PUBLIC_URL + '/egg.png'} className="food-img" onClick={this.addToSideBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/egg.png'} className="food-img" onClick={this.addToSideBox} />
                             <p>Egg</p>
                         </div>
                         <div className="food-dropdown-item" >
-                            <img src={process.env.PUBLIC_URL + '/potatoes.png'} className="food-img" onClick={this.addToSideBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/potatoes.png'} className="food-img" onClick={this.addToSideBox} />
                             <p>Potatoes</p>
                         </div>
                     </div>
@@ -219,22 +219,34 @@ class ChoseItemIndex extends React.Component {
             )
         } else if (this.state.current === "Entree") {
             return (
-                <div className="drop-down-box-item">
-                    <div className="food-dropdown-item" >
-                        <img src={process.env.PUBLIC_URL + '/beef.png'} className="food-img" onClick={this.addToEntreeBox} />
-                        <p>Beef</p>
+                <div>
+                    <div className="drop-down-box-item">
+                        <div className="food-dropdown-item" >
+                            <img alt='' src={process.env.PUBLIC_URL + '/beef.png'} className="food-img" onClick={this.addToEntreeBox} />
+                            <p>Beef</p>
+                        </div>
+                        <div className="food-dropdown-item" >
+                            <img alt='' src={process.env.PUBLIC_URL + '/chicken.png'} className="food-img" onClick={this.addToEntreeBox} />
+                            <p>Chicken</p>
+                        </div>
+                        <div className="food-dropdown-item" >
+                            <img alt='' src={process.env.PUBLIC_URL + '/pork.png'} className="food-img" onClick={this.addToEntreeBox} />
+                            <p>Pork</p>
+                        </div>
+                        <div className="food-dropdown-item" >
+                            <img alt='' src={process.env.PUBLIC_URL + '/shrimp.png'} className="food-img" onClick={this.addToEntreeBox} />
+                            <p>Shrimp</p>
+                        </div>
                     </div>
-                    <div className="food-dropdown-item" >
-                        <img src={process.env.PUBLIC_URL + '/chicken.png'} className="food-img" onClick={this.addToEntreeBox} />
-                        <p>Chicken</p>
-                    </div>
-                    <div className="food-dropdown-item" >
-                        <img src={process.env.PUBLIC_URL + '/pork.png'} className="food-img" onClick={this.addToEntreeBox} />
-                        <p>Pork</p>
-                    </div>
-                    <div className="food-dropdown-item" >
-                        <img src={process.env.PUBLIC_URL + '/shrimp.png'} className="food-img" onClick={this.addToEntreeBox} />
-                        <p>Shrimp</p>
+                    <div className="drop-down-box-item">
+                        <div className="food-dropdown-item" >
+                            <img alt='' src={process.env.PUBLIC_URL + '/crab.png'} className="food-img" onClick={this.addToSideBox} />
+                            <p>Crab</p>
+                        </div>
+                        <div className="food-dropdown-item" >
+                            <img alt='' src={process.env.PUBLIC_URL + '/Tofu.png'} className="food-img" onClick={this.addToSideBox} />
+                            <p>Tofu</p>
+                        </div>
                     </div>
                 </div>
             )
@@ -243,29 +255,29 @@ class ChoseItemIndex extends React.Component {
                 <div>
                     <div className="drop-down-box-item">
                         <div className="food-dropdown-item">
-                            <img src={process.env.PUBLIC_URL + '/broccoli.png'} className="food-img" />
+                            <img alt='' src={process.env.PUBLIC_URL + '/broccoli.png'} className="food-img" />
                             <p>Broccoli</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img src={process.env.PUBLIC_URL + '/carrot.png'} className="food-img" onClick={this.addToVegBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/carrot.png'} className="food-img" onClick={this.addToVegBox} />
                             <p>Carrot</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img src={process.env.PUBLIC_URL + '/green_beans.png'} className="food-img" onClick={this.addToVegBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/green_beans.png'} className="food-img" onClick={this.addToVegBox} />
                             <p>Green Bean</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img src={process.env.PUBLIC_URL + '/corn.png'} className="food-img" onClick={this.addToVegBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/corn.png'} className="food-img" onClick={this.addToVegBox} />
                             <p>Corn </p>
                         </div>
                     </div>
                     <div className="drop-down-box-item">
                         <div className="food-dropdown-item">
-                            <img src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" onClick={this.addToVegBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" onClick={this.addToVegBox} />
                             <p>Avocado</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img src={process.env.PUBLIC_URL + '/tomato.png'} className="food-img" onClick={this.addToVegBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/tomato.png'} className="food-img" onClick={this.addToVegBox} />
                             <p>Tomato</p>
                         </div>
                     </div>
