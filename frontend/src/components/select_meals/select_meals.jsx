@@ -2,10 +2,6 @@ import React from 'react';
 import './select_meals.css';
 
 class SelectMeals extends React.Component {
-   constructor(props) {
-      super(props);
-   }
-
    componentDidMount() {
       // const selectMeals = this.props.
    }

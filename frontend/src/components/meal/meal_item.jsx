@@ -1,11 +1,6 @@
 import React from 'react';
 
 class MealItem extends React.Component {
-    constructor(props) {
-        super(props);
-        
-    }
-
     componentDidMount() {
         this.props.fetchMeal(this.props.match.params.mealId)
     }
@@ -14,11 +9,30 @@ class MealItem extends React.Component {
         const {meal} = this.props;
         const display = meal ? (
             <div>
-                <div>Title:{meal.title}</div>
-                <div>Category:{meal.category}</div>
-                <div>Ingredients:{meal.ingredients}</div>
-                <div><img src={meal.photoUrl} /></div>
-                <div>Cooking Instruction:{meal.cookingInstruction}</div>
+                <div>Title
+                    <div>{meal.title}</div>
+                </div>
+                <div>Category
+                    <div>{meal.category}</div>
+                </div>
+                <div>Ingredients
+                    {meal.ingredients.map(ingredient => (
+                        <ul>
+                            <li>{ingredient}</li>
+                        </ul>
+                    ))}
+                </div>
+                <div><img alt="" src={meal.photoUrl} /></div>
+                <div>Cooking Instruction
+                    {meal.cookingInstruction.map(instruction => (
+                        <ul>
+                            <li>{instruction}</li>
+                        </ul>
+                    ))}
+                </div>
+                <div>Nutrition Facts
+                    <div>{meal.nutritionFacts}</div>
+                </div>
             </div>
         ) : (
             <div></div>

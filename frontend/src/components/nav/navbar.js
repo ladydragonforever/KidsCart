@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import './navbar.css';
 import { withRouter } from 'react-router';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -97,7 +97,7 @@ class NavBar extends React.Component {
     render() {
         return (
             <div className="nav-bar-container">
-                <img src={process.env.PUBLIC_URL + '/kidscart_logo.png'} className="logo" onClick={this.backToHome}/>
+                <img alt='' src={process.env.PUBLIC_URL + '/kidscart_logo.png'} className="logo" onClick={this.backToHome}/>
                 <div style={{ flex: "0.7"}}>
                     <label className="search-label">
                         <input className="search-input" type="text" placeholder="Search for anything" 
