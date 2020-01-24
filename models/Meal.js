@@ -11,7 +11,7 @@ const MealSchema = new Schema({
         required: false
     },
     ingredients: {
-        type: String,
+        type: Array,
         required: true
     },
     photoUrl: {
@@ -19,6 +19,10 @@ const MealSchema = new Schema({
         required: false
     },
     cookingInstruction: {
+        type: Array,
+        required: false
+    },
+    nutritionFacts: {
         type: String,
         required: false
     },
