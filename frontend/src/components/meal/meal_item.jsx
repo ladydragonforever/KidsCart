@@ -1,11 +1,6 @@
 import React from 'react';
 
 class MealItem extends React.Component {
-    constructor(props) {
-        super(props);
-        
-    }
-
     componentDidMount() {
         this.props.fetchMeal(this.props.match.params.mealId)
     }
@@ -27,7 +22,7 @@ class MealItem extends React.Component {
                         </ul>
                     ))}
                 </div>
-                <div><img src={meal.photoUrl} /></div>
+                <div><img alt="" src={meal.photoUrl} /></div>
                 <div>Cooking Instruction
                     {meal.cookingInstruction.map(instruction => (
                         <ul>

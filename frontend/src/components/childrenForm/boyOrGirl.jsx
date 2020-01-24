@@ -53,10 +53,10 @@ class BoyOrGirl extends React.Component {
                     <div className="subtitle-form-gender">Please chose your baby's gender</div>
                     <div className="gender-container">
                         <div className={this.state.girl} onClick={this.changeGirlClass}>
-                            <img src="https://i.ya-webdesign.com/images/icons-transparent-baby-6.png" style={{ width: "200px" }}/>
+                            <img alt='' src="https://i.ya-webdesign.com/images/icons-transparent-baby-6.png" style={{ width: "200px" }}/>
                         </div>
                         <div className={this.state.boy} onClick={this.changeBoyClass}>
-                            <img src="https://image.flaticon.com/icons/png/512/30/30048.png" style={{ width: "200px" }} />
+                            <img alt='' src="https://image.flaticon.com/icons/png/512/30/30048.png" style={{ width: "200px" }} />
                         </div>
                     </div>
                     <button className="gender-button" onClick={() => this.props.history.push("/childForm")}>Next</button>

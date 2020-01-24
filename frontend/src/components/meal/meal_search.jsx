@@ -32,7 +32,7 @@ class MealSearch extends React.Component {
                             >
                                 <div>Title:{meal.title}</div>
                                 <div>Category:{meal.category}</div>
-                                <div><img src={meal.photoUrl}/></div>
+                                <div><img alt='' src={meal.photoUrl}/></div>
                             </li>
                         ))
                     }

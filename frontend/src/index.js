@@ -7,14 +7,21 @@ import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
-import { getMeals, searchMeals, getSingleMeal} from './util/meal_util';
+import {
+    // getMeals,
+    // searchMeals,
+    getSingleMeal,
+} from './util/meal_util';
 
 import { fetchMeals, fetchSearchMeals, fetchMeal} from './actions/meal_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
+  
 
     if (localStorage.jwtToken) {
+        console.log(localStorage.jwtToken, "localStorage")
+        
         setAuthToken(localStorage.jwtToken);
 
         const decodedUser = jwt_decode(localStorage.jwtToken);
