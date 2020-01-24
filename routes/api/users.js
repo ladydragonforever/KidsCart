@@ -16,8 +16,8 @@ router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
 //router.get('/current', passport.authenticate('jwt', { session: false }), async(req, res) => {
 router.get('/:user_id', async(req, res) => {
     //let childs = await Child.find({ user: req.user.id});
+    let user = await User.findById(req.params.user_id)
     let childs = await Child.find({ user: req.params.user_id}).lean();
-
     for (let child of childs) {
         let selectedMeal = await SelectedMeal.findOne({ child: child._id }).lean();
         child.selectedMeal = selectedMeal;
@@ -30,9 +30,11 @@ router.get('/:user_id', async(req, res) => {
     }
 
     res.status(200).json({
-        //id: req.user.id,
-        //handle: req.user.handle,
-        //email: req.user.email,
+        id: user.id,
+        handle: user.handle,
+        email: user.email,
+        firstName: user.firstName,
+        lastName: user.lastName,
         childs,
     });
 })

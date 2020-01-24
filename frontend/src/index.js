@@ -10,6 +10,11 @@ import { logout } from './actions/session_actions';
 // import { getMeals, searchMeals, getSingleMeal} from './util/meal_util';
 // import {fetchSelectMeals} from './actions/select_meals_actions';
 import {fetchSelectMeals} from './util/select_meals_util';
+import {
+    // getMeals,
+    // searchMeals,
+    getSingleMeal,
+} from './util/meal_util';
 
 import { fetchMeals, fetchSearchMeals, fetchMeal} from './actions/meal_actions';
 
