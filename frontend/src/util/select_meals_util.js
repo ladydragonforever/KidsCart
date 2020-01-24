@@ -4,12 +4,12 @@ export const fetchSelectMeals = childId => {
    return axios.get(`/api/children/${childId}/matching-meals`)
 };
 
-export const deleteSelectMeal = (mealId, childId) => {
+export const deleteSelectMeal = (childId, mealId) => {
    return axios.delete(`/api/selected-meals/${childId}/${mealId}`)
 };
 
-export const addSelectMeal = (mealId, childId, data) => {
-   return axios.put(`/api/selected-meals/${childId}/${mealId}`, data)
+export const addSelectMeal = (childId, mealId) => {
+   return axios.put(`/api/selected-meals/${childId}/${mealId}`)
 };
 
 export const postSelectMeals = (childId, data) => {

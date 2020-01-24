@@ -1,11 +1,17 @@
 import * as SelectMealsApiUtil from "../util/select_meals_util";
 
 export const RECEIVE_SELECT_MEALS = "RECEIVE_SELECT_MEALS";
+export const RECEIVE_SELECT_MEAL = "RECEIVE_SELECT_MEAL";
 export const REMOVE_SELECT_MEAL = "RECEIVE_SELECT_MEAL";
 
 export const receiveSelectMeals = selectMeals => ({
    type: RECEIVE_SELECT_MEALS,
    selectMeals
+})
+
+export const receiveSelectMeal = selectMeal => ({
+   type: RECEIVE_SELECT_MEALS,
+   selectMeal
 })
 
 export const removeSelectMeal = (mealId, childId) => ({
@@ -20,15 +26,15 @@ export const fetchSelectMeals = childId => dispatch => (
       .catch(err => console.log(err))
 );
 
-export const deleteSelectMeal = (mealId, childId)  => dispatch => (
+export const deleteSelectMeal = (childId, mealId)  => dispatch => (
    SelectMealsApiUtil.deleteSelectMeal(mealId, childId)
       .then(() => dispatch(removeSelectMeal(mealId, childId)))
       .catch(err => console.log(err))
 );
 
-export const addSelectMeal = (mealId, childId, data) => dispatch => (
-   SelectMealsApiUtil.addSelectMeal(mealId, childId, data)
-      .then(meals => dispatch(receiveSelectMeals(meals)))
+export const addSelectMeal = (childId, mealId) => dispatch => (
+   SelectMealsApiUtil.addSelectMeal(mealId, childId)
+      .then(meals => dispatch(receiveSelectMeal(meals)))
       .catch(err => console.log(err))
 );
 

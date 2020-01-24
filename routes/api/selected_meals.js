@@ -16,8 +16,10 @@ router.post('/:child_id/selectedMeals',
                     child: req.params.child_id,
                     meals: req.body.meals
                 });
+                
             
                 const selectedMeals = await matchedMeals.save();
+               console.log(matchedMeals, selectedMeals)
 
                 res.status(200).json({selectedMeals})
 

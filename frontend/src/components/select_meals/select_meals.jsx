@@ -14,7 +14,9 @@ class SelectMeals extends React.Component {
    componentDidMount(){
       // debugger
       this.props.fetchSelectMeals(this.props.match.params.childId)
+      // .then(() => this.props.postSelectMeals(this.props.match.params.childId))
    }
+
 
    update() {
       return e => this.setState({ word: e.target.value })
@@ -30,14 +32,6 @@ class SelectMeals extends React.Component {
          }
       }
    }
-   
-   generatedMeals(){
-      return (
-         <div>
-            {this.props.selectMeals}
-         </div>
-      );
-   }
 
    render() {
       const {meals, selectMeals} = this.props;
@@ -47,7 +41,7 @@ class SelectMeals extends React.Component {
             <section className="child-select">
                <form className="selected-meals-form">
                   {/* <button className="generate-input" type="text"
-                     // onClick={this.props.fetchSelectMeals(this.props.mathc.params.childId)}
+                     // onClick={this.props.fetchSelectMeals(this.props.match.params.childId)}
 
                   >
                      Generate new meals
@@ -58,9 +52,14 @@ class SelectMeals extends React.Component {
                               <div>Title:{meal.title}</div>
                               <div>Category:{meal.category}</div>
                               {/* <div><img src={meal.photoUrl} /></div> */}
+                           {/* <button 
+                              className="delete-button" 
+                              type="button" 
+                              onClick={() => this.props.deleteSelectMeal(this.props.match.params.childId, meal._id)}>
+                                 deselect meal
+                           </button> */}
                            </li>
                         ))}
-                     {/* { this.generatedMeals(this.props.childId) } */}
                   </ul>
                   <button className="generate-input" type="submit">
                      Confim meals
@@ -84,6 +83,12 @@ class SelectMeals extends React.Component {
                            <div>Title:{meal.title}</div>
                            <div>Category:{meal.category}</div>
                            {/* <div><img src={meal.photoUrl} /></div> */}
+                           {/* <button
+                              className="delete-button"
+                              type="button"
+                              onClick={() => this.props.addSelectMeal(this.props.match.params.childId, meal._id)}>
+                                 select meal
+                           </button> */}
                         </li>
                      ))}
                   </ul>

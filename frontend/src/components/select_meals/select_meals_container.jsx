@@ -16,7 +16,7 @@ const mapDispatchToProps = dispatch => {
    return {
       fetchSelectMeals: childId => dispatch(fetchSelectMeals(childId)),
       deleteSelectMeal: (childId, mealId) => dispatch(deleteSelectMeal(childId, mealId)),
-      addSelectMeal: mealId => dispatch(addSelectMeal(mealId)),
+      addSelectMeal: (childId, mealId) => dispatch(addSelectMeal(childId, mealId)),
       fetchSearchMeals: keyword => dispatch(fetchSearchMeals(keyword)),
       fetchMeal: mealId => dispatch(fetchMeal(mealId)),
       postSelectMeals: childId => dispatch(postSelectMeals(childId)),
