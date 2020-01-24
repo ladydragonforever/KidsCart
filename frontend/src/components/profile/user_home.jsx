@@ -6,6 +6,7 @@ class UserHome extends React.Component {
         super(props)
         this.initials = this.initials.bind(this)
         this.fullName = this.fullName.bind(this)
+        this.addClass = this.addClass.bind(this)
     }
 
     componentDidMount() {
@@ -24,6 +25,10 @@ class UserHome extends React.Component {
         }
     }
 
+    addClass(e) {
+        console.log("hihihihi",e.target.parentNode.parentNode.childNodes[1])
+    }
+
     render() {
         if(this.props.user) {
             return (
@@ -39,11 +44,27 @@ class UserHome extends React.Component {
                         </div>
                         <div>
                             {
-                                this.props.user.childs.map((child) => (
-                                    <div className="baby-box">
-                                        <div className="initial-baby">{child.name.slice(0,1).toUpperCase()}</div>
-                                        <div className="baby-text">{child.name}</div>
-                                        <div className="baby-text">{child.age} year old</div>
+                                this.props.user.childs.map((child,i) => (
+                                    <div key={i}>
+                                        <div className="baby-box" onClick={this.addClass}>
+                                            <div className="initial-baby">{child.name.slice(0,1).toUpperCase()}</div>
+                                            <div className="baby-text">{child.name}</div>
+                                            <div className="baby-text">{child.age} year old</div>
+                                        </div>
+                                        <div >
+                                                {   
+                                                    child.selectedMeal ? child.selectedMeal.meals.map((each,i) => (
+                                                        <div className="list-box">
+                                                            <div style={{ display: "flex", alignItems: "center", marginBottom:"20px"}}>
+                                                                <b style={{marginRight:"20px"}}>{i + 1}.</b>
+                                                                <img src={`${each.meal_relation.photoUrl}`} style={{ width: "100px", borderRadius: "10px", marginRight:"30px" }}></img>
+                                                                <div className="user-meal-text">{each.title}</div>
+                                                            </div>
+                                                        </div>
+                                                    )) 
+                                                    : null
+                                                }
+                                        </div>
                                     </div>
                                 ))
                             }
