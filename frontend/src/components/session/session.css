@@ -1,3 +1,4 @@
+
 .session-form {
    width: 400px;
    background-color: #ffe4b3;
@@ -116,3 +117,9 @@
    cursor: pointer;
 }
 
+.session-errors {
+   list-style: none;
+   color: #d8292f;
+   font-size: 12px;
+   padding-left: 12px;
+}

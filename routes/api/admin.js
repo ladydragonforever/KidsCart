@@ -16,6 +16,13 @@ router.get("/seed", async (req, res)=>{
             password: password_digest,
             firstName: "usera",
             lastName: "a"
+        },
+        {
+            handle: "demo-user",
+            email: "demoUserA@demo.com",
+            password: password_digest,
+            firstName: "demo",
+            lastName: "user" 
         }
     ].map(u => new User(u).save()));
 

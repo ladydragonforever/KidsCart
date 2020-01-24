@@ -15,8 +15,11 @@ import { fetchMeals, fetchSearchMeals, fetchMeal} from './actions/meal_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
+  
 
     if (localStorage.jwtToken) {
+        console.log(localStorage.jwtToken, "localStorage")
+        
         setAuthToken(localStorage.jwtToken);
 
         const decodedUser = jwt_decode(localStorage.jwtToken);
