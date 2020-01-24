@@ -33,11 +33,20 @@ export const clearErrors = () => ({
 });
 
 export const signup = user => dispatch => (
-    APIUtil.signup(user).then(() => (
-        dispatch(receiveUserSignIn())
-    ), err => (
-        dispatch(receiveErrors(err.response.data))
-    ))
+    APIUtil.signup(user).then((res) => {
+        const { token } = res.data;
+        localStorage.setItem('jwtToken', token);
+        APIUtil.setAuthToken(token);
+        // debugger;
+        const decoded = jwt_decode(token);
+       
+        dispatch(receiveCurrentUser(decoded))
+    }) 
+      .catch(err => {
+        //   debugger;
+          dispatch(receiveErrors(err.response.data));
+      })
+    
 );
 
 export const login = user => dispatch => (
@@ -46,6 +55,7 @@ export const login = user => dispatch => (
         const { token } = res.data;
         localStorage.setItem('jwtToken', token);
         APIUtil.setAuthToken(token);
+        // debugger;
         const decoded = jwt_decode(token);
         dispatch(receiveCurrentUser(decoded))
     }

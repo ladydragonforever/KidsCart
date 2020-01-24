@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     AuthRoute,
-    // ProtectedRoute,
+    ProtectedRoute,
 } from '../util/route_util';
 import { Switch,Route } from 'react-router-dom';
 import NavBarContainer from "./nav/navbar_container";
@@ -26,14 +26,14 @@ const App = () => (
       </header>
         <Switch>
             <Route exact path="/user" component={UserHomeContainer} />
-            <Route exact path="/lunchBoxSelect" component={ChoseItemIndexContainer} />
+            <ProtectedRoute exact path="/lunchBoxSelect" component={ChoseItemIndexContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <Route path="/meals/:mealId" component={MealItemContainer} />
             <Route path="/search/:query" component={MealSearchContainer} />
             <Route path="/search/" component={MealSearchContainer} />
-            <Route exact path="/choseGender" component={BoyOrGirlContainer} />
-            <Route exact path="/childForm" component={DetailFormContainer} />
+            <ProtectedRoute exact path="/choseGender" component={BoyOrGirlContainer} />
+            <ProtectedRoute exact path="/childForm" component={DetailFormContainer} />
             <Route exact path="/generate-meals/:childId/" component={SelectMealContainer} />
             <Route exact path="/" component={HomeContainer} />
         </Switch>

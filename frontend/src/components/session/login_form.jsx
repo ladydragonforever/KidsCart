@@ -14,6 +14,7 @@ class LoginForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
+        this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
     }
 
     
@@ -37,22 +38,81 @@ class LoginForm extends React.Component {
             password: this.state.password
         };
 
-        this.props.login(user);
-        // console.log(this.props.signedIn);
+        this.props.login(user).then(() => this.props.signedIn ? this.props.closeModal() : "")
 
-        if (this.props.signedIn) {
-           this.props.closeModal()
-        }
+       
     }
 
-    renderErrors() {
+    handleDemoSubmit(e) {
+        e.preventDefault();
+        const user = {
+            email: "demoUser@demo.com",
+            password: "123456"
+        }
+        this.demo(user)
+        
+    }
+    demo(user) {    
+        const intervalSpeed = 75;
+
+        const { email, password } = user;
+        const { login } = this.props;
+        const demoEmailTime = email.length * intervalSpeed;
+        const demoPasswordTime = password.length * intervalSpeed;
+        const buffer = intervalSpeed * 2;
+        const totalDemoTime = demoEmailTime + demoPasswordTime + buffer;
+
+        this.demoEmail(email, intervalSpeed);
+
+        setTimeout(() => this.demoPassword(password, intervalSpeed), demoEmailTime);
+
+        
+        setTimeout(() => { 
+            login(user).then(() =>
+            this.props.closeModal()
+            )
+        }, totalDemoTime)
+
+
+        
+    }
+
+    demoEmail(email, intervalSpeed) {
+        let i = 0;
+
+        setInterval(() => {
+            if (i <= email.length) {
+                this.setState({ email: email.slice(0, i) })
+                i++
+            } else {
+                clearInterval()
+            }
+        }, intervalSpeed);
+    }
+
+    demoPassword(password, intervalSpeed) {
+        let j = 0;
+
+        setInterval(() => {
+            if (j <= password.length) {
+                this.setState({ password: password.slice(0, j) })
+                j++
+            } else {
+                clearInterval();
+            }
+        }, intervalSpeed);
+    }
+
+    renderErrors(field) {
+        const err = Object.keys(this.props.errors).filter((error) => (
+            error === field
+        ))
         return (
             <ul>
-                {Object.keys(this.props.errors).map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {this.props.errors[error]}
-                    </li>
-                ))}
+                {
+                    this.props.errors[err]
+                }
+
             </ul>
         );
     }
@@ -72,6 +132,7 @@ class LoginForm extends React.Component {
                             placeholder="Email"
                             className="login-input"
                         />
+                        <div className="session-errors">{this.renderErrors("email")}</div>
                         {/* <br /> */}
                         <input type="password"
                             value={this.state.password}
@@ -79,9 +140,10 @@ class LoginForm extends React.Component {
                             placeholder="Password"
                             className="login-input"
                         />
+                        <div className="session-errors">{this.renderErrors("password")}</div>
                         {/* <br /> */}
                         <input type="submit" value="Submit" className="session-submit"/>
-                        <div className="session-errors">{this.renderErrors()}</div>
+                       
                     </div>
                     <p className="session-footer">Don't have an accont? &nbsp;
                        <button
@@ -95,7 +157,7 @@ class LoginForm extends React.Component {
                     <button
                           className="session-footer-button"
                           type="button"
-                        //   onClick={(e) => this.demo(e)}
+                          onClick={this.handleDemoSubmit}
                        >
                           demo login
                   </button>.
