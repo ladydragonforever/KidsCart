@@ -8,6 +8,7 @@ const passport = require('passport');
 //fectch one child' matchingmeals 
 router.get('/:child_id/matching-meals', async (req, res) => {
    const child = await Child.findById( req.params.child_id );
+   console.log(child.category)
    const childCategory = child.category;
    // const ingredient = child.ingredient;
    const select_meals = await Meal.find({category : { $in: childCategory }})

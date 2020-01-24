@@ -1,0 +1,76 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+* {
+    /* border: 1px solid red; */
+}
+
+.selected-shell {
+   overflow-x: hidden;
+   height: 700px;
+   margin: 0 auto;
+   width: 814px;
+   /* border: 1px solid rgba(0,0,0,0.1); */
+   border-top: none;
+   padding-top: 25px;
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+}
+
+
+html,
+section {
+    padding: 0;
+    margin: 0;
+    /* color: #ebebeb; */
+}
+
+.search-select {
+   display: flex;
+    overflow: hidden;
+    height: 100vh;
+    margin-top: -100px;
+    padding-top: 100px;
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: overflow;
+
+    /* background-color: indigo; */
+
+   display: flex;
+   flex-direction: column;
+   padding-left: 27px;
+   width: 380px;
+   height: 100%;
+}
+
+.search-meals-list {
+   overflow: auto;
+   height: auto;
+   /* padding: .5rem; */
+   /* -webkit-overflow-scrolling: touch; */
+   /* -ms-overflow-style: none; */
+   /* width: 12.5rem; */
+   
+
+   display: flex;
+   flex-direction: column;
+   padding-left: 27px;
+   width: 100%;
+   /* height: 2000=px; */
+}
+
+.discover-label{
+   /* height: 5000px; */
+}
+
+.selected-meals-form{
+   display: flex;
+   flex-direction: column;
+   padding-left: 27px;
+   width: 380px;
+   height: 100%;
+}

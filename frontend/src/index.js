@@ -7,7 +7,9 @@ import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
-import { getMeals, searchMeals, getSingleMeal} from './util/meal_util';
+// import { getMeals, searchMeals, getSingleMeal} from './util/meal_util';
+// import {fetchSelectMeals} from './actions/select_meals_actions';
+import {fetchSelectMeals} from './util/select_meals_util';
 
 import { fetchMeals, fetchSearchMeals, fetchMeal} from './actions/meal_actions';
 
@@ -39,8 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.getState = store.getState
     window.fetchMeals = fetchMeals
     window.fetchSearchMeals = fetchSearchMeals
-    window.getSingleMeal = getSingleMeal
+   //  window.getSingleMeal = getSingleMeal
     window.fetchMeal = fetchMeal
+    window.fetchSelectMeals = fetchSelectMeals
     //test end
     const root = document.getElementById('root');
 
