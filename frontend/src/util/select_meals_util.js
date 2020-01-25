@@ -12,6 +12,8 @@ export const addSelectMeal = (childId, mealId) => {
    return axios.put(`/api/selected-meals/${childId}/${mealId}`)
 };
 
-export const postSelectMeals = (childId, data) => {
-   return axios.post(`/api/selected-meals/${childId}`, data)
+export const createSelectMeals = (childId, data) => {
+   return axios.post(`/api/selected-meals/${childId}/selectedMeals`, data)
 };
+
+window.createSelectMeals = createSelectMeals;
