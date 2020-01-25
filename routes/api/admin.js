@@ -346,6 +346,42 @@ router.get("/seed", async (req, res)=>{
                 "After roasting a chicken, remove it from the roasting pan and place on a serving tray to rest. Leave the oven on. Pour off excess drippings from the roasting pan, leaving just enough to coat the broccoli. Toss broccoli and garlic in the drippings until coated and place in the still hot oven. Roast for 5 to 8 minutes, until tender."
             ],
             nutritionFacts: "Per Serving: 225 calories; 9.4 g fat; 13.8 g carbohydrates; 20.7 g protein; 77 mg cholesterol; 508 mg sodium."
+        },
+        {
+            title: "Pork Dumplings",
+            category: "Chinese",
+            ingredients: [
+                "100 (3.5 inch square) wonton wrappers",
+                "1 3/4 pounds ground pork",
+                "4 cloves garlic",
+                "1 egg",
+                "1 Chinese cabbage"
+            ],
+            photoUrl: "https://www.garlicandzest.com/wp-content/uploads/2016/02/pork-dumplings-6.jpg",
+            cookingInstruction: [
+                "In a large bowl, combine the pork, ginger, garlic, green onion, soy sauce, sesame oil, egg and cabbage. Stir until well mixed.",
+                "Place 1 heaping teaspoon of pork filling onto each wonton skin. Moisten edges with water and fold edges over to form a triangle shape. Roll edges slightly to seal in filling. Set dumplings aside on a lightly floured surface until ready to cook.",
+                "To Cook: Steam dumplings in a covered bamboo or metal steamer for about 15 to 20 minutes. Serve immediately."
+            ],
+            nutritionFacts: "Per Serving: 752 calories; 28.8 g fat; 81.1 g carbohydrates; 39.2 g protein; 129 mg cholesterol; 1449 mg sodium."
+        },
+        {
+            title: "Yakisoba Chicken",
+            category: "Japanese",
+            ingredients: [
+                "2 cloves garlic",
+                "4 skinless, boneless chicken breast halves",
+                "1 onion",
+                "½ medium head cabbage",
+                "2 carrots",
+                "8 ounces soba noodles"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/2220105.jpg",
+            cookingInstruction: [
+                "In a large skillet combine sesame oil, canola oil and chili paste; stir-fry 30 seconds. Add garlic and stir fry an additional 30 seconds. Add chicken and 1/4 cup of the soy sauce and stir fry until chicken is no longer pink, about 5 minutes. Remove mixture from pan, set aside, and keep warm.",
+                "In the emptied pan combine the onion, cabbage, and carrots. Stir-fry until cabbage begins to wilt, 2 to 3 minutes. Stir in the remaining soy sauce, cooked noodles, and the chicken mixture to pan and mix to blend. Serve and enjoy!"
+            ],
+            nutritionFacts: "Per Serving: 752 calories; 28.8 g fat; 81.1 g carbohydrates; 39.2 g protein; 129 mg cholesterol; 1449 mg sodium."
         }
     ].map(m => new Meal(m).save()));
 
