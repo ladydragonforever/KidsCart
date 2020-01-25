@@ -317,20 +317,35 @@ router.get("/seed", async (req, res)=>{
             nutritionFacts: "Per Serving: 424 calories; 14.7 g fat; 30.2 g carbohydrates; 40.8 g protein; 369 mg cholesterol; 1114 mg sodium."
         },
         {
-            title: "Thai Curry Tofu",
-            category: "Thai",
+            title: "Lori's Famous Crab Cakes",
+            category: "American",
             ingredients: [
-                "1 (12 ounce) package extra-firm tofu", 
-                "1 small onion",
-                "3 cloves garlic",
-                "¼ cup fresh cilantro"
+                "1 green bell pepper",
+                "2 green onions",
+                "4 sprigs fresh parsley",
+                "1 egg",
+                "3 (6 ounce) cans crabmeat"
             ],
             photoUrl: "https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy.progressive.strip_profile,g_faces:auto,q_auto:low,w_344/8132_sfs-skillet-thai-curry-with-sweet-potatoes-and-tofu-article",
             cookingInstruction: [
-                "Heat oil in a large skillet over medium-high heat. Add tofu cubes, season with seasoned salt and fry until golden on all sides, stirring occasionally, about 15 minutes. Remove to paper towels, and set aside.",
-                "Melt butter or margarine in the same skillet over medium heat. Add the onion and garlic; cook and stir until tender. Stir in coconut milk, curry powder, salt, pepper and cilantro. Return the tofu to the skillet. Simmer over low heat for 15 minutes, stirring occasionally."
+                "In a bowl, toss together the 1/3 cup bread crumbs, green bell pepper, red bell pepper, green onions, and parsley. Mix in the egg white, mayonnaise, lemon juice, Worcestershire sauce, and Dijon mustard. Season with Old Bay seasoning, dry mustard, and onion powder. Fold crabmeat into the mixture. Form into 6 large cakes. Coat in the remaining 1/2 cup bread crumbs.",
+                "Heat the oil in a large, heavy skillet. Fry the cakes 5 minutes on each side, or until evenly brown. Drain on paper towels."
             ],
-            nutritionFacts: "Per Serving: 424 calories; 14.7 g fat; 30.2 g carbohydrates; 40.8 g protein; 369 mg cholesterol; 1114 mg sodium."
+            nutritionFacts: "Per Serving: 225 calories; 9.4 g fat; 13.8 g carbohydrates; 20.7 g protein; 77 mg cholesterol; 508 mg sodium."
+        },
+        {
+            title: "Broccoli in Roast Chicken Drippings",
+            category: "American",
+            ingredients: [
+                "¼ cup roast chicken drippings",
+                "1 head broccoli",
+                "2 cloves garlic"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/1019848.jpg",
+            cookingInstruction: [
+                "After roasting a chicken, remove it from the roasting pan and place on a serving tray to rest. Leave the oven on. Pour off excess drippings from the roasting pan, leaving just enough to coat the broccoli. Toss broccoli and garlic in the drippings until coated and place in the still hot oven. Roast for 5 to 8 minutes, until tender."
+            ],
+            nutritionFacts: "Per Serving: 225 calories; 9.4 g fat; 13.8 g carbohydrates; 20.7 g protein; 77 mg cholesterol; 508 mg sodium."
         }
     ].map(m => new Meal(m).save()));
 
