@@ -26,12 +26,9 @@ const SelectedMealSchema = new Schema ({
         type: Schema.Types.ObjectId,
         ref: 'chidren'
     },
-    meals: {
-        formType: [SingleSelectedMealSchema],
+    meals:[SingleSelectedMealSchema]
       //   required: true
-    },
-   
-
-})
+}  
+)
 
 module.exports = SelectedMeal = mongoose.model('selectedMeals', SelectedMealSchema);

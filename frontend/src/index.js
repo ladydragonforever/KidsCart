@@ -8,8 +8,9 @@ import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
 // import { getMeals, searchMeals, getSingleMeal} from './util/meal_util';
-// import {fetchSelectMeals} from './actions/select_meals_actions';
-import {fetchSelectMeals} from './util/select_meals_util';
+import {fetchSelectMeals} from './actions/select_meals_actions';
+// import {fetchSelectMeals} from './util/select_meals_util';
+import { createSelectMeals} from './actions/select_meals_actions'
 import {
     // getMeals,
     // searchMeals,
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
    //  window.getSingleMeal = getSingleMeal
     window.fetchMeal = fetchMeal
     window.fetchSelectMeals = fetchSelectMeals
+   window.createSelectMeals = createSelectMeals
     //test end
     const root = document.getElementById('root');
 

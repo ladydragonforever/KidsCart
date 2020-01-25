@@ -11,10 +11,10 @@ const SelectedMeal = require('../../models/SelectedMeal');
 
 router.post('/:child_id/selectedMeals', 
             async (req, res) => {
-
+            // debugger;
                 const matchedMeals = new SelectedMeal({
                     child: req.params.child_id,
-                    meals: req.body.meals
+                    meals: req.body
                 });
                 
             

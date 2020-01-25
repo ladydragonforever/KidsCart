@@ -15,9 +15,9 @@ export const receiveSelectMeal = selectMeal => ({
    selectMeal
 })
 
-export const postSelectMeals = selectMeals => ({
+export const postSelectMeals = postMeals => ({
    type: POST_SELECT_MEALS,
-   selectMeals
+   postMeals
 })
 
 export const removeSelectMeal = (mealId, childId) => ({
@@ -45,11 +45,12 @@ export const addSelectMeal = (childId, mealId) => dispatch => (
 );
 
 export const createSelectMeals = (childId, data) => dispatch => {
-   console.log(data);
+   console.log(data, "test action");
    return(
    SelectMealsApiUtil.createSelectMeals(childId, data)
       .then(postMeals => dispatch(postSelectMeals(postMeals)))
       .catch(err => console.log(err))
 )};
 
+window.fetchSelectMeals = fetchSelectMeals
 window.createSelectMeals = createSelectMeals;

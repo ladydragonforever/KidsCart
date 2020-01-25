@@ -5,6 +5,8 @@ import { fetchMeal, fetchSearchMeals } from '../../actions/meal_actions';
 
 const mapStateToProps = (state, ownProps) => {
    // if(!state.seesion) return null;
+   if (!state.entities.selectMeals) return null;
+   console.log(state.entities.selectMeals, "container test")
    return {
       currentUser: state.session.user,
       selectMeals: Object.values(state.entities.selectMeals),
@@ -19,7 +21,7 @@ const mapDispatchToProps = dispatch => {
       addSelectMeal: (childId, mealId) => dispatch(addSelectMeal(childId, mealId)),
       fetchSearchMeals: keyword => dispatch(fetchSearchMeals(keyword)),
       fetchMeal: mealId => dispatch(fetchMeal(mealId)),
-      createSelectMeals: childId => dispatch(createSelectMeals(childId)),
+      createSelectMeals: (childId, meal) => dispatch(createSelectMeals(childId, meal)),
       // editSingleSelectMeal: singleSelectMealId => dispatch(editSingleSelectMeal(singleSelectMealId))'
    };
 };

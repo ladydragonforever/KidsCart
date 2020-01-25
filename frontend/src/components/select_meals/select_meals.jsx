@@ -6,14 +6,15 @@ class SelectMeals extends React.Component {
    constructor(props) {
       super(props);
       this.state = {
-         word: ''
+         word: '',
+         meals: {}
       }
       this.startSearch = this.startSearch.bind(this)
    }
 
    componentDidMount(){
       this.props.fetchSelectMeals(this.props.match.params.childId)
-      .then(() => this.props.createSelectMeals(this.props.match.params.childId, this.props.selectMeals))
+         .then(() => this.props.createSelectMeals(this.props.match.params.childId, this.props.selectMeals))
    }
 
 
@@ -46,7 +47,7 @@ class SelectMeals extends React.Component {
                      Generate new meals
                   </button> */}
                   <ul className="selected-meals-list" >
-                     {selectMeals.map(meal => (
+                     {selectMeals && selectMeals.map(meal => (
                            <li key = {meal._id}>
                               <div>Title:{meal.title}</div>
                               <div>Category:{meal.category}</div>
