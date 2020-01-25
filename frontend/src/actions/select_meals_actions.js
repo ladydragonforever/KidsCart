@@ -3,6 +3,7 @@ import * as SelectMealsApiUtil from "../util/select_meals_util";
 export const RECEIVE_SELECT_MEALS = "RECEIVE_SELECT_MEALS";
 export const RECEIVE_SELECT_MEAL = "RECEIVE_SELECT_MEAL";
 export const REMOVE_SELECT_MEAL = "RECEIVE_SELECT_MEAL";
+export const POST_SELECT_MEALS = "POST_SELECT_MEALS"
 
 export const receiveSelectMeals = selectMeals => ({
    type: RECEIVE_SELECT_MEALS,
@@ -12,6 +13,11 @@ export const receiveSelectMeals = selectMeals => ({
 export const receiveSelectMeal = selectMeal => ({
    type: RECEIVE_SELECT_MEALS,
    selectMeal
+})
+
+export const postSelectMeals = selectMeals => ({
+   type: POST_SELECT_MEALS,
+   selectMeals
 })
 
 export const removeSelectMeal = (mealId, childId) => ({
@@ -38,8 +44,12 @@ export const addSelectMeal = (childId, mealId) => dispatch => (
       .catch(err => console.log(err))
 );
 
-export const postSelectMeals = (childId, data) => dispatch => (
-   SelectMealsApiUtil.postSelectMeals(childId, data)
-      .then(selectMeals => dispatch(receiveSelectMeals(selectMeals)))
+export const createSelectMeals = (childId, data) => dispatch => {
+   console.log(data);
+   return(
+   SelectMealsApiUtil.createSelectMeals(childId, data)
+      .then(postMeals => dispatch(postSelectMeals(postMeals)))
       .catch(err => console.log(err))
-);
+)};
+
+window.createSelectMeals = createSelectMeals;

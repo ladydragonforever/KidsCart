@@ -12,9 +12,8 @@ class SelectMeals extends React.Component {
    }
 
    componentDidMount(){
-      // debugger
       this.props.fetchSelectMeals(this.props.match.params.childId)
-      // .then(() => this.props.postSelectMeals(this.props.match.params.childId))
+      .then(() => this.props.createSelectMeals(this.props.match.params.childId, this.props.selectMeals))
    }
 
 
@@ -52,12 +51,12 @@ class SelectMeals extends React.Component {
                               <div>Title:{meal.title}</div>
                               <div>Category:{meal.category}</div>
                               {/* <div><img src={meal.photoUrl} /></div> */}
-                           {/* <button 
+                           <button 
                               className="delete-button" 
                               type="button" 
                               onClick={() => this.props.deleteSelectMeal(this.props.match.params.childId, meal._id)}>
                                  deselect meal
-                           </button> */}
+                           </button>
                            </li>
                         ))}
                   </ul>
@@ -83,12 +82,12 @@ class SelectMeals extends React.Component {
                            <div>Title:{meal.title}</div>
                            <div>Category:{meal.category}</div>
                            {/* <div><img src={meal.photoUrl} /></div> */}
-                           {/* <button
+                           <button
                               className="delete-button"
                               type="button"
                               onClick={() => this.props.addSelectMeal(this.props.match.params.childId, meal._id)}>
                                  select meal
-                           </button> */}
+                           </button>
                         </li>
                      ))}
                   </ul>

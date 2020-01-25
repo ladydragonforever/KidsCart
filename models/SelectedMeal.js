@@ -27,8 +27,8 @@ const SelectedMealSchema = new Schema ({
         ref: 'chidren'
     },
     meals: {
-        type: [SingleSelectedMealSchema],
-        required: true
+        formType: [SingleSelectedMealSchema],
+      //   required: true
     },
    
 
