@@ -9,12 +9,13 @@ class SelectMeals extends React.Component {
          word: '',
          meals: {}
       }
-      this.startSearch = this.startSearch.bind(this)
+      this.startSearch = this.startSearch.bind(this);
+      this.saveMealstoDB = this.saveMealstoDB.bind(this);
    }
 
    componentDidMount(){
       this.props.fetchSelectMeals(this.props.match.params.childId)
-         .then(() => this.props.createSelectMeals(this.props.match.params.childId, this.props.selectMeals))
+   
    }
 
 
@@ -31,6 +32,11 @@ class SelectMeals extends React.Component {
             this.startSearch(this.state.word)
          }
       }
+   }
+
+   saveMealstoDB() {
+      this.props.createSelectMeals(this.props.match.params.childId, this.props.selectMeals)
+      .then(this.props.history.push('/user'))
    }
 
    render() {
@@ -55,13 +61,13 @@ class SelectMeals extends React.Component {
                            <button 
                               className="delete-button" 
                               type="button" 
-                              onClick={() => this.props.deleteSelectMeal(this.props.match.params.childId, meal._id)}>
+                              onClick={() => this.props.removeSelectMeal(this.props.match.params.childId, meal._id)}>
                                  deselect meal
                            </button>
                            </li>
                         ))}
                   </ul>
-                  <button className="generate-input" type="submit">
+                  <button className="generate-input" type="submit" onClick={this.saveMealstoDB}>
                      Confim meals
                   </button>
                </form>
@@ -86,7 +92,7 @@ class SelectMeals extends React.Component {
                            <button
                               className="delete-button"
                               type="button"
-                              onClick={() => this.props.addSelectMeal(this.props.match.params.childId, meal._id)}>
+                              onClick={()=>this.props.addSelectMeal(this.props.match.params.childId, meal._id, meal.title, meal.category)}>
                                  select meal
                            </button>
                         </li>

@@ -17,7 +17,7 @@ const SingleSelectedMealSchema = new Schema ({
     },
     ingredients: {
         type: String,
-        required: true
+        required: false
     }, 
 })
 const SelectedMealSchema = new Schema ({
