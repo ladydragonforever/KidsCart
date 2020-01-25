@@ -11,16 +11,24 @@ const SelectedMeal = require('../../models/SelectedMeal');
 
 router.post('/:child_id/selectedMeals', 
             async (req, res) => {
+                const mealArray = req.body.map (meal => ({
+                    meal: meal._id
+                }))
 
-                const matchedMeals = new SelectedMeal({
-                    child: req.params.child_id,
-                    meals: req.body.meals
-                });
+                let selectedMeal = await SelectedMeal.findOne({child: req.params.child_id});
+
+                if(!selectedMeal){
+                    selectedMeal = new SelectedMeal({
+                        child: req.params.child_id,
+                    });
+                }
+                
+                selectedMeal.meals = mealArray;
             
-                const selectedMeals = await matchedMeals.save();
+                const savedSelectedMeal = await selectedMeal.save();
+                console.log(savedSelectedMeal);
 
-                res.status(200).json({selectedMeals})
-
+                res.status(200).json({selectedMeals:savedSelectedMeal})
         });
 
 router.get('/:child_id',
@@ -57,16 +65,16 @@ router.put('/:child_id/:meal_id',
 )  
 
 //  user can delete the meal they don't like
-router.delete('/:child_id/:meal_id'),
-        async (req, res) => {
-            let selectedMeal = await SelectedMeal.findOne({ child: req.params.child_id });
+// router.delete('/:child_id/:meal_id'),
+//         async (req, res) => {
+//             let selectedMeal = await SelectedMeal.findOne({ child: req.params.child_id });
 
-            selectedMeal.meals = selectedMeal.meals.filter(meal => meal.meal.toString() !== meal_id); 
-            const newSelectedMeal = await selectedMeal.save()
+//             selectedMeal.meals = selectedMeal.meals.filter(meal => meal.meal.toString() !== meal_id); 
+//             const newSelectedMeal = await selectedMeal.save()
 
-            res.status(200).json({ newSelectedMeal })
+//             res.status(200).json({ newSelectedMeal })
 
-        }
+//         }
 
 module.exports = router;
 
