@@ -36,6 +36,10 @@ const SelectMealsReducer = (state = {}, action) => {
             _id: action.mealId,
             title: action.title,
             category: action.category,
+            photoUrl: action.photoUrl,
+            ingredients: action.ingredients,
+            cookingInstruction: action.cookingInstruction,
+            nutritionFacts: action.nutritionFacts,
          }  
          return nextState; 
       default:
