@@ -180,6 +180,172 @@ router.get("/seed", async (req, res)=>{
                 "Bake until lasagna noodles are tender and casserole is bubbling, about 50 minutes. Remove foil and bake until cheese topping is lightly browned, 15 to 20 more minutes. Let stand 15 minutes before serving."
             ],
             nutritionFacts: "Per Serving: 594 calories; 29.1 g fat; 43.4 g carbohydrates; 41.2 g protein; 115 mg cholesterol; 1898 mg sodium."
+        },
+        {
+            title: "Melissa's Chicken Cacciatore",
+            category: "Italian",
+            ingredients: [
+                "1 (12 ounce) jar marinated artichoke hearts", 
+                "2 large skinless, boneless chicken breast halves", 
+                "1 large onion", 
+                "3 cloves garlic",
+                "8 ounces fresh mushrooms",
+                "1 (14.5 ounce) can diced tomatoes in juice",
+                "⅓ cup black olives",
+                "8 ounces shredded mozzarella cheese"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/889256.jpg",
+            cookingInstruction: [
+                "Preheat oven to 350 degrees F (175 degrees C).",
+                "Place half the artichoke marinade into a large skillet over medium-high heat, and brown the chicken pieces until the liquid has almost evaporated, 8 to 10 minutes. Remove the chicken pieces with a slotted spoon, and place into a 9x13-inch baking dish.",
+                "Pour the remaining marinade into the same skillet, and cook and stir the onions, garlic, mushrooms, oregano, basil, salt, rosemary, and black pepper until the onions are translucent, 5 to 8 minutes. Mix in diced tomatoes with their juice, tomato sauce, black olives, and chopped artichoke hearts. Stir the sauce well, and pour over the chicken in the baking dish. Cover the dish with foil.",
+                "Bake the chicken until the sauce is bubbling, about 45 minutes. Uncover, and drizzle the Madeira wine over the dish; top with mozzarella cheese. Return to oven, uncovered, and bake until the cheese is melted, about 10 more minutes."
+            ],
+            nutritionFacts: "Per Serving: 320 calories; 12 g total fat; 63 mg cholesterol; 1428 mg sodium. 21.2 g carbohydrates; 29.2 g protein."
+        },
+        {
+            title: "French Toast",
+            category: "American",
+            ingredients: [
+                "6 thick slices bread", 
+                "2 eggs"
+            ],
+            photoUrl: "https://www.momables.com/wp-content/uploads/2013/12/Egg-free-french-toast_post.jpg",
+            cookingInstruction: [
+                "Beat together egg, milk, salt, desired spices and vanilla.",
+                "Heat a lightly oiled griddle or skillet over medium-high heat.",
+                "Dunk each slice of bread in egg mixture, soaking both sides. Place in pan, and cook on both sides until golden. Serve hot."
+            ],
+            nutritionFacts: "Per Serving: 240 calories; 6.4 g fat; 33.6 g carbohydrates; 10.6 g protein; 128 mg cholesterol; 478 mg sodium."
+        },
+        {
+            title: "Easy Chicken Pasta Alfredo",
+            category: "American",
+            ingredients: [
+                "4 skinless, boneless chicken breast halves", 
+                "½ pound fresh mushrooms",
+                "⅓ cup grated Parmesan cheese"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/1105549.jpg",
+            cookingInstruction: [
+                "Bring a large pot of lightly salted water to a boil. Add tortellini. Cook, stirring occasionally, until tortellini float to the top and the filling is hot, about 5 minutes. Drain.",
+                "Heat vegetable oil in a large skillet over medium heat; cook and stir chicken breast in hot oil until no longer pink in the center, about 10 minutes. Remove from heat.",
+                "Melt butter in another skillet over medium heat; cook and stir mushrooms and garlic powder until mushrooms begin to soften, about 3 minutes. Stir heavy cream into mushrooms and bring to a boil. Reduce heat to medium-low and simmer until slightly thickened, about 3 minutes. Add Parmesan cheese, parsley, and salt. Continue to cook until cheese is melted, about 1 minute.",
+                "Stir tortellini and chicken into mushroom-cream sauce. Simmer until heated through, about 2 minutes."
+            ],
+            nutritionFacts: "Per Serving: 686 calories; 46.9 g total fat; 201 mg cholesterol; 843 mg sodium. 38.4 g carbohydrates; 30.2 g protein."
+        },
+        {
+            title: "Beef and Sweet Potato Stew",
+            category: "American",
+            ingredients: [
+                "1 1/2 pounds top round beef", 
+                "2 large sweet potatoes",
+                "2 carrots",
+                "2 stalks celery",
+                "1 (8 ounce) package pearl onions",
+                "1 (4.5 ounce) can mushrooms",
+                "1 (28 ounce) can tomato puree",
+                "1 clove garlic"
+            ],
+            photoUrl: "https://www.diabetesfoodhub.org/system/thumbs/system/images/recipes/Recid_78_beef_sweet_potato_stew_iStock585609020_022118_2959761669.jpg",
+            cookingInstruction: [
+                "Preheat the oven to 300 degrees F (150 degrees C).",
+                "Place chunks of meat into a large baking pan. Add sweet potatoes, carrots, celery, onions, and mushrooms.",
+                "Combine tomato puree, water, gravy mix, garlic, thyme, garlic salt, and black pepper in a bowl. Pour over meat and vegetables in the baking pan. Cover with aluminum foil.",
+                "Bake in the preheated oven for about 3 hours."
+            ],
+            nutritionFacts: "Per Serving: 384 calories; 7.5 g fat; 55.3 g carbohydrates; 25.9 g protein; 50 mg cholesterol; 1255 mg sodium."
+        },
+        {
+            title: "Orange and Milk-Braised Pork Carnitas",
+            category: "American",
+            ingredients: [
+                "3 1/2 pounds boneless pork shoulder", 
+                "2 bay leaves",
+                "1 orange"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/250x250/2280918.jpg",
+            cookingInstruction: [
+                "Season pork with pepper and salt.",
+                "Heat oil in large pot over high heat. Working in batches, cook pork in the hot oil until browned on all sides, about 5 minutes. Return all cooked pork and accumulated juice to pot.",
+                "Season pork with bay leaves, cumin, dried oregano, and cayenne pepper. Stir in fresh orange juice, orange zest, and milk. Bring mixture to a boil over high heat; reduce heat to low. Cover and simmer, stirring occasionally, until meat is fork tender but not falling apart, about 2 hours.",
+                "Preheat oven to 450 degrees F (230 degrees C).",
+                "Remove pork from liquid. Skim some fat from the pot to grease a baking dish. Transfer the pieces of pork to the baking dish. Drizzle about 2 more tablespoons of the floating fat over the meat. Season with more salt, if needed.",
+                "Bake in preheated oven until pork is browned, about 15 minutes. Stir pork.",
+                "Turn on oven's broiler. Cook pork under broiler until crisp, 2 to 3 minutes."
+            ],
+            nutritionFacts: "Per Serving: 325 calories; 24.1 g fat; 3.7 g carbohydrates; 22.4 g protein; 84 mg cholesterol; 805 mg sodium."
+        },
+        {
+            title: "Chef John's Shrimp Etouffee",
+            category: "American",
+            ingredients: [
+                "2 pounds shrimp", 
+                "1 green bell pepper",
+                "1 pound celery",
+                "2 tomatoes",
+                "3 green onions"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/560x315/5118524.jpg",
+            cookingInstruction: [
+                "Whisk paprika, thyme, oregano, cayenne pepper, garlic powder, onion powder, white pepper, and black pepper together in a small bowl.",
+                "Drain shrimp in a colander for at least 15 minutes. Transfer to a bowl lined with paper towels and dry shrimp for about 3 minutes. Remove paper towels from bowl and season shrimp with 1 teaspoon salt and 1 teaspoon spice blend. Toss to coat shrimp with spice blend.",
+                "Heat vegetable oil a large heavy skillet over high heat until oil is smoking hot. Cook shrimp in the hot oil without stirring for 1 minute; stir, and cook 1 minute more.",
+                "Transfer shrimp to a large bowl. Let stand until juice forms in bowl. Strain shrimp juices into chicken stock to total 2 cups, adding more chicken stock if necessary.",
+                "Melt butter in large skillet over medium heat until butter begins to turn tan at the edges. Saute onion, celery, and green pepper in hot butter until softened, about 5 minutes. Pour in remaining spice blend.",
+                "Sprinkle flour into vegetable mixture and saute until combined, 3 to 4 minutes. Stir in tomatoes; cook until tomato juices begin to brown on bottom of pan, about 3 minutes. Whisk stock into vegetable mixture, stirring until smooth. Bring to a simmer and cook until slightly thickened and reduced to a gravy consistency, 3 to 5 minutes. Stir in Worcestershire sauce and hot sauce. Season with salt to taste.",
+                "Stir shrimp into etouffee sauce; let simmer until shrimp are cooked all the way through and no longer translucent, about 1 minute.",
+                "Garnish with green onions and a dusting of cayenne pepper. Pour over rice in large, shallow bowls."
+            ],
+            nutritionFacts: "Per Serving: 424 calories; 14.7 g fat; 30.2 g carbohydrates; 40.8 g protein; 369 mg cholesterol; 1114 mg sodium."
+        },
+        {
+            title: "Thai Curry Tofu",
+            category: "Thai",
+            ingredients: [
+                "1 (12 ounce) package extra-firm tofu", 
+                "1 small onion",
+                "3 cloves garlic",
+                "¼ cup fresh cilantro"
+            ],
+            photoUrl: "https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy.progressive.strip_profile,g_faces:auto,q_auto:low,w_344/8132_sfs-skillet-thai-curry-with-sweet-potatoes-and-tofu-article",
+            cookingInstruction: [
+                "Heat oil in a large skillet over medium-high heat. Add tofu cubes, season with seasoned salt and fry until golden on all sides, stirring occasionally, about 15 minutes. Remove to paper towels, and set aside.",
+                "Melt butter or margarine in the same skillet over medium heat. Add the onion and garlic; cook and stir until tender. Stir in coconut milk, curry powder, salt, pepper and cilantro. Return the tofu to the skillet. Simmer over low heat for 15 minutes, stirring occasionally."
+            ],
+            nutritionFacts: "Per Serving: 424 calories; 14.7 g fat; 30.2 g carbohydrates; 40.8 g protein; 369 mg cholesterol; 1114 mg sodium."
+        },
+        {
+            title: "Lori's Famous Crab Cakes",
+            category: "American",
+            ingredients: [
+                "1 green bell pepper",
+                "2 green onions",
+                "4 sprigs fresh parsley",
+                "1 egg",
+                "3 (6 ounce) cans crabmeat"
+            ],
+            photoUrl: "https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy.progressive.strip_profile,g_faces:auto,q_auto:low,w_344/8132_sfs-skillet-thai-curry-with-sweet-potatoes-and-tofu-article",
+            cookingInstruction: [
+                "In a bowl, toss together the 1/3 cup bread crumbs, green bell pepper, red bell pepper, green onions, and parsley. Mix in the egg white, mayonnaise, lemon juice, Worcestershire sauce, and Dijon mustard. Season with Old Bay seasoning, dry mustard, and onion powder. Fold crabmeat into the mixture. Form into 6 large cakes. Coat in the remaining 1/2 cup bread crumbs.",
+                "Heat the oil in a large, heavy skillet. Fry the cakes 5 minutes on each side, or until evenly brown. Drain on paper towels."
+            ],
+            nutritionFacts: "Per Serving: 225 calories; 9.4 g fat; 13.8 g carbohydrates; 20.7 g protein; 77 mg cholesterol; 508 mg sodium."
+        },
+        {
+            title: "Broccoli in Roast Chicken Drippings",
+            category: "American",
+            ingredients: [
+                "¼ cup roast chicken drippings",
+                "1 head broccoli",
+                "2 cloves garlic"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/1019848.jpg",
+            cookingInstruction: [
+                "After roasting a chicken, remove it from the roasting pan and place on a serving tray to rest. Leave the oven on. Pour off excess drippings from the roasting pan, leaving just enough to coat the broccoli. Toss broccoli and garlic in the drippings until coated and place in the still hot oven. Roast for 5 to 8 minutes, until tender."
+            ],
+            nutritionFacts: "Per Serving: 225 calories; 9.4 g fat; 13.8 g carbohydrates; 20.7 g protein; 77 mg cholesterol; 508 mg sodium."
         }
     ].map(m => new Meal(m).save()));
 
