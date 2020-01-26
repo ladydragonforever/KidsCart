@@ -99,7 +99,7 @@ class SelectMeals extends React.Component {
                      <input 
                         className="discover-input" 
                         type="text" 
-                        placeholder="Discover more options"
+                        placeholder="Discover more by typing (Japanese, Chinese...)"
                         value={this.state.word}
                         onChange = {this.update()}
                         onKeyPress={this.searchFunc()}

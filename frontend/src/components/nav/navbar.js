@@ -104,7 +104,7 @@ class NavBar extends React.Component {
                 <img alt='' src={process.env.PUBLIC_URL + '/kidscart_logo.png'} className="logo" onClick={this.backToHome}/>
                 <div style={{ flex: "0.7"}}>
                     <label className="search-label">
-                        <input className="search-input" type="text" placeholder="Search for anything" 
+                        <input className="search-input" type="text" placeholder="Discover by category: Japanese, Chinese..." 
                             onFocus={this.inputFocus} 
                             onBlur={this.inputUnFocus} 
                             onKeyUp={this.getSearchInput}   
