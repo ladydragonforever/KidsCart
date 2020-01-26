@@ -2,7 +2,7 @@
 
 Interactive lunchbox planner app for busy working parents!
 
-[Live Site] (https://kidscart.herokuapp.com/)
+[Live Site](https://kidscart.herokuapp.com/)
 
 ## Background and Overview
 
@@ -20,20 +20,29 @@ As overview, KidsCart has:
   
 ## Functionalities and Highlights 
 
-## Technologies used
+### Interactive interface for 
 
-The KidsCart app is built with the MERN stack (MongoDB, Express, React, and Node.js). It features a back-end HTTP API used for retrieving user records in conjunction with client side rendering with React. Considering the low-latency and scalabitily, we chose MongoDB as database and Mongoose to manage schemas and queries.
+### Advanced search function
 
-Here is an overview of our database achitecture:
-
+### Scalable and flexible database achitecture
 ![alt text](https://github.com/ladydragonforever/KidsCart/blob/master/Kidscart%20architecture%20backend.png)
 
+## Technologies used
+
+The KidsCart app is built with the MERN stack (MongoDB, Express, React, and Node.js). It features a back-end HTTP API used for retrieving user records in conjunction with client side rendering with React/Redux. Node.js and Express are used for backend routing. Considering the low-latency and scalabitily, we chose MongoDB as database and Mongoose to manage schemas and queries.
+
 - Backend
-  * Database: MongoDB
-  * Routing, Controllers, and Models: 
-  * Auth: BCrypt
+  * express (the main framework)
+  * mongoose (to connect and interact with MongoDB)
+  * passport (for authentication)
+  * passport-jwt (for JSON web tokens)
+  * jsonwebtoken (to generate the tokens)
+  * body-parser (to parse data from requests)
+  * bcryptjs (for securing the password with hashing and salting)
+  * validator (for database validations)
+  * nodemon for watching the changes and updating instantly
+  
 - Frontend
-React with Redux for state management
-jQuery(only for AJAX requests)
-jBuilder for backend requests
-Styling and animations done with SCSS/CSS
+  * React with Redux for state management
+  * Axios for sending HTTP requests
+  * Styling and animations done with SCSS/CSS
