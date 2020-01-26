@@ -27,12 +27,16 @@ export const removeSelectMeal = (childId, mealId) => ({
    childId
 });
 
-export const addSelectMeal = (childId, mealId, title, category) => ({
+export const addSelectMeal = (childId, mealId, title, category, photoUrl, ingredients, cookingInstruction, nutritionFacts) => ({
    type: ADD_SELECT_MEAL,
    childId,
    mealId,
    title,
-   category
+   category,
+   photoUrl,
+   ingredients,
+   cookingInstruction,
+   nutritionFacts,
 });
 
 export const fetchSelectMeals = childId => dispatch => (
