@@ -35,6 +35,7 @@
     font-size: 15px;
     text-align: center;
     line-height: 46px;
+    cursor: pointer;
  }
 
 .baby-box {
@@ -48,7 +49,6 @@
  .baby-box:hover {
     background: #fffdfd;
     border-bottom: 2px solid #dad9d9;
-    cursor: pointer;
  }
 
  .baby-text {
@@ -121,6 +121,7 @@
     border-radius: 5px;
     background-color: #acbad0;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .button-profile:hover {
