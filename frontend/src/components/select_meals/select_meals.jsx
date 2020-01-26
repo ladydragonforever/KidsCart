@@ -47,6 +47,7 @@ class SelectMeals extends React.Component {
          <main className="selected-shell">
             <p className="select-title">Plan your meals here:</p>
             <section className="child-select">
+               <p>Deselect a meal first if you want to add a new one:</p>
                <form className="selected-meals-form">
                   {/* <button className="generate-input" type="text"
                      // onClick={this.props.fetchSelectMeals(this.props.match.params.childId)}>
