@@ -11,8 +11,7 @@ router.get('/:child_id/matching-meals', async (req, res) => {
    // console.log(child.category)
    const childCategory = child.category;
    // const ingredient = child.ingredient;
-   const select_meals = await Meal.find({category : { $in: childCategory }})
-
+   const select_meals = await Meal.find({category : { $in: childCategory }}).limit(5);
    res.status(200).json(select_meals);
 });
 
