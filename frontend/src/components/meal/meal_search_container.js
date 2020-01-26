@@ -2,6 +2,7 @@ import MealSearch from './meal_search';
 import { connect } from 'react-redux';
 import {
     fetchSearchMeals,
+    clearMeals
     // fetchMeals,
 } from '../../actions/meal_actions';
 
@@ -12,7 +13,8 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchSearchMeals: keyword => dispatch(fetchSearchMeals(keyword))
+    fetchSearchMeals: keyword => dispatch(fetchSearchMeals(keyword)),
+    clearMeals: () => dispatch(clearMeals())
 });
 
 
