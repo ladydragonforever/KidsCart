@@ -22,19 +22,19 @@ As overview, KidsCart has:
 
 ### Features
 
-- Search
+Search
  * Our search function allows users to search for lunchbox receipees without being logged in, as well as serach for meals to replace pre-generated ones.
  * The search function is case insensitive and users can search with category and key words. 
  
-- Food preference selection
+Food preference selection
  * Users can choose their favorite food category with specific ingredients through an interactive User Interface.
  * Users create forms for each child and add food preference to them
  
-- SelectedReceipees
-* Based on preference, lunchbox receipees will be automatically generated for each child.
-* Users can add a new one based on search, delete a particular one.
+SelectedReceipees
+ * Based on preference, lunchbox receipees will be automatically generated for each child.
+ * Users can add a new one based on search, delete a particular one.
 
-- Profile and summary
+Profile and summary
  * Users can add more or delete child forms
  * Users can create their user profile
  * Users can see the summary of their selected meals, and can see the detail of each meal through links.
