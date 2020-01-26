@@ -326,7 +326,7 @@ router.get("/seed", async (req, res)=>{
                 "1 egg",
                 "3 (6 ounce) cans crabmeat"
             ],
-            photoUrl: "https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy.progressive.strip_profile,g_faces:auto,q_auto:low,w_344/8132_sfs-skillet-thai-curry-with-sweet-potatoes-and-tofu-article",
+            photoUrl: "https://images.media-allrecipes.com/userphotos/560x315/1649402.jpg",
             cookingInstruction: [
                 "In a bowl, toss together the 1/3 cup bread crumbs, green bell pepper, red bell pepper, green onions, and parsley. Mix in the egg white, mayonnaise, lemon juice, Worcestershire sauce, and Dijon mustard. Season with Old Bay seasoning, dry mustard, and onion powder. Fold crabmeat into the mixture. Form into 6 large cakes. Coat in the remaining 1/2 cup bread crumbs.",
                 "Heat the oil in a large, heavy skillet. Fry the cakes 5 minutes on each side, or until evenly brown. Drain on paper towels."
@@ -413,7 +413,7 @@ router.get("/seed", async (req, res)=>{
                 "2 eggs",
                 "rice"
             ],
-            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/4557813.jpg",
+            photoUrl: "https://hips.hearstapps.com/del.h-cdn.co/assets/17/24/1497458825-delish-shrimp-fried-rice-1-1024.jpg",
             cookingInstruction: [
                 "In a saucepan bring water to a boil. Add rice and stir. Reduce heat, cover and simmer for 20 minutes. Set aside and allow rice to cool.",
                 "Heat a large skillet or wok for 2 minutes. When the skillet or wok is hot, pour in vegetable oil, bean sprouts and onions. Mix well and cook for 3 minutes.",
@@ -430,7 +430,7 @@ router.get("/seed", async (req, res)=>{
                 "2 ounces Cheddar cheese",
                 "1 avocado"
             ],
-            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/4557813.jpg",
+            photoUrl: "https://s23209.pcdn.co/wp-content/uploads/2016/04/5MinuteAvocadoToastIMG_8273edit-360x360.jpg",
             cookingInstruction: [
                 "Preheat oven to 300 degrees F (150 degrees C).",
                 "Heat a large skillet or wok for 2 minutes. When the skillet or wok is hot, pour in vegetable oil, bean sprouts and onions. Mix well and cook for 3 minutes.",
@@ -465,7 +465,7 @@ router.get("/seed", async (req, res)=>{
             ingredients: [
                 "3 slices bread"
             ],
-            photoUrl: "https://wearychef.com/wp-content/uploads/2016/01/turkey-sandwich-with-goat-cheese-and-jam-6.jpg",
+            photoUrl: "https://www.readersdigest.ca/wp-content/uploads/sites/14/2017/04/peanut-butter-and-jelly-facts.jpg",
             cookingInstruction: [
                 "Toast 1 bread slice, allow to cool. Spread one side of each of the two remaining slices with preserves. Spread both sides of the toasted slice with peanut butter. Form a sandwich with the toasted slice in the center."
             ],
@@ -592,31 +592,21 @@ router.get("/seed", async (req, res)=>{
             nutritionFacts: "Per Serving: 545 calories; 26.4 g fat; 51.7 g carbohydrates; 25.7 g protein; 142 mg cholesterol; 779 mg sodium."
         },
         {
-            title: "Inside Out Ravioli",
-            category: "American",
+            title: "Shortcut Beef Noodle Bowl",
+            category: "Chinese,American",
             ingredients: [
-                "16 ounces pasta",
-                "1 package spinach",
-                "2 ounces bread crumbs",
-                "2 eggs",
-                "1 ounce shredded mozzarella cheese",
-                "1 pound lean ground beef",
-                "4 onions",
-                "1 clove garlic",
-                "1 (8 ounce) can tomato sauce",
-                "1 (6 ounce) can tomato paste",
-                "1 (16 ounce) jar spaghetti sauce"
+                "1 (16 ounce) package linguine pasta",
+                "1 broccoli ",
+                "3 carrots",
+                "1 pound beef sirloin steak"
             ],
-            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/663068.jpg",
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/4458795.jpg",
             cookingInstruction: [
-                "In a medium pot cook pasta in boiling salted water until al dente. Drain well.",
-                "Cook spinach according to package directions.",
-                "Meanwhile, brown ground beef, chopped onion, and minced garlic in a large skillet over medium heat. Stir in tomato sauce, tomato paste, and pasta sauce. Simmer for 10 minutes.",
-                "Combine cooked spinach, cooked pasta, bread crumbs, shredded cheese, beaten eggs, and olive oil.",
-                "Spread spinach mixture evenly into the bottom of a 9x13 inch baking dish. Top with meat mixture.",
-                "Bake in a preheated 350 degree F oven (175 degree C) for 30 minutes."
+                "Bring a large pot of lightly salted water to a boil. Cook linguine until firm to the bite, about 9 minutes. Add broccoli and carrots; cook until linguine is tender, about 2 minutes more. Drain.",
+                "Heat oil in a large nonstick skillet or wok. Add steak slices; cook and stir until browned on all sides, about 4 minutes. Stir in sesame dressing and teriyaki sauce. Cook until sauce is thickened, about 2 minutes.",
+                "Stir linguine, broccoli, and carrots into the sauce. Increase heat to high and cook until noodles are slightly browned, 2 to 3 minutes."
             ],
-            nutritionFacts: "Per Serving: 545 calories; 26.4 g fat; 51.7 g carbohydrates; 25.7 g protein; 142 mg cholesterol; 779 mg sodium."
+            nutritionFacts: "Per Serving: 1055 calories; 56.2 g fat; 101.8 g carbohydrates; 40.1 g protein; 60 mg cholesterol; 1716 mg sodium."
         }
     ].map(m => new Meal(m).save()));
 
