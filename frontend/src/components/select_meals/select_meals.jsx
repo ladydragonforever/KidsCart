@@ -42,7 +42,7 @@ class SelectMeals extends React.Component {
 
    render() {
       const {meals, selectMeals} = this.props;
-      const fiveSelectMeals = selectMeals.length > 5 ? selectMeals.slice(selectMeals.length - 5) : selectMeals;
+      // const fiveSelectMeals = selectMeals.length > 5 ? selectMeals.slice(selectMeals.length - 5) : selectMeals;
       return(
          <main className="selected-shell">
             <p className="select-title">Plan your meals here:</p>
@@ -53,7 +53,7 @@ class SelectMeals extends React.Component {
                      Generate new meals
                   </button> */}
                   <ul className="selected-meals-list" >
-                     {fiveSelectMeals.map(meal => (
+                     {selectMeals.map(meal => (
                            <li 
                               key = {meal._id}
                               className="list-element"
