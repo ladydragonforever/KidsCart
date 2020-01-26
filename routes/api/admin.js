@@ -476,7 +476,7 @@ router.get("/seed", async (req, res)=>{
             category: "American",
             ingredients: [
                 "1 (16 ounce) package linguine pasta",
-                " shallots",
+                "2 shallots",
                 "2 cloves garlic",
                 "1 pound shrimp",
                 "1 lemon",
@@ -489,6 +489,134 @@ router.get("/seed", async (req, res)=>{
                 "Pour white wine and lemon juice into skillet and bring to a boil while scraping the browned bits of food off of the bottom of the skillet with a wooden spoon. Melt 2 tablespoons butter in skillet, stir 2 tablespoons olive oil into butter mixture, and bring to a simmer. Toss linguine, shrimp, and parsley in the butter mixture until coated; season with salt and black pepper. Drizzle with 1 teaspoon olive oil to serve."
             ],
             nutritionFacts: "Per Serving: 511 calories; 19.4 g fat; 57.5 g carbohydrates; 21.9 g protein; 135 mg cholesterol; 260 mg sodium."
+        },
+        {
+            title: "Cream Cheese and Crab Sushi Rolls",
+            category: "Japanese",
+            ingredients: [
+                "2 sheets nori seaweed sheets",
+                "1 cucumber",
+                "2 pieces imitation crab legs",
+                "1/2 (3 ounce) package cream cheese",
+                "rice"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/4208534.jpg",
+            cookingInstruction: [
+                "Bring the rice and water to a boil in a saucepan over high heat. Reduce heat to medium-low, cover, and simmer until the rice is tender, and the liquid has been absorbed, 20 to 25 minutes. Stir in rice vinegar and salt. Allow to cool completely.",
+                "Lay out seaweed sheets. Moisten hands with water, then spread the rice evenly on each sheet, leaving a 1/2 inch gap along one edge, lengthwise. Arrange strips of cucumber, imitation crabmeat, and cream cheese in a straight line along the side opposite of the gap. Roll the sushi from the toppings to the exposed end of the the seaweed sheet.",
+                "Using a sharp wet knife, slice each roll into 5 or 6 pieces. Serve with minced ginger on the side."
+            ],
+            nutritionFacts: "Per Serving: 444 calories; 8.2 g fat; 79.9 g carbohydrates; 10.7 g protein; 29 mg cholesterol; 1475 mg sodium."
+        },
+        {
+            title: "Gyoza",
+            category: "Japanese",
+            ingredients: [
+                "1 cabbage",
+                "5 onions",
+                "1 clove garlic",
+                "1 carrot",
+                "1/2 pound ground pork",
+                "1 egg",
+                "1 (10 ounce) package wonton wrappers"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/250x250/313346.jpg",
+            cookingInstruction: [
+                "Heat sesame oil in a large skillet over medium high heat. Mix in cabbage, onion, garlic and carrot. Cook and stir until cabbage is limp. Mix in ground pork and egg. Cook until pork is evenly brown and egg is no longer runny.",
+                "Preheat vegetable oil in a large skillet over medium high heat.",
+                "Place approximately 1 tablespoon of the cabbage and pork mixture in the center of each wrapper. Fold wrappers in half over filling, and seal edges with moistened fingers.",
+                "In the preheated vegetable oil, cook gyoza approximately 1 minute per side, until lightly browned. Place water into skillet and reduce heat. Cover and allow gyoza to steam until the water is gone.",
+                "In a small bowl, mix soy sauce and rice vinegar. Use the mixture as a dipping sauce for the finished wrappers."
+            ],
+            nutritionFacts: "Per Serving: 184 calories; 8.5 g fat; 18.5 g carbohydrates; 7.9 g protein; 37 mg cholesterol; 546 mg sodium."
+        },
+        {
+            title: "Soba with Toasted Sesame Seed Sauce",
+            category: "Japanese",
+            ingredients: [
+                "8 ounces dried soba noodles",
+                "5 onions",
+                "1 clove garlic",
+                "5 green onions",
+                "1 broccoli"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/1167296.jpg",
+            cookingInstruction: [
+                "Preheat the oven to 375 degrees F (190 degrees C).",
+                "Pour the sesame seeds onto a rimmed baking sheet. Toast the seeds in the oven for 10 to 12 minutes, until they are a rich brown around the edges.",
+                "Meanwhile, bring a large pot of salted water to a boil. Add the noodles and cook them for 5 to 6 minutes, or until they are just tender. Drain them, rinse them well with cold water, and drain them again.",
+                "In a large mixing bowl, mix together the vinegar, sugar, soy sauce, garlic, sesame oil and green onions. Add the noodles, and the toasted sesame seeds. Toss well, then stir in the broccoli. Let the dish sit for 30 minutes at room temperature before serving."
+            ],
+            nutritionFacts: "Per Serving: 355 calories; 10.9 g fat; 57.3 g carbohydrates; 14.2 g protein; 0 mg cholesterol; 1037 mg sodium."
+        },
+        {
+            title: "Miso Salmon",
+            category: "Japanese",
+            ingredients: [
+                "2 pounds salmon",
+                "rice"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/6538331.jpg",
+            cookingInstruction: [
+                "Preheat the oven to 400 degrees F (200 degrees C). Fill a large skillet with about 1 inch of water and bring to a boil. Poach fish just until cooked on the outside, about 2 minutes per side. Transfer fillets to a broiler pan.",
+                "In a small bowl, stir together the miso paste, sake, brown sugar, sesame seeds, sesame oil, water, salad dressing and rice vinegar. Spread this over the tops of the salmon fillets.",
+                "Bake for 15 minutes in the preheated oven, or until almost cooked through. Switch the oven to broil, and broil until the top is browned and bubbly, about 5 more minutes. Cut fillets into portions to serve."
+            ],
+            nutritionFacts: "Per Serving: 719 calories; 40.5 g fat; 34.9 g carbohydrates; 50.5 g protein; 132 mg cholesterol; 2247 mg sodium."
+        },
+        {
+            title: "Inside Out Ravioli",
+            category: "American",
+            ingredients: [
+                "16 ounces pasta",
+                "1 package spinach",
+                "2 ounces bread crumbs",
+                "2 eggs",
+                "1 ounce shredded mozzarella cheese",
+                "1 pound lean ground beef",
+                "4 onions",
+                "1 clove garlic",
+                "1 (8 ounce) can tomato sauce",
+                "1 (6 ounce) can tomato paste",
+                "1 (16 ounce) jar spaghetti sauce"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/663068.jpg",
+            cookingInstruction: [
+                "In a medium pot cook pasta in boiling salted water until al dente. Drain well.",
+                "Cook spinach according to package directions.",
+                "Meanwhile, brown ground beef, chopped onion, and minced garlic in a large skillet over medium heat. Stir in tomato sauce, tomato paste, and pasta sauce. Simmer for 10 minutes.",
+                "Combine cooked spinach, cooked pasta, bread crumbs, shredded cheese, beaten eggs, and olive oil.",
+                "Spread spinach mixture evenly into the bottom of a 9x13 inch baking dish. Top with meat mixture.",
+                "Bake in a preheated 350 degree F oven (175 degree C) for 30 minutes."
+            ],
+            nutritionFacts: "Per Serving: 545 calories; 26.4 g fat; 51.7 g carbohydrates; 25.7 g protein; 142 mg cholesterol; 779 mg sodium."
+        },
+        {
+            title: "Inside Out Ravioli",
+            category: "American",
+            ingredients: [
+                "16 ounces pasta",
+                "1 package spinach",
+                "2 ounces bread crumbs",
+                "2 eggs",
+                "1 ounce shredded mozzarella cheese",
+                "1 pound lean ground beef",
+                "4 onions",
+                "1 clove garlic",
+                "1 (8 ounce) can tomato sauce",
+                "1 (6 ounce) can tomato paste",
+                "1 (16 ounce) jar spaghetti sauce"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/663068.jpg",
+            cookingInstruction: [
+                "In a medium pot cook pasta in boiling salted water until al dente. Drain well.",
+                "Cook spinach according to package directions.",
+                "Meanwhile, brown ground beef, chopped onion, and minced garlic in a large skillet over medium heat. Stir in tomato sauce, tomato paste, and pasta sauce. Simmer for 10 minutes.",
+                "Combine cooked spinach, cooked pasta, bread crumbs, shredded cheese, beaten eggs, and olive oil.",
+                "Spread spinach mixture evenly into the bottom of a 9x13 inch baking dish. Top with meat mixture.",
+                "Bake in a preheated 350 degree F oven (175 degree C) for 30 minutes."
+            ],
+            nutritionFacts: "Per Serving: 545 calories; 26.4 g fat; 51.7 g carbohydrates; 25.7 g protein; 142 mg cholesterol; 779 mg sodium."
         }
     ].map(m => new Meal(m).save()));
 
