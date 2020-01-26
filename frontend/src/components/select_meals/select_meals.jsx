@@ -71,16 +71,16 @@ class SelectMeals extends React.Component {
                               <div className="dropdown-meal-content">
                                  <div id="header-info">{meal.category}: {meal.title}</div>
                                  <div>Ingredients:
-                                    {meal.ingredients.map(ingredient => (
-                                          <ul>
+                                    {meal.ingredients.map((ingredient, i) => (
+                                          <ul key={i}>
                                              <li>{ingredient}</li>
                                           </ul>
                                        ))}
                                  </div>
                                    
                                  <div>Cooking Instruction:
-                                       {meal.cookingInstruction.map(instruction => (
-                                          <ul>
+                                       {meal.cookingInstruction.map((instruction, i) => (
+                                          <ul key={i}>
                                              <li>{instruction}</li>
                                           </ul>
                                        ))}
