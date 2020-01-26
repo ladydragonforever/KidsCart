@@ -1,10 +1,28 @@
 import React from "react"
+// import { url } from "inspector"
 // import { Link } from 'react-router-dom'
 
 class Home extends React.Component {
     constructor(props) {
         super(props)
         this.requireLogin = this.requireLogin.bind(this)
+        this.state = {
+            index: 0,
+            backgroundImages: [
+                "https://9qudp2z48ar3r1cja2i7gtx1-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/food-and-nutrition-guide-for-kids-healthy-teeth.jpg",
+                "https://writepaperforme.org/wp-content/uploads/2019/12/healthy-eating-habits-for-kids.jpg",
+                "https://www.tabib.pk/wp-content/uploads/2019/09/Healthy-Kids-Diet-Habits-to-Develop-For-Good-Health-Tabib.pk-1.jpg",
+                "https://jagwire.augusta.edu/wp-content/uploads/sites/15/2017/01/little-kid-smiling-e1485192628129.jpg",
+                "https://blog.organwiseguys.com/wp-content/uploads/2015/09/Asian-Girl-with-Vegetable-1080x675.jpg",
+                "http://www.cityguideny.com/columnpic/young-girl-eating-vegetables.jpg",
+                "https://chelkogroup.com/wp-content/uploads/2019/03/las-vegas-preschool-daycare-childcare.png",
+                "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F38%2F2016%2F12%2F12231705%2Feating_at_daycare.jpg&q=85",
+                "https://evoosante.ca/wp-content/uploads/2019/04/daycare_centers.jpg",
+                "https://cdn.websites.hibu.com/d29d9bd4ddc84f82918067200ae98785/dms3rep/multi/mobile/KIDS+U+KIDS.PNG"
+            ],
+            id: null
+        }
+        this.changeImg = this.changeImg.bind(this)
     }
 
     requireLogin() {
@@ -15,13 +33,37 @@ class Home extends React.Component {
         }
     }
 
+    componentDidMount () {
+        const id = setInterval(this.changeImg, 5000)
+        this.setState({
+            id: id
+        })
+    }
+
+    componentWillUnmount() {
+        window.clearInterval(this.state.id)
+    }
+    
+    changeImg() {
+        if(this.state.index > this.state.backgroundImages.length - 1) {
+            this.setState({
+                index:0
+            })
+        } else {
+            this.setState({
+                index: this.state.index + 1
+            })
+        }
+
+    }
+
     render() {
         return (
-            <div>
-                <div className="homeVideoContainer">
-                    <video poster="https://media.blueapron.com/home_page/Splash/website_header_201911.png?quality=80" preload="auto" autoPlay="" loop={true} muted="" style={{width:"100%"}}>
-                        <source src="https://media.blueapron.com/home_page/Splash/BA_Holiday_201911.mp4" type="video/mp4" />
-                    </video>
+            <div className="home-container">
+                <div className="homeVideoContainer" style={{
+                        // backgroundImage: `url(${this.state.backgroundImages[this.state.index]}) `
+                    backgroundImage: `url(https://9qudp2z48ar3r1cja2i7gtx1-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/food-and-nutrition-guide-for-kids-healthy-teeth.jpg) `
+                    }}>
                     <div className="videoText">
                         <h2>Order our top-rated recipes for your kids</h2>
                         {/* <Link to={this.requireLogin()} className="videoButton" >GET STARTED</Link> */}

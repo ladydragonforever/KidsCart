@@ -37,6 +37,7 @@ body {
     line-height: 1.35135;
     border-radius: 10px;
     margin-right: 4px;
+    outLine:none;
     font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
 }
 
@@ -134,3 +135,9 @@ body {
      cursor: pointer;
  }
 
+.kid-eating-img {
+    position: absolute;
+    clip: rect(120px, calc(100vw), 725px, 0px);
+    width: 100%;
+    top: -21px;
+}

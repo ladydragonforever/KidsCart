@@ -121,7 +121,7 @@ class LoginForm extends React.Component {
         return (
          <Draggable handle="h1">
           <div className="session-form">
-              <h1>Login</h1>
+              <h1>Log In</h1>
               <button className="close-form" type="button" onClick={this.props.closeModal}>×</button>
                  <form onSubmit={this.handleSubmit} className="signup-form">
                     <div className="session-inputs">
