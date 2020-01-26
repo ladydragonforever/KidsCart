@@ -14,11 +14,6 @@ class UserHome extends React.Component {
         this.props.fetchUser(this.props.userId)
     }
 
-    // componentDidUpdate() {
-    //     if(this.props.user)
-    //     // this.props.fetchUser(this.props.userId)
-    // }
-
     deleteChild(childId) {
         this.props.deleteAChild(childId)
         .then(() => {
