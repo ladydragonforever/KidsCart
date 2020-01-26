@@ -384,7 +384,7 @@ class ChoseItemIndex extends React.Component {
                 MVegBox={this.state.MVegBox}
                 />
                 <div className="next-button">
-                    <button className="gender-button" style={{width:"25%"}} onClick={this.submitChild}>Next</button>
+                 <button className="gender-button" style={{ width: "25%" }} onClick={this.submitChild}>Next</button>
                 </div>
             </div>
         )
