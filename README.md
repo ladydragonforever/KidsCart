@@ -2,7 +2,6 @@
 
 Interactive lunchbox planner app for busy working parents!
 
-
 [Live Site](https://kidscart.herokuapp.com/)
 
 ## Background and Overview
