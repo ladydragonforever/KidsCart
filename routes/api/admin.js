@@ -382,6 +382,82 @@ router.get("/seed", async (req, res)=>{
                 "In the emptied pan combine the onion, cabbage, and carrots. Stir-fry until cabbage begins to wilt, 2 to 3 minutes. Stir in the remaining soy sauce, cooked noodles, and the chicken mixture to pan and mix to blend. Serve and enjoy!"
             ],
             nutritionFacts: "Per Serving: 752 calories; 28.8 g fat; 81.1 g carbohydrates; 39.2 g protein; 129 mg cholesterol; 1449 mg sodium."
+        },
+        {
+            title: "Pork Fried Rice",
+            category: "Chinese, American",
+            ingredients: [
+                "1 (6 ounce) boneless pork loin chop",
+                "1 carrot",
+                "1 broccoli",
+                "1 green onion",
+                "1 egg",
+                "rice",
+                "1 bag peas"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/1353688.jpg",
+            cookingInstruction: [
+                "Melt butter in a large non-stick skillet over medium heat. Cook and stir pork, carrot, broccoli, peas, and green onion in melted butter until pork is cooked through, 7 to 10 minutes. Remove pork mixture to a bowl and return skillet to medium heat.",
+                "Scramble egg in the skillet until completely set. Return the pork mixture to the skillet. Stir rice, peas, soy sauce, garlic powder, and ground ginger into the pork mixture; cook and stir until heated through, 7 to 10 minutes."
+            ],
+            nutritionFacts: "Per Serving: 557 calories; 13.3 g fat; 80.7 g carbohydrates; 26.1 g protein; 137 mg cholesterol; 815 mg sodium."
+        },
+        {
+            title: "Shrimp Fried Rice",
+            category: "Chinese, American",
+            ingredients: [
+                "1 ounce bean sprouts",
+                "1 onion",
+                "2 ounces medium shrimp",
+                "1 green onion",
+                "2 eggs",
+                "rice"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/4557813.jpg",
+            cookingInstruction: [
+                "In a saucepan bring water to a boil. Add rice and stir. Reduce heat, cover and simmer for 20 minutes. Set aside and allow rice to cool.",
+                "Heat a large skillet or wok for 2 minutes. When the skillet or wok is hot, pour in vegetable oil, bean sprouts and onions. Mix well and cook for 3 minutes.",
+                "Mix in cooled rice and shrimp and cook for another 3 minutes. Stirring constantly.",
+                "Mix in green onions, eggs, salt, pepper, soy sauce and sesame oil. Cook for another 4 minutes, stirring continuously, until eggs are cooked and everything is blended evenly."
+            ],
+            nutritionFacts: "Per Serving: 483 calories; 17.5 g fat; 60.3 g carbohydrates; 20 g protein; 187 mg cholesterol; 1638 mg sodium."
+        },
+        {
+            title: "Avocado Toast",
+            category: "American",
+            ingredients: [
+                "2 slices bread",
+                "2 ounces Cheddar cheese",
+                "1 avocado"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/4557813.jpg",
+            cookingInstruction: [
+                "Preheat oven to 300 degrees F (150 degrees C).",
+                "Heat a large skillet or wok for 2 minutes. When the skillet or wok is hot, pour in vegetable oil, bean sprouts and onions. Mix well and cook for 3 minutes.",
+                "Bake in the preheated oven until cheese melts, about 5 minutes. Cover each bread slice with sliced avocado."
+            ],
+            nutritionFacts: "Per Serving: 483 calories; 17.5 g fat; 60.3 g carbohydrates; 20 g protein; 187 mg cholesterol; 1638 mg sodium."
+        },
+        {
+            title: "Turkey Sandwiches",
+            category: "American",
+            ingredients: [
+                "1 loaf French bread",
+                "8 ounces sliced deli turkey meat",
+                "8 slices provolone cheese",
+                "8 slices precooked bacon",
+                "1 pound tomatoes",
+                "4 lettuce leaves"
+            ],
+            photoUrl: "https://wearychef.com/wp-content/uploads/2016/01/turkey-sandwich-with-goat-cheese-and-jam-6.jpg",
+            cookingInstruction: [
+                "Preheat the oven broiler.",
+                "Cut the bread into four pieces, and split lengthwise almost all the way through for four sandwiches. Spread margarine on the inside of each piece. Place on a baking sheet, cut side up.",
+                "Toast bread under preheated broiler until lightly browned, 1 to 2 minutes. Remove pan from the oven.",
+                "Layer 4 pieces of bread with 2 slices each of the turkey, cheese, and bacon. Remove the remaining 4 slices of bread from the baking sheet and reserve for sandwich tops. Cool bread slightly, and spread mayonnaise onto the cut side of each of the 4 top slices.",
+                "Place the bread with turkey and cheese under the broiler just until the cheese melts, about 1 minute. Remove from the broiler, and spread 1 tablespoon cranberry sauce over each sandwich. Layer with the tomatoes and lettuce. Place a top bread slice over each half, and serve."
+            ],
+            nutritionFacts: "Per Serving: 1068 calories; 65.8 g fat; 70.1 g carbohydrates; 49.5 g protein; 128 mg cholesterol; 3322 mg sodium."
         }
     ].map(m => new Meal(m).save()));
 
