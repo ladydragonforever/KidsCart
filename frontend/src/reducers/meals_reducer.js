@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_MEALS, RECEIVE_SEARCH_MEALS, RECEIVE_MEAL } from '../actions/meal_actions';
+import { RECEIVE_ALL_MEALS, RECEIVE_SEARCH_MEALS, RECEIVE_MEAL, CLEAR_MEALS } from '../actions/meal_actions';
 
 const MealsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -17,6 +17,8 @@ const MealsReducer = (state = {}, action) => {
             let nextState = Object.assign({}, state);
             nextState[action.meal.data._id] = action.meal.data;
             return nextState;
+        case CLEAR_MEALS:
+            return {};
         default:
             return state;
     }

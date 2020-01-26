@@ -3,6 +3,7 @@ import { getMeals, searchMeals, getSingleMeal } from "../util/meal_util";
 export const RECEIVE_ALL_MEALS = "RECEIVE_ALL_MEALS";
 export const RECEIVE_MEAL = "RECEIVE_MEAL";
 export const RECEIVE_SEARCH_MEALS = "RECEIVE_SEARCH_MEALS";
+export const CLEAR_MEALS = "CLEAR_MEALS";
 
 export const receiveAllMeals = meals => ({
     type: RECEIVE_ALL_MEALS,
@@ -18,6 +19,10 @@ export const receiveSearchMeals = meals => ({
     type: RECEIVE_SEARCH_MEALS,
     meals
 })
+
+export const clearMeals = () => ({
+    type: CLEAR_MEALS
+});
 
 
 export const fetchMeals = id => dispatch => (
