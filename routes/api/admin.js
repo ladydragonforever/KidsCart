@@ -458,6 +458,37 @@ router.get("/seed", async (req, res)=>{
                 "Place the bread with turkey and cheese under the broiler just until the cheese melts, about 1 minute. Remove from the broiler, and spread 1 tablespoon cranberry sauce over each sandwich. Layer with the tomatoes and lettuce. Place a top bread slice over each half, and serve."
             ],
             nutritionFacts: "Per Serving: 1068 calories; 65.8 g fat; 70.1 g carbohydrates; 49.5 g protein; 128 mg cholesterol; 3322 mg sodium."
+        },
+        {
+            title: "Ignacio's Super Peanut Butter and Jelly Sandwich",
+            category: "American",
+            ingredients: [
+                "3 slices bread"
+            ],
+            photoUrl: "https://wearychef.com/wp-content/uploads/2016/01/turkey-sandwich-with-goat-cheese-and-jam-6.jpg",
+            cookingInstruction: [
+                "Toast 1 bread slice, allow to cool. Spread one side of each of the two remaining slices with preserves. Spread both sides of the toasted slice with peanut butter. Form a sandwich with the toasted slice in the center."
+            ],
+            nutritionFacts: "Per Serving: 1068 calories; 65.8 g fat; 70.1 g carbohydrates; 49.5 g protein; 128 mg cholesterol; 3322 mg sodium."
+        },
+        {
+            title: "Shrimp Scampi with Pasta",
+            category: "American",
+            ingredients: [
+                "1 (16 ounce) package linguine pasta",
+                " shallots",
+                "2 cloves garlic",
+                "1 pound shrimp",
+                "1 lemon",
+                "1 ounce parsley leaves"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/2606852.jpg",
+            cookingInstruction: [
+                "Bring a large pot of salted water to a boil; cook linguine in boiling water until nearly tender, 6 to 8 minutes. Drain.",
+                "Melt 2 tablespoons butter with 2 tablespoons olive oil in a large skillet over medium heat. Cook and stir shallots, garlic, and red pepper flakes in the hot butter and oil until shallots are translucent, 3 to 4 minutes. Season shrimp with kosher salt and black pepper; add to the skillet and cook until pink, stirring occasionally, 2 to 3 minutes. Remove shrimp from skillet and keep warm.",
+                "Pour white wine and lemon juice into skillet and bring to a boil while scraping the browned bits of food off of the bottom of the skillet with a wooden spoon. Melt 2 tablespoons butter in skillet, stir 2 tablespoons olive oil into butter mixture, and bring to a simmer. Toss linguine, shrimp, and parsley in the butter mixture until coated; season with salt and black pepper. Drizzle with 1 teaspoon olive oil to serve."
+            ],
+            nutritionFacts: "Per Serving: 511 calories; 19.4 g fat; 57.5 g carbohydrates; 21.9 g protein; 135 mg cholesterol; 260 mg sodium."
         }
     ].map(m => new Meal(m).save()));
 
