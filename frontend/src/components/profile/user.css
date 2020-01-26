@@ -35,18 +35,20 @@
     font-size: 15px;
     text-align: center;
     line-height: 46px;
+    cursor: pointer;
  }
 
 .baby-box {
    display: flex;
-   justify-content: center;
    align-items: center;
-   padding: 10px 0px;
-   border-radius: 50px;
+   justify-content: space-between;
+   padding: 10px 10px;
+   border-radius: 1px;
+   border-bottom: 2px solid #ffffff;
 }
  .baby-box:hover {
-    background: #ececec;
-    cursor: pointer;
+    background: #fffdfd;
+    border-bottom: 2px solid #dad9d9;
  }
 
  .baby-text {
@@ -101,8 +103,27 @@
  }
 
  .list-box {
-    /* border-top: 1px solid #dad9d9; */
     border-bottom: 1px solid #dad9d9;
     padding: 50px;
     border-radius: 5px;
  }
+
+ .button-profile {
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    background-color: #245091;
+    outline: none;
+    cursor: pointer;
+    font-size: 12px;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: #acbad0;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.button-profile:hover {
+    background-color: #245091;
+}

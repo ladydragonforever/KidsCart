@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchUser } from '../../actions/user_action'
+import { deleteAChild } from '../../actions/child_actions'
 import { withRouter } from 'react-router'
 
 import UserHome from './user_home';
@@ -10,7 +11,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchUser: userId => dispatch(fetchUser(userId))
+    fetchUser: userId => dispatch(fetchUser(userId)),
+    deleteAChild: childId => dispatch(deleteAChild(childId))
 })
 
 

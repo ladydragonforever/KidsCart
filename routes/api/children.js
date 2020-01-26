@@ -8,10 +8,12 @@ const passport = require('passport');
 //fectch one child' matchingmeals 
 router.get('/:child_id/matching-meals', async (req, res) => {
    const child = await Child.findById( req.params.child_id );
+   // debugger;
    // console.log(child.category)
-   const childCategory = child.category;
-   // const ingredient = child.ingredient;
-   const select_meals = await Meal.find({category : { $in: childCategory }})
+   const childCategoryRe = "(" + child.category.join(")|(") + ")";
+   console.log(childCategoryRe);
+   const re = new RegExp(childCategoryRe, "i");
+   const select_meals = await Meal.find({ category: re }).limit(5);
 
    res.status(200).json(select_meals);
 });
@@ -45,6 +47,17 @@ router.post('/:user_id',
    }
 );
 
+router.delete('/:id',(req,res) => {
+   Child.findByIdAndRemove(req.params.id, (err, child) => {
+      if (err) return res.status(500).send(err);
+      const response = {
+         message: "child successfully deleted",
+         id: child._id
+      };
+      return res.status(200).send(response);
+   });
+})
+
 
 // router.get('/:child_id/selected-meals', (req, res) => {
 //    const child = Child.find({ child: req.params.child_id });
@@ -71,5 +84,8 @@ router.post('/:user_id',
 //          res.status(404).json({ noselectmealsfound: 'No meals found for child' })
 //       );
 // });
+
+
+
 
 module.exports = router;

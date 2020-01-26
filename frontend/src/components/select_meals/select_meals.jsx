@@ -58,7 +58,7 @@ class SelectMeals extends React.Component {
                               key = {meal._id}
                               className="list-element"
                               tabIndex="1">
-                              <div className="food-image"><img src={meal.photoUrl} /></div>
+                              <div className="food-image"><img alt='' src={meal.photoUrl} /></div>
                               <div className="meal-info">
                                  <span className="meal-name" >{meal.title}</span>
                                  <button
@@ -71,16 +71,16 @@ class SelectMeals extends React.Component {
                               <div className="dropdown-meal-content">
                                  <div id="header-info">{meal.category}: {meal.title}</div>
                                  <div>Ingredients:
-                                    {meal.ingredients.map(ingredient => (
-                                          <ul>
+                                    {meal.ingredients.map((ingredient, i) => (
+                                          <ul key={i}>
                                              <li>{ingredient}</li>
                                           </ul>
                                        ))}
                                  </div>
                                    
                                  <div>Cooking Instruction:
-                                       {meal.cookingInstruction.map(instruction => (
-                                          <ul>
+                                       {meal.cookingInstruction.map((instruction, i) => (
+                                          <ul key={i}>
                                              <li>{instruction}</li>
                                           </ul>
                                        ))}
@@ -111,7 +111,7 @@ class SelectMeals extends React.Component {
                         <li
                            key={meal._id}
                            className="search-list-element">
-                           <div className="search-food-image"><img src={meal.photoUrl} /></div>
+                           <div className="search-food-image"><img alt='' src={meal.photoUrl} /></div>
                            <div className="seach-food-info">
                               <div>{meal.title}</div>
                               <button

@@ -2,6 +2,7 @@ import React from "react"
 import BoxContainer from './box_container'
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router'
+import { resolve } from "path";
 
 
 class ChoseItemIndex extends React.Component {
@@ -34,25 +35,91 @@ class ChoseItemIndex extends React.Component {
         this.submitChild = this.submitChild.bind(this)
     }
 
+
     submitChild() {
         if (this.props.type === "AMERICAN") {
             let arr = this.state.ASideBox.concat(this.state.AEntreeBox, this.state.AVegBox).map((item) => item.slice(1, item.length - 4))
-            this.props.receiveChildIngredient(arr)
+            let promise = new Promise((resolve, reject) => {
+                try{
+                    this.props.receiveChildIngredient(arr)
+                    resolve()
+                } catch {
+                    reject(new Error("bad bad save"))
+                }
+            })
+            promise.then(() => {
+                this.props.createAChild(this.props.child, this.props.user.id)
+                .then((child) => {
+                    // console.log(child.child.data)
+                    this.props.history.push(`/generate-meals/${child.child.data._id}`)
+                })
+            })
         } else if (this.props.type === "CHINESE") {
             let arr = this.state.CSideBox.concat(this.state.CEntreeBox, this.state.CVegBox).map((item) => item.slice(1, item.length - 4))
-            this.props.receiveChildIngredient(arr)
+            let promise = new Promise((resolve, reject) => {
+                try {
+                    this.props.receiveChildIngredient(arr)
+                    resolve()
+                } catch {
+                    reject(new Error("bad bad save"))
+                }
+            })
+            promise.then(() => {
+                this.props.createAChild(this.props.child, this.props.user.id)
+                    .then((child) => {
+                        this.props.history.push(`/generate-meals/${child.child.data._id}`)
+                    })
+            })
         } else if (this.props.type === "ITALIAN") {
             let arr = this.state.ISideBox.concat(this.state.IEntreeBox, this.state.IVegBox).map((item) => item.slice(1, item.length - 4))
-            this.props.receiveChildIngredient(arr)
+            let promise = new Promise((resolve, reject) => {
+                try {
+                    this.props.receiveChildIngredient(arr)
+                    resolve()
+                } catch {
+                    reject(new Error("bad bad save"))
+                }
+            })
+            promise.then(() => {
+                this.props.createAChild(this.props.child, this.props.user.id)
+                    .then((child) => {
+                        this.props.history.push(`/generate-meals/${child.child.data._id}`)
+                    })
+            })
         } else if (this.props.type === "JAPANESE") {
             let arr = this.state.JSideBox.concat(this.state.JEntreeBox, this.state.JVegBox).map((item) => item.slice(1, item.length - 4))
-            this.props.receiveChildIngredient(arr)
+            let promise = new Promise((resolve, reject) => {
+                try {
+                    this.props.receiveChildIngredient(arr)
+                    resolve()
+                } catch {
+                    reject(new Error("bad bad save"))
+                }
+            })
+            promise.then(() => {
+                this.props.createAChild(this.props.child, this.props.user.id)
+                    .then((child) => {
+                        this.props.history.push(`/generate-meals/${child.child.data._id}`)
+                    })
+            })
         } else if (this.props.type === "MEXICAN") {
             let arr = this.state.MSideBox.concat(this.state.MEntreeBox, this.state.MVegBox).map((item) => item.slice(1, item.length - 4))
-            this.props.receiveChildIngredient(arr)
+            let promise = new Promise((resolve, reject) => {
+                try {
+                    this.props.receiveChildIngredient(arr)
+                    resolve()
+                } catch {
+                    reject(new Error("bad bad save"))
+                }
+            })
+            promise.then(() => {
+                this.props.createAChild(this.props.child, this.props.user.id)
+                    .then((child) => {
+                        console.log(child.data)
+                        this.props.history.push(`/generate-meals/${child.child.data._id}`)
+                    })
+            })
         }
-
-        this.props.createAChild(this.props.child, this.props.user.id)
     }
 
     deleteItem(filed,index) {
@@ -240,11 +307,11 @@ class ChoseItemIndex extends React.Component {
                     </div>
                     <div className="drop-down-box-item">
                         <div className="food-dropdown-item" >
-                            <img alt='' src={process.env.PUBLIC_URL + '/crab.png'} className="food-img" onClick={this.addToSideBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/crab.png'} className="food-img" onClick={this.addToEntreeBox} />
                             <p>Crab</p>
                         </div>
                         <div className="food-dropdown-item" >
-                            <img alt='' src={process.env.PUBLIC_URL + '/Tofu.png'} className="food-img" onClick={this.addToSideBox} />
+                            <img alt='' src={process.env.PUBLIC_URL + '/Tofu.png'} className="food-img" onClick={this.addToEntreeBox} />
                             <p>Tofu</p>
                         </div>
                     </div>
@@ -255,7 +322,7 @@ class ChoseItemIndex extends React.Component {
                 <div>
                     <div className="drop-down-box-item">
                         <div className="food-dropdown-item">
-                            <img alt='' src={process.env.PUBLIC_URL + '/broccoli.png'} className="food-img" />
+                            <img alt='' src={process.env.PUBLIC_URL + '/broccoli.png'} className="food-img" onClick={this.addToVegBox}/>
                             <p>Broccoli</p>
                         </div>
                         <div className="food-dropdown-item">
@@ -317,7 +384,7 @@ class ChoseItemIndex extends React.Component {
                 MVegBox={this.state.MVegBox}
                 />
                 <div className="next-button">
-                    <button className="gender-button" style={{width:"25%"}} onClick={this.submitChild}>Next</button>
+                 <button className="gender-button" style={{ width: "25%" }} onClick={this.submitChild}>Next</button>
                 </div>
             </div>
         )

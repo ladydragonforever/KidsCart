@@ -1,6 +1,11 @@
+body {
+    margin: 0;
+}
+
 .logo {
     width: 200px;
     height: 100%;
+    cursor: pointer;
 }
 
 .nav-bar-container {
@@ -49,6 +54,7 @@
 .logo-footer {
     width: 200px;
     height: 50%;
+    cursor: pointer;
 }
 
 .search-bar{
@@ -118,5 +124,13 @@
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 85px;
+ }
+
+ .user-profile-icon {
+     display: flex;
+     justify-content: space-between;
+     width: 15%;
+     align-items: center;
+     cursor: pointer;
  }
 
