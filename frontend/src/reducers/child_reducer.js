@@ -3,14 +3,15 @@ import { RECEIVE_CHILD,
         RECEIVE_CHILD_AGE, 
         RECEIVE_CHILD_CATEGORY, 
         RECEIVE_CHILD_INGREDIENT, 
-        RECEIVE_CHILD_GENDER 
+        RECEIVE_CHILD_GENDER,
+        DELETE_CHILD
     } from '../actions/child_actions';
     
 const defaultState = {
     name: "",
     age: "",
     gender: "",
-    category: "",
+    category: "AMERICAN",
     ingredient: []
 }
 
@@ -35,6 +36,9 @@ const childReducer = (state = defaultState, action) => {
             return nextState
         case RECEIVE_CHILD:
             nextState = action.child
+            return nextState
+        case DELETE_CHILD:
+            delete nextState[action.childId]
             return nextState
         default:
             return state;

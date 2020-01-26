@@ -6,7 +6,7 @@ import { fetchMeal, fetchSearchMeals } from '../../actions/meal_actions';
 const mapStateToProps = (state, ownProps) => {
    // if(!state.seesion) return null;
    if (!state.entities.selectMeals) return null;
-   console.log(state.entities.selectMeals, "container test")
+   // console.log(state.entities.selectMeals, "container test")
    return {
       currentUser: state.session.user,
       selectMeals: Object.values(state.entities.selectMeals),
