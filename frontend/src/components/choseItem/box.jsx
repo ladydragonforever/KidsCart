@@ -92,7 +92,8 @@ class Box extends React.Component {
                                 <div className="side-box">
                                      {this.props.ASideBox.map((item, i) => {
                                          return(
-                                             <img alt='' src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("ASideBox",i)}/>
+                                            //  <img alt='' src={process.env.PUBLIC_URL + `${item}`} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("ASideBox",i)}/>
+                                             <img alt='' src={item} className="food-img-box-item" key={i} onClick={() => this.props.deleteItem("ASideBox",i)}/>
                                          )
                                      })}
                                 </div>
