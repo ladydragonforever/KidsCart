@@ -2,7 +2,7 @@ import React from 'react';
 // import { NavLink } from 'react-router-dom';
 import './navbar.css';
 import { withRouter } from 'react-router';
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faUser} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class NavBar extends React.Component {
@@ -29,6 +29,8 @@ class NavBar extends React.Component {
         this.inputFocus = this.inputFocus.bind(this)
         this.inputUnFocus = this.inputUnFocus.bind(this)
     }
+
+
 
     componentDidUpdate(prevProps) {
         const res = this.props.location.pathname.match("/search/(.*)")
@@ -65,10 +67,12 @@ class NavBar extends React.Component {
     getLinks() {
         if (this.props.loggedIn) {
             return (
-                <div>
+                <div className="user-profile-icon">
                     {/* <NavLink to={'/meals'}>All Meals</NavLink> */}
                     {/* <NavLink to={'/profile'}>Profile</NavLink> */}
                     {/* <NavLink to={'/new_meal'}>Create a Meal</NavLink> */}
+                    {/* <div style={{ display:"flex"}}> */}
+                    <FontAwesomeIcon icon={faUser} style={{ fontSize: "30px", color: "grey", cursor: "pointer" }} onClick={() => this.props.history.push("/user")} />
                     <button className="loginButton" onClick={this.logoutUser}>Logout</button>
                 </div>
             );
