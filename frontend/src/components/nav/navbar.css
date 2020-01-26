@@ -1,6 +1,7 @@
 .logo {
     width: 200px;
     height: 100%;
+    cursor: pointer;
 }
 
 .nav-bar-container {
@@ -49,6 +50,7 @@
 .logo-footer {
     width: 200px;
     height: 50%;
+    cursor: pointer;
 }
 
 .search-bar{
