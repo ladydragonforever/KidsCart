@@ -326,7 +326,7 @@ router.get("/seed", async (req, res)=>{
                 "1 egg",
                 "3 (6 ounce) cans crabmeat"
             ],
-            photoUrl: "https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy.progressive.strip_profile,g_faces:auto,q_auto:low,w_344/8132_sfs-skillet-thai-curry-with-sweet-potatoes-and-tofu-article",
+            photoUrl: "https://images.media-allrecipes.com/userphotos/560x315/1649402.jpg",
             cookingInstruction: [
                 "In a bowl, toss together the 1/3 cup bread crumbs, green bell pepper, red bell pepper, green onions, and parsley. Mix in the egg white, mayonnaise, lemon juice, Worcestershire sauce, and Dijon mustard. Season with Old Bay seasoning, dry mustard, and onion powder. Fold crabmeat into the mixture. Form into 6 large cakes. Coat in the remaining 1/2 cup bread crumbs.",
                 "Heat the oil in a large, heavy skillet. Fry the cakes 5 minutes on each side, or until evenly brown. Drain on paper towels."
@@ -346,6 +346,267 @@ router.get("/seed", async (req, res)=>{
                 "After roasting a chicken, remove it from the roasting pan and place on a serving tray to rest. Leave the oven on. Pour off excess drippings from the roasting pan, leaving just enough to coat the broccoli. Toss broccoli and garlic in the drippings until coated and place in the still hot oven. Roast for 5 to 8 minutes, until tender."
             ],
             nutritionFacts: "Per Serving: 225 calories; 9.4 g fat; 13.8 g carbohydrates; 20.7 g protein; 77 mg cholesterol; 508 mg sodium."
+        },
+        {
+            title: "Pork Dumplings",
+            category: "Chinese",
+            ingredients: [
+                "100 (3.5 inch square) wonton wrappers",
+                "1 3/4 pounds ground pork",
+                "4 cloves garlic",
+                "1 egg",
+                "1 Chinese cabbage"
+            ],
+            photoUrl: "https://www.garlicandzest.com/wp-content/uploads/2016/02/pork-dumplings-6.jpg",
+            cookingInstruction: [
+                "In a large bowl, combine the pork, ginger, garlic, green onion, soy sauce, sesame oil, egg and cabbage. Stir until well mixed.",
+                "Place 1 heaping teaspoon of pork filling onto each wonton skin. Moisten edges with water and fold edges over to form a triangle shape. Roll edges slightly to seal in filling. Set dumplings aside on a lightly floured surface until ready to cook.",
+                "To Cook: Steam dumplings in a covered bamboo or metal steamer for about 15 to 20 minutes. Serve immediately."
+            ],
+            nutritionFacts: "Per Serving: 752 calories; 28.8 g fat; 81.1 g carbohydrates; 39.2 g protein; 129 mg cholesterol; 1449 mg sodium."
+        },
+        {
+            title: "Yakisoba Chicken",
+            category: "Japanese",
+            ingredients: [
+                "2 cloves garlic",
+                "4 skinless, boneless chicken breast halves",
+                "1 onion",
+                "½ medium head cabbage",
+                "2 carrots",
+                "8 ounces soba noodles"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/2220105.jpg",
+            cookingInstruction: [
+                "In a large skillet combine sesame oil, canola oil and chili paste; stir-fry 30 seconds. Add garlic and stir fry an additional 30 seconds. Add chicken and 1/4 cup of the soy sauce and stir fry until chicken is no longer pink, about 5 minutes. Remove mixture from pan, set aside, and keep warm.",
+                "In the emptied pan combine the onion, cabbage, and carrots. Stir-fry until cabbage begins to wilt, 2 to 3 minutes. Stir in the remaining soy sauce, cooked noodles, and the chicken mixture to pan and mix to blend. Serve and enjoy!"
+            ],
+            nutritionFacts: "Per Serving: 752 calories; 28.8 g fat; 81.1 g carbohydrates; 39.2 g protein; 129 mg cholesterol; 1449 mg sodium."
+        },
+        {
+            title: "Pork Fried Rice",
+            category: "Chinese, American",
+            ingredients: [
+                "1 (6 ounce) boneless pork loin chop",
+                "1 carrot",
+                "1 broccoli",
+                "1 green onion",
+                "1 egg",
+                "rice",
+                "1 bag peas"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/1353688.jpg",
+            cookingInstruction: [
+                "Melt butter in a large non-stick skillet over medium heat. Cook and stir pork, carrot, broccoli, peas, and green onion in melted butter until pork is cooked through, 7 to 10 minutes. Remove pork mixture to a bowl and return skillet to medium heat.",
+                "Scramble egg in the skillet until completely set. Return the pork mixture to the skillet. Stir rice, peas, soy sauce, garlic powder, and ground ginger into the pork mixture; cook and stir until heated through, 7 to 10 minutes."
+            ],
+            nutritionFacts: "Per Serving: 557 calories; 13.3 g fat; 80.7 g carbohydrates; 26.1 g protein; 137 mg cholesterol; 815 mg sodium."
+        },
+        {
+            title: "Shrimp Fried Rice",
+            category: "Chinese, American",
+            ingredients: [
+                "1 ounce bean sprouts",
+                "1 onion",
+                "2 ounces medium shrimp",
+                "1 green onion",
+                "2 eggs",
+                "rice"
+            ],
+            photoUrl: "https://hips.hearstapps.com/del.h-cdn.co/assets/17/24/1497458825-delish-shrimp-fried-rice-1-1024.jpg",
+            cookingInstruction: [
+                "In a saucepan bring water to a boil. Add rice and stir. Reduce heat, cover and simmer for 20 minutes. Set aside and allow rice to cool.",
+                "Heat a large skillet or wok for 2 minutes. When the skillet or wok is hot, pour in vegetable oil, bean sprouts and onions. Mix well and cook for 3 minutes.",
+                "Mix in cooled rice and shrimp and cook for another 3 minutes. Stirring constantly.",
+                "Mix in green onions, eggs, salt, pepper, soy sauce and sesame oil. Cook for another 4 minutes, stirring continuously, until eggs are cooked and everything is blended evenly."
+            ],
+            nutritionFacts: "Per Serving: 483 calories; 17.5 g fat; 60.3 g carbohydrates; 20 g protein; 187 mg cholesterol; 1638 mg sodium."
+        },
+        {
+            title: "Avocado Toast",
+            category: "American",
+            ingredients: [
+                "2 slices bread",
+                "2 ounces Cheddar cheese",
+                "1 avocado"
+            ],
+            photoUrl: "https://s23209.pcdn.co/wp-content/uploads/2016/04/5MinuteAvocadoToastIMG_8273edit-360x360.jpg",
+            cookingInstruction: [
+                "Preheat oven to 300 degrees F (150 degrees C).",
+                "Heat a large skillet or wok for 2 minutes. When the skillet or wok is hot, pour in vegetable oil, bean sprouts and onions. Mix well and cook for 3 minutes.",
+                "Bake in the preheated oven until cheese melts, about 5 minutes. Cover each bread slice with sliced avocado."
+            ],
+            nutritionFacts: "Per Serving: 483 calories; 17.5 g fat; 60.3 g carbohydrates; 20 g protein; 187 mg cholesterol; 1638 mg sodium."
+        },
+        {
+            title: "Turkey Sandwiches",
+            category: "American",
+            ingredients: [
+                "1 loaf French bread",
+                "8 ounces sliced deli turkey meat",
+                "8 slices provolone cheese",
+                "8 slices precooked bacon",
+                "1 pound tomatoes",
+                "4 lettuce leaves"
+            ],
+            photoUrl: "https://wearychef.com/wp-content/uploads/2016/01/turkey-sandwich-with-goat-cheese-and-jam-6.jpg",
+            cookingInstruction: [
+                "Preheat the oven broiler.",
+                "Cut the bread into four pieces, and split lengthwise almost all the way through for four sandwiches. Spread margarine on the inside of each piece. Place on a baking sheet, cut side up.",
+                "Toast bread under preheated broiler until lightly browned, 1 to 2 minutes. Remove pan from the oven.",
+                "Layer 4 pieces of bread with 2 slices each of the turkey, cheese, and bacon. Remove the remaining 4 slices of bread from the baking sheet and reserve for sandwich tops. Cool bread slightly, and spread mayonnaise onto the cut side of each of the 4 top slices.",
+                "Place the bread with turkey and cheese under the broiler just until the cheese melts, about 1 minute. Remove from the broiler, and spread 1 tablespoon cranberry sauce over each sandwich. Layer with the tomatoes and lettuce. Place a top bread slice over each half, and serve."
+            ],
+            nutritionFacts: "Per Serving: 1068 calories; 65.8 g fat; 70.1 g carbohydrates; 49.5 g protein; 128 mg cholesterol; 3322 mg sodium."
+        },
+        {
+            title: "Ignacio's Super Peanut Butter and Jelly Sandwich",
+            category: "American",
+            ingredients: [
+                "3 slices bread"
+            ],
+            photoUrl: "https://www.readersdigest.ca/wp-content/uploads/sites/14/2017/04/peanut-butter-and-jelly-facts.jpg",
+            cookingInstruction: [
+                "Toast 1 bread slice, allow to cool. Spread one side of each of the two remaining slices with preserves. Spread both sides of the toasted slice with peanut butter. Form a sandwich with the toasted slice in the center."
+            ],
+            nutritionFacts: "Per Serving: 1068 calories; 65.8 g fat; 70.1 g carbohydrates; 49.5 g protein; 128 mg cholesterol; 3322 mg sodium."
+        },
+        {
+            title: "Shrimp Scampi with Pasta",
+            category: "American",
+            ingredients: [
+                "1 (16 ounce) package linguine pasta",
+                "2 shallots",
+                "2 cloves garlic",
+                "1 pound shrimp",
+                "1 lemon",
+                "1 ounce parsley leaves"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/2606852.jpg",
+            cookingInstruction: [
+                "Bring a large pot of salted water to a boil; cook linguine in boiling water until nearly tender, 6 to 8 minutes. Drain.",
+                "Melt 2 tablespoons butter with 2 tablespoons olive oil in a large skillet over medium heat. Cook and stir shallots, garlic, and red pepper flakes in the hot butter and oil until shallots are translucent, 3 to 4 minutes. Season shrimp with kosher salt and black pepper; add to the skillet and cook until pink, stirring occasionally, 2 to 3 minutes. Remove shrimp from skillet and keep warm.",
+                "Pour white wine and lemon juice into skillet and bring to a boil while scraping the browned bits of food off of the bottom of the skillet with a wooden spoon. Melt 2 tablespoons butter in skillet, stir 2 tablespoons olive oil into butter mixture, and bring to a simmer. Toss linguine, shrimp, and parsley in the butter mixture until coated; season with salt and black pepper. Drizzle with 1 teaspoon olive oil to serve."
+            ],
+            nutritionFacts: "Per Serving: 511 calories; 19.4 g fat; 57.5 g carbohydrates; 21.9 g protein; 135 mg cholesterol; 260 mg sodium."
+        },
+        {
+            title: "Cream Cheese and Crab Sushi Rolls",
+            category: "Japanese",
+            ingredients: [
+                "2 sheets nori seaweed sheets",
+                "1 cucumber",
+                "2 pieces imitation crab legs",
+                "1/2 (3 ounce) package cream cheese",
+                "rice"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/4208534.jpg",
+            cookingInstruction: [
+                "Bring the rice and water to a boil in a saucepan over high heat. Reduce heat to medium-low, cover, and simmer until the rice is tender, and the liquid has been absorbed, 20 to 25 minutes. Stir in rice vinegar and salt. Allow to cool completely.",
+                "Lay out seaweed sheets. Moisten hands with water, then spread the rice evenly on each sheet, leaving a 1/2 inch gap along one edge, lengthwise. Arrange strips of cucumber, imitation crabmeat, and cream cheese in a straight line along the side opposite of the gap. Roll the sushi from the toppings to the exposed end of the the seaweed sheet.",
+                "Using a sharp wet knife, slice each roll into 5 or 6 pieces. Serve with minced ginger on the side."
+            ],
+            nutritionFacts: "Per Serving: 444 calories; 8.2 g fat; 79.9 g carbohydrates; 10.7 g protein; 29 mg cholesterol; 1475 mg sodium."
+        },
+        {
+            title: "Gyoza",
+            category: "Japanese",
+            ingredients: [
+                "1 cabbage",
+                "5 onions",
+                "1 clove garlic",
+                "1 carrot",
+                "1/2 pound ground pork",
+                "1 egg",
+                "1 (10 ounce) package wonton wrappers"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/250x250/313346.jpg",
+            cookingInstruction: [
+                "Heat sesame oil in a large skillet over medium high heat. Mix in cabbage, onion, garlic and carrot. Cook and stir until cabbage is limp. Mix in ground pork and egg. Cook until pork is evenly brown and egg is no longer runny.",
+                "Preheat vegetable oil in a large skillet over medium high heat.",
+                "Place approximately 1 tablespoon of the cabbage and pork mixture in the center of each wrapper. Fold wrappers in half over filling, and seal edges with moistened fingers.",
+                "In the preheated vegetable oil, cook gyoza approximately 1 minute per side, until lightly browned. Place water into skillet and reduce heat. Cover and allow gyoza to steam until the water is gone.",
+                "In a small bowl, mix soy sauce and rice vinegar. Use the mixture as a dipping sauce for the finished wrappers."
+            ],
+            nutritionFacts: "Per Serving: 184 calories; 8.5 g fat; 18.5 g carbohydrates; 7.9 g protein; 37 mg cholesterol; 546 mg sodium."
+        },
+        {
+            title: "Soba with Toasted Sesame Seed Sauce",
+            category: "Japanese",
+            ingredients: [
+                "8 ounces dried soba noodles",
+                "5 onions",
+                "1 clove garlic",
+                "5 green onions",
+                "1 broccoli"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/1167296.jpg",
+            cookingInstruction: [
+                "Preheat the oven to 375 degrees F (190 degrees C).",
+                "Pour the sesame seeds onto a rimmed baking sheet. Toast the seeds in the oven for 10 to 12 minutes, until they are a rich brown around the edges.",
+                "Meanwhile, bring a large pot of salted water to a boil. Add the noodles and cook them for 5 to 6 minutes, or until they are just tender. Drain them, rinse them well with cold water, and drain them again.",
+                "In a large mixing bowl, mix together the vinegar, sugar, soy sauce, garlic, sesame oil and green onions. Add the noodles, and the toasted sesame seeds. Toss well, then stir in the broccoli. Let the dish sit for 30 minutes at room temperature before serving."
+            ],
+            nutritionFacts: "Per Serving: 355 calories; 10.9 g fat; 57.3 g carbohydrates; 14.2 g protein; 0 mg cholesterol; 1037 mg sodium."
+        },
+        {
+            title: "Miso Salmon",
+            category: "Japanese",
+            ingredients: [
+                "2 pounds salmon",
+                "rice"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/6538331.jpg",
+            cookingInstruction: [
+                "Preheat the oven to 400 degrees F (200 degrees C). Fill a large skillet with about 1 inch of water and bring to a boil. Poach fish just until cooked on the outside, about 2 minutes per side. Transfer fillets to a broiler pan.",
+                "In a small bowl, stir together the miso paste, sake, brown sugar, sesame seeds, sesame oil, water, salad dressing and rice vinegar. Spread this over the tops of the salmon fillets.",
+                "Bake for 15 minutes in the preheated oven, or until almost cooked through. Switch the oven to broil, and broil until the top is browned and bubbly, about 5 more minutes. Cut fillets into portions to serve."
+            ],
+            nutritionFacts: "Per Serving: 719 calories; 40.5 g fat; 34.9 g carbohydrates; 50.5 g protein; 132 mg cholesterol; 2247 mg sodium."
+        },
+        {
+            title: "Inside Out Ravioli",
+            category: "American",
+            ingredients: [
+                "16 ounces pasta",
+                "1 package spinach",
+                "2 ounces bread crumbs",
+                "2 eggs",
+                "1 ounce shredded mozzarella cheese",
+                "1 pound lean ground beef",
+                "4 onions",
+                "1 clove garlic",
+                "1 (8 ounce) can tomato sauce",
+                "1 (6 ounce) can tomato paste",
+                "1 (16 ounce) jar spaghetti sauce"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/663068.jpg",
+            cookingInstruction: [
+                "In a medium pot cook pasta in boiling salted water until al dente. Drain well.",
+                "Cook spinach according to package directions.",
+                "Meanwhile, brown ground beef, chopped onion, and minced garlic in a large skillet over medium heat. Stir in tomato sauce, tomato paste, and pasta sauce. Simmer for 10 minutes.",
+                "Combine cooked spinach, cooked pasta, bread crumbs, shredded cheese, beaten eggs, and olive oil.",
+                "Spread spinach mixture evenly into the bottom of a 9x13 inch baking dish. Top with meat mixture.",
+                "Bake in a preheated 350 degree F oven (175 degree C) for 30 minutes."
+            ],
+            nutritionFacts: "Per Serving: 545 calories; 26.4 g fat; 51.7 g carbohydrates; 25.7 g protein; 142 mg cholesterol; 779 mg sodium."
+        },
+        {
+            title: "Shortcut Beef Noodle Bowl",
+            category: "Chinese,American",
+            ingredients: [
+                "1 (16 ounce) package linguine pasta",
+                "1 broccoli ",
+                "3 carrots",
+                "1 pound beef sirloin steak"
+            ],
+            photoUrl: "https://images.media-allrecipes.com/userphotos/720x405/4458795.jpg",
+            cookingInstruction: [
+                "Bring a large pot of lightly salted water to a boil. Cook linguine until firm to the bite, about 9 minutes. Add broccoli and carrots; cook until linguine is tender, about 2 minutes more. Drain.",
+                "Heat oil in a large nonstick skillet or wok. Add steak slices; cook and stir until browned on all sides, about 4 minutes. Stir in sesame dressing and teriyaki sauce. Cook until sauce is thickened, about 2 minutes.",
+                "Stir linguine, broccoli, and carrots into the sauce. Increase heat to high and cook until noodles are slightly browned, 2 to 3 minutes."
+            ],
+            nutritionFacts: "Per Serving: 1055 calories; 56.2 g fat; 101.8 g carbohydrates; 40.1 g protein; 60 mg cholesterol; 1716 mg sodium."
         }
     ].map(m => new Meal(m).save()));
 
