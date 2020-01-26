@@ -31,7 +31,7 @@ const SelectMealsReducer = (state = {}, action) => {
          return nextState;
       
       case ADD_SELECT_MEAL:
-         console.log(action)
+         // console.log(action)
          nextState[action.mealId] = {
             _id: action.mealId,
             title: action.title,
