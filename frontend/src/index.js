@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
     if (localStorage.jwtToken) {
-        console.log(localStorage.jwtToken, "localStorage")
+        // console.log(localStorage.jwtToken, "localStorage")
         
         setAuthToken(localStorage.jwtToken);
 
