@@ -106,7 +106,15 @@
 .recipe-heading {
     font-size: 20px;
     color: rgba(248, 105, 50, .9);
-    padding: 20px 0 0 0;
+    /* padding: 20px 0 0 0; */
+    border: 1px solid #dad9d9;
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.recipe-heading:hover {
+    background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,22.9)) ,url("https://cdn2.vectorstock.com/i/1000x1000/07/11/cat-head-icon-cute-funny-cartoon-character-happy-vector-25810711.jpg") no-repeat 50%;
 }
 
 .recipe-detail-ul {
@@ -121,6 +129,15 @@
 .recipe-subheading {
     color: rgba(19, 19, 19, .8);
     padding: 15px 0 0 0;
+    font-size: 15px;
+}
+
+.recipe-subheading-category {
+    color: grey;
+    padding: 15px 0 0 0;
+    font-weight: 600;
+    margin-bottom: 60px;
+    text-align: center;
 }
 
 .recipe-container {
@@ -136,3 +153,14 @@
     border-radius: 10px;
     box-shadow: rgba(48, 48, 48, .6) 5px 2.5px 10px;
 }
+
+.recipe-heading-title {
+    font-size: 20px;
+    color: rgba(248, 105, 50, .9);
+    padding: 20px 0 0 0;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+

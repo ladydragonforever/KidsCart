@@ -47,12 +47,12 @@ class SelectMeals extends React.Component {
          <main className="selected-shell">
             <p className="select-title">Plan your meals here:</p>
             <section className="child-select">
-               <p>Deselect a meal first if you want to add a new one. 5 meals per week: </p>
                <form className="selected-meals-form">
                   {/* <button className="generate-input" type="text"
                      // onClick={this.props.fetchSelectMeals(this.props.match.params.childId)}>
                      Generate new meals
                   </button> */}
+                  <p className="select-meal-text-5">Deselect a meal first if you want to add a new one. <p>5 meals per week!</p> </p>
                   <ul className="selected-meals-list" >
                      {selectMeals.map(meal => (
                            <li 

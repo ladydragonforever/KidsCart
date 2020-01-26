@@ -11,12 +11,8 @@ class MealItem extends React.Component {
             <div className="recipe-container">
                 <img className="recipe-image-container" alt="" src={meal.photoUrl} />
                 <div className="recipe-details-panel">
-                    <div className="recipe-heading">Title
-                        <div className="recipe-subheading">{meal.title}</div>
-                    </div>
-                    <div className="recipe-heading">Category
-                        <div className="recipe-subheading">{meal.category}</div>
-                    </div>
+                    <div className="recipe-heading-title" style={{fontSize:"30px",fontWeight:"600"}}>{meal.title}</div>
+                    <div className="recipe-subheading-category">{meal.category}</div>
                     <div className="recipe-heading">Ingredients
                         {meal.ingredients.map(ingredient => (
                             <ul className="recipe-detail-ul">

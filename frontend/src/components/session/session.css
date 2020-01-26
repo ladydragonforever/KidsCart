@@ -1,28 +1,30 @@
 
 .session-form {
    width: 400px;
-   background-color: #ffe4b3;
+   background-color: #fbf4e9;
    box-sizing: border-box;
-   padding: 0;
+   padding: 20px 0px;
    font-size: 16px;
    border-radius: 10px;
    font-family: Arial, sans-serif;
 }
 
 .session-form h1 {
-   font-size: 24px;
-   box-sizing: border-box;
-   text-align: center;
-   width: 100%;
-   display: block;
-   /* background-color: #ffbf48; */
-   border-bottom: 3px solid #ffc250;
-   margin: 0;
-   padding: 8px 20px 8px;
-   font-weight: 400;
-   border-radius: 10px 10px 0 0;
-   cursor: move;
-   color: black;
+    font-size: 25px;
+    font-weight: 600;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    display: block;
+    /* background-color: #ffbf48; */
+    border-bottom: 3px solid #ffc250;
+    margin: 0;
+    padding: 8px 20px 8px;
+    font-weight: 600;
+    border-radius: 10px 10px 0 0;
+    cursor: move;
+    color: #3a3a3a;
+    padding-bottom: 20px;
 }
 
 .close-form {
@@ -65,7 +67,8 @@
    font-weight: 400;
    border: 1px solid #ffc250;
    padding: 4px 10px 4px 10px;
-   height: 35px;
+   height: 38px;
+   outline: none;
    font-size: 14px;
    margin-top: 18px;
    border-radius: 10px;
@@ -87,6 +90,7 @@
    outline: none;
    cursor: pointer;
    font-weight: bold;
+   outline: none;
 }
 .session-form input[type="submit"]:hover {
    text-decoration: underline;
