@@ -3,6 +3,27 @@ import BoxContainer from './box_container'
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router'
 import { resolve } from "path";
+import rice from "../../img/rice.png";
+import noodles from "../../img/noodles.png";
+import bread from "../../img/bread.png";
+import fries from "../../img/french_fries.png";
+import egg from "../../img/egg.png";
+import potatoes from "../../img/potatoes.png";
+import beef from "../../img/beef.png";
+import chicken from "../../img/chicken.png";
+import pork from "../../img/pork.png";
+import shrimp from "../../img/shrimp.png";
+import crab from "../../img/crab.png";
+import tofu from "../../img/tofu.png";
+import broccoli from "../../img/broccoli.png";
+import carrot from "../../img/carrot.png";
+import corn from "../../img/corn.png";
+import tomato from "../../img/tomato.png";
+import avocado from "../../img/avocado.png";
+import greenBeen from "../../img/green_beans.png"
+
+
+
 
 
 class ChoseItemIndex extends React.Component {
@@ -146,7 +167,8 @@ class ChoseItemIndex extends React.Component {
     }
 
     addToVegBox(e) {
-        let src = e.target.src.slice(21)
+        // let src = e.target.src.slice(21)
+        let src = e.target.src;
         if (this.props.typeFood === "AMERICAN") {
             if(this.state.AVegBox.length < 2) {
                 this.setState({
@@ -181,7 +203,8 @@ class ChoseItemIndex extends React.Component {
     }
 
     addToEntreeBox(e) {
-        let src = e.target.src.slice(21)
+        // let src = e.target.src.slice(21)
+        let src =e.target.src;
         if (this.props.typeFood === "AMERICAN") {
             if (this.state.AEntreeBox.length < 2) {
                 this.setState({
@@ -216,7 +239,11 @@ class ChoseItemIndex extends React.Component {
     }
 
     addToSideBox(e) {
-        let src = e.target.src.slice(21)
+
+        // let src = e.target.src.slice(21)
+        let src = e.target.src
+        // console.log(src)
+        
         if (this.props.typeFood === "AMERICAN") {
             if (this.state.ASideBox.length < 2) {
                 this.setState({
@@ -256,29 +283,35 @@ class ChoseItemIndex extends React.Component {
                 <div>
                     <div className="drop-down-box-item">
                         <div className="food-dropdown-item">
-                            <img alt='' src={process.env.PUBLIC_URL + '/rice.png'} className="food-img" onClick={this.addToSideBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/rice.png'} className="food-img" onClick={this.addToSideBox} /> */}
+                            <img alt='' src={rice} className="food-img" onClick={this.addToSideBox} />
                             <p>Rice</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img alt='' src={process.env.PUBLIC_URL + '/noodles.png'} className="food-img" onClick={this.addToSideBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/noodles.png'} className="food-img" onClick={this.addToSideBox} /> */}
+                            <img alt='' src={noodles} className="food-img" onClick={this.addToSideBox} />
                             <p>Noodles</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img alt='' src={process.env.PUBLIC_URL + '/bread.png'} className="food-img" onClick={this.addToSideBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/bread.png'} className="food-img" onClick={this.addToSideBox} /> */}
+                            <img alt='' src={bread} className="food-img" onClick={this.addToSideBox} />
                             <p>Bread</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img alt='' src={process.env.PUBLIC_URL + '/French_fries.png'} className="food-img" onClick={this.addToSideBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/french_fries.png'} className="food-img" onClick={this.addToSideBox} /> */}
+                            <img alt='' src={fries} className="food-img" onClick={this.addToSideBox} />
                             <p>Fries</p>
                         </div>
                     </div>
                     <div className="drop-down-box-item">
                         <div className="food-dropdown-item" >
-                            <img alt='' src={process.env.PUBLIC_URL + '/egg.png'} className="food-img" onClick={this.addToSideBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/egg.png'} className="food-img" onClick={this.addToSideBox} /> */}
+                            <img alt='' src={egg} className="food-img" onClick={this.addToSideBox} />
                             <p>Egg</p>
                         </div>
                         <div className="food-dropdown-item" >
-                            <img alt='' src={process.env.PUBLIC_URL + '/potatoes.png'} className="food-img" onClick={this.addToSideBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/potatoes.png'} className="food-img" onClick={this.addToSideBox} /> */}
+                            <img alt='' src={potatoes} className="food-img" onClick={this.addToSideBox} />
                             <p>Potatoes</p>
                         </div>
                     </div>
@@ -289,29 +322,35 @@ class ChoseItemIndex extends React.Component {
                 <div>
                     <div className="drop-down-box-item">
                         <div className="food-dropdown-item" >
-                            <img alt='' src={process.env.PUBLIC_URL + '/beef.png'} className="food-img" onClick={this.addToEntreeBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/beef.png'} className="food-img" onClick={this.addToEntreeBox} /> */}
+                            <img alt='' src={beef} className="food-img" onClick={this.addToEntreeBox} />
                             <p>Beef</p>
                         </div>
                         <div className="food-dropdown-item" >
-                            <img alt='' src={process.env.PUBLIC_URL + '/chicken.png'} className="food-img" onClick={this.addToEntreeBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/chicken.png'} className="food-img" onClick={this.addToEntreeBox} /> */}
+                            <img alt='' src={chicken} className="food-img" onClick={this.addToEntreeBox} />
                             <p>Chicken</p>
                         </div>
                         <div className="food-dropdown-item" >
-                            <img alt='' src={process.env.PUBLIC_URL + '/pork.png'} className="food-img" onClick={this.addToEntreeBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/pork.png'} className="food-img" onClick={this.addToEntreeBox} /> */}
+                            <img alt='' src={pork} className="food-img" onClick={this.addToEntreeBox} />
                             <p>Pork</p>
                         </div>
                         <div className="food-dropdown-item" >
-                            <img alt='' src={process.env.PUBLIC_URL + '/shrimp.png'} className="food-img" onClick={this.addToEntreeBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/shrimp.png'} className="food-img" onClick={this.addToEntreeBox} /> */}
+                            <img alt='' src={shrimp} className="food-img" onClick={this.addToEntreeBox} />
                             <p>Shrimp</p>
                         </div>
                     </div>
                     <div className="drop-down-box-item">
                         <div className="food-dropdown-item" >
-                            <img alt='' src={process.env.PUBLIC_URL + '/crab.png'} className="food-img" onClick={this.addToEntreeBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/crab.png'} className="food-img" onClick={this.addToEntreeBox} /> */}
+                            <img alt='' src={crab} className="food-img" onClick={this.addToEntreeBox} />
                             <p>Crab</p>
                         </div>
                         <div className="food-dropdown-item" >
-                            <img alt='' src={process.env.PUBLIC_URL + '/Tofu.png'} className="food-img" onClick={this.addToEntreeBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/tofu.png'} className="food-img" onClick={this.addToEntreeBox} /> */}
+                            <img alt='' src={tofu} className="food-img" onClick={this.addToEntreeBox} />
                             <p>Tofu</p>
                         </div>
                     </div>
@@ -322,29 +361,35 @@ class ChoseItemIndex extends React.Component {
                 <div>
                     <div className="drop-down-box-item">
                         <div className="food-dropdown-item">
-                            <img alt='' src={process.env.PUBLIC_URL + '/broccoli.png'} className="food-img" onClick={this.addToVegBox}/>
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/broccoli.png'} className="food-img" onClick={this.addToVegBox}/> */}
+                            <img alt='' src={broccoli} className="food-img" onClick={this.addToVegBox}/>
                             <p>Broccoli</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img alt='' src={process.env.PUBLIC_URL + '/carrot.png'} className="food-img" onClick={this.addToVegBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/carrot.png'} className="food-img" onClick={this.addToVegBox} /> */}
+                            <img alt='' src={carrot} className="food-img" onClick={this.addToVegBox} />
                             <p>Carrot</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img alt='' src={process.env.PUBLIC_URL + '/green_beans.png'} className="food-img" onClick={this.addToVegBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/green_beans.png'} className="food-img" onClick={this.addToVegBox} /> */}
+                            <img alt='' src={greenBeen} className="food-img" onClick={this.addToVegBox} />
                             <p>Green Bean</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img alt='' src={process.env.PUBLIC_URL + '/corn.png'} className="food-img" onClick={this.addToVegBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/corn.png'} className="food-img" onClick={this.addToVegBox} /> */}
+                            <img alt='' src={corn} className="food-img" onClick={this.addToVegBox} />
                             <p>Corn </p>
                         </div>
                     </div>
                     <div className="drop-down-box-item">
                         <div className="food-dropdown-item">
-                            <img alt='' src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" onClick={this.addToVegBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/avocado.png'} className="food-img" onClick={this.addToVegBox} /> */}
+                            <img alt='' src={avocado} className="food-img" onClick={this.addToVegBox} />
                             <p>Avocado</p>
                         </div>
                         <div className="food-dropdown-item">
-                            <img alt='' src={process.env.PUBLIC_URL + '/tomato.png'} className="food-img" onClick={this.addToVegBox} />
+                            {/* <img alt='' src={process.env.PUBLIC_URL + '/tomato.png'} className="food-img" onClick={this.addToVegBox} /> */}
+                            <img alt='' src={tomato} className="food-img" onClick={this.addToVegBox} />
                             <p>Tomato</p>
                         </div>
                     </div>
