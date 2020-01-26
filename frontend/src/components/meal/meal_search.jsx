@@ -1,4 +1,5 @@
 import React from 'react';
+import './search.css'
 
 
 
@@ -24,29 +25,31 @@ class MealSearch extends React.Component {
                 </div>
             </div>
         ) : (
-                <ul>
+                <div className="grid-container">
                     {
                         meals.map(meal => (
-                            <li key={meal._id}
+                            <div key={meal._id} className="grid-item"
                                 onClick={() => this.routeChange(`/meals/${meal._id}`)}
-                            >
-                                <div>Title:{meal.title}</div>
-                                <div>Category:{meal.category}</div>
-                                <div><img alt='' src={meal.photoUrl}/></div>
-                            </li>
+                            >   
+                                <img alt='' src={meal.photoUrl} className="search-img" />
+                                <div className="search-text-box">
+                                    <div className="search-meal-title">{meal.title}</div>
+                                    <div className="search-meal-subtitle">{meal.category}</div>
+                                </div>
+                            </div>
                         ))
                     }
-                </ul>
+                </div>
         )
 
         const display = (url === '/search/' ? (    
             <div>Please type something to search!</div>
         ) : (
-            <div>{result}</div>
+             <div className="search-index-box">{result}</div>
         ))
 
         return(
-            <div>{display}</div>
+            <div className="search-container">{display}</div>
         )
             
     }

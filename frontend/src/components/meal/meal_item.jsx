@@ -8,30 +8,32 @@ class MealItem extends React.Component {
     render(){
         const {meal} = this.props;
         const display = meal ? (
-            <div>
-                <div>Title
-                    <div>{meal.title}</div>
-                </div>
-                <div>Category
-                    <div>{meal.category}</div>
-                </div>
-                <div>Ingredients
-                    {meal.ingredients.map(ingredient => (
-                        <ul>
-                            <li>{ingredient}</li>
-                        </ul>
-                    ))}
-                </div>
-                <div><img alt="" src={meal.photoUrl} /></div>
-                <div>Cooking Instruction
-                    {meal.cookingInstruction.map(instruction => (
-                        <ul>
-                            <li>{instruction}</li>
-                        </ul>
-                    ))}
-                </div>
-                <div>Nutrition Facts
-                    <div>{meal.nutritionFacts}</div>
+            <div className="recipe-container">
+                <img className="recipe-image-container" alt="" src={meal.photoUrl} />
+                <div className="recipe-details-panel">
+                    <div className="recipe-heading">Title
+                        <div className="recipe-subheading">{meal.title}</div>
+                    </div>
+                    <div className="recipe-heading">Category
+                        <div className="recipe-subheading">{meal.category}</div>
+                    </div>
+                    <div className="recipe-heading">Ingredients
+                        {meal.ingredients.map(ingredient => (
+                            <ul className="recipe-detail-ul">
+                                <li className="recipe-subheading">{ingredient}</li>
+                            </ul>
+                        ))}
+                    </div>
+                    <div className="recipe-heading">Cooking Instruction
+                        {meal.cookingInstruction.map(instruction => (
+                            <ul className="recipe-detail-ul">
+                                <li className="recipe-subheading">{instruction}</li>
+                            </ul>
+                        ))}
+                    </div>
+                    <div className="recipe-heading">Nutrition Facts
+                        <div className="recipe-subheading">{meal.nutritionFacts}</div>
+                    </div>
                 </div>
             </div>
         ) : (
