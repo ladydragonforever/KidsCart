@@ -45,6 +45,17 @@ router.post('/:user_id',
    }
 );
 
+router.delete('/:id',(req,res) => {
+   Child.findByIdAndRemove(req.params.id, (err, child) => {
+      if (err) return res.status(500).send(err);
+      const response = {
+         message: "child successfully deleted",
+         id: child._id
+      };
+      return res.status(200).send(response);
+   });
+})
+
 
 // router.get('/:child_id/selected-meals', (req, res) => {
 //    const child = Child.find({ child: req.params.child_id });
@@ -71,5 +82,8 @@ router.post('/:user_id',
 //          res.status(404).json({ noselectmealsfound: 'No meals found for child' })
 //       );
 // });
+
+
+
 
 module.exports = router;

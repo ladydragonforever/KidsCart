@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { receiveChildIngredient, createAChild } from '../../actions/child_actions'
+import { receiveChildIngredient, createAChild, receiveChildCategory} from '../../actions/child_actions'
 import { withRouter } from 'react-router'
 
 import ChoseItemIndex from './choseItemIndex';
@@ -12,7 +12,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     receiveChildIngredient: ingredient => dispatch(receiveChildIngredient(ingredient)),
-    createAChild: (child,userID) => dispatch(createAChild(child,userID))
+    createAChild: (child,userID) => dispatch(createAChild(child,userID)),
+    receiveChildCategory: category => dispatch(receiveChildIngredient(category))
 })
 
 

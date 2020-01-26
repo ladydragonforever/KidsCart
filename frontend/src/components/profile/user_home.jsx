@@ -7,11 +7,20 @@ class UserHome extends React.Component {
         this.initials = this.initials.bind(this)
         this.fullName = this.fullName.bind(this)
         this.addClass = this.addClass.bind(this)
+        this.deleteChild = this.deleteChild.bind(this)
     }
 
     componentDidMount() {
         this.props.fetchUser(this.props.userId)
     }
+
+    deleteChild(childId) {
+        this.props.deleteAChild(childId)
+        .then(() => {
+            this.props.fetchUser(this.props.userId)
+        })
+    }
+
 
     initials(){
         if (this.props.user) {
@@ -37,7 +46,7 @@ class UserHome extends React.Component {
         if(this.props.user) {
             return (
                 <div className="children-form-box">
-                    <div className="children-form-inner">
+                    <div className="children-form-inner" style={{ padding:" 75px 0px 60px"}}>
                         <div className="profile-header">
                             <div className="initial">{this.initials()}</div>
                             <div style={{marginLeft: "20px"}}>
@@ -54,6 +63,8 @@ class UserHome extends React.Component {
                                             <div className="initial-baby">{child.name.slice(0,1).toUpperCase()}</div>
                                             <div className="baby-text">{child.name}</div>
                                             <div className="baby-text">{child.age} year old</div>
+                                            <button className="button-profile" onClick={() => this.props.history.push(`/generate-meals/${child._id}`)}>Edit the Lunch Plan</button>
+                                            <button className="button-profile" onClick={() => this.deleteChild(child._id)}>Delete the Child</button>
                                         </div>
                                         <div ref={el => this[`popout-${i}`] = el} style={{display: 'none'}}>
                                                 {   
