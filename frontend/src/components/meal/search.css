@@ -1,0 +1,137 @@
+.search-container {
+    display: flex;
+    justify-items: center;
+}
+
+.search-index {
+    display: flex;
+    list-style: none;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    border-bottom: 1px solid #dad9d9;
+    background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)), url(https://cdn2.vectorstock.com/i/1000x1000/70/46/shopping-cart-symbol-cute-kawaii-cartoon-vector-17457046.jpg) no-repeat scroll right top;
+    background-size: 235px 213px;
+}
+
+.search-index:hover {
+     background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)), url(https://cdn2.vectorstock.com/i/1000x1000/70/46/shopping-cart-symbol-cute-kawaii-cartoon-vector-17457046.jpg) no-repeat scroll right top;
+     background-size: 235px 213px;
+}
+
+.search-img {
+    width: 100%;
+    height: 150px;
+    border-radius: 5px 5px 0 0;
+}
+
+.grid-container {
+    display: grid;
+    padding-left: 15px;
+}
+
+@media only screen and (max-width: 370px) {
+    .grid-container {
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (min-width: 371px) and (max-width: 720px) {
+    .grid-container {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media only screen and (min-width: 721px) and (max-width: 868px) {
+    .grid-container {
+        grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+}
+
+@media only screen and (min-width: 869px) {
+    .grid-container {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 225px;
+    margin: 0 15px 15px 0;
+    border-radius: 15px;
+    box-shadow: rgba(48, 48, 48, .6) 5px 2.5px 10px;
+    transition: box-shadow .65s;
+}
+
+.grid-item:hover {
+    box-shadow: rgba(48, 48, 48, .2) 5px 2.5px 10px;
+}
+
+.search-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    color: #0f346c;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+.search-index-box {
+    min-width: 500px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.search-meal-title {
+    color: rgba(45, 60, 72, 1);
+    font-size: 18px;
+    padding: 10px 0 0 10px;
+}
+
+.search-meal-subtitle {
+    color: rgba(248, 105, 50, .8);
+    font-size: 16px;
+    padding: 5px 0 0 10px;
+}
+
+.recipe-details-panel {
+    max-width: calc(50% - 60px);
+    white-space: normal;
+}
+
+.recipe-heading {
+    font-size: 20px;
+    color: rgba(248, 105, 50, .9);
+    padding: 20px 0 0 0;
+}
+
+.recipe-detail-ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recipe-detail-ul li {
+    padding-left: 5px;
+}
+
+.recipe-subheading {
+    color: rgba(19, 19, 19, .8);
+    padding: 15px 0 0 0;
+}
+
+.recipe-container {
+    padding: 0px 30px 30px 30px;
+    position: relative;
+}
+
+.recipe-image-container {
+    position: fixed;
+    left: calc(50% - 30px);
+    top: 150px;
+    max-width: calc(50% - 30px);
+    border-radius: 10px;
+    box-shadow: rgba(48, 48, 48, .6) 5px 2.5px 10px;
+}
