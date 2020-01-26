@@ -1,20 +1,22 @@
 import React from 'react';
 import './select_meals.css';
 import { withRouter } from "react-router";
+// import { Link } from 'react-router-dom';
 
 class SelectMeals extends React.Component {
    constructor(props) {
       super(props);
       this.state = {
-         word: ''
+         word: '',
+         meals: {}
       }
-      this.startSearch = this.startSearch.bind(this)
+      this.startSearch = this.startSearch.bind(this);
+      this.saveMealstoDB = this.saveMealstoDB.bind(this);
    }
 
    componentDidMount(){
-      // debugger
       this.props.fetchSelectMeals(this.props.match.params.childId)
-      // .then(() => this.props.postSelectMeals(this.props.match.params.childId))
+   
    }
 
 
@@ -33,37 +35,64 @@ class SelectMeals extends React.Component {
       }
    }
 
+   saveMealstoDB() {
+      this.props.createSelectMeals(this.props.match.params.childId, this.props.selectMeals)
+      .then(this.props.history.push('/user'))
+   }
+
    render() {
       const {meals, selectMeals} = this.props;
+      const fiveSelectMeals = selectMeals.length > 5 ? selectMeals.slice(selectMeals.length - 5) : selectMeals;
       return(
          <main className="selected-shell">
-            <p className="select-title">Alter this weeks meal selection below.</p>
+            <p className="select-title">Plan your meals here:</p>
             <section className="child-select">
                <form className="selected-meals-form">
                   {/* <button className="generate-input" type="text"
-                     // onClick={this.props.fetchSelectMeals(this.props.match.params.childId)}
-
-                  >
+                     // onClick={this.props.fetchSelectMeals(this.props.match.params.childId)}>
                      Generate new meals
                   </button> */}
                   <ul className="selected-meals-list" >
-                     {selectMeals.map(meal => (
-                           <li key = {meal._id}>
-                              <div>Title:{meal.title}</div>
-                              <div>Category:{meal.category}</div>
-                              {/* <div><img src={meal.photoUrl} /></div> */}
-                           {/* <button 
-                              className="delete-button" 
-                              type="button" 
-                              onClick={() => this.props.deleteSelectMeal(this.props.match.params.childId, meal._id)}>
-                                 deselect meal
-                           </button> */}
+                     {fiveSelectMeals.map(meal => (
+                           <li 
+                              key = {meal._id}
+                              className="list-element"
+                              tabIndex="1">
+                              <div className="food-image"><img src={meal.photoUrl} /></div>
+                              <div className="meal-info">
+                                 <span className="meal-name" >{meal.title}</span>
+                                 <button
+                                    className="delete-button"
+                                    type="button"
+                                    onClick={() => this.props.removeSelectMeal(this.props.match.params.childId, meal._id)}>
+                                    deselect meal
+                                 </button>
+                              </div>
+                              <div className="dropdown-meal-content">
+                                 <div id="header-info">{meal.category}: {meal.title}</div>
+                                 <div>Ingredients:
+                                    {meal.ingredients.map(ingredient => (
+                                          <ul>
+                                             <li>{ingredient}</li>
+                                          </ul>
+                                       ))}
+                                 </div>
+                                   
+                                 <div>Cooking Instruction:
+                                       {meal.cookingInstruction.map(instruction => (
+                                          <ul>
+                                             <li>{instruction}</li>
+                                          </ul>
+                                       ))}
+                                 </div>
+                                    
+                                 <div>Nutrition Facts:
+                                    <div>{meal.nutritionFacts}</div>
+                                 </div>
+                              </div>
                            </li>
                         ))}
                   </ul>
-                  <button className="generate-input" type="submit">
-                     Confim meals
-                  </button>
                </form>
                <aside className="search-select">
                   <label className="discover-label">
@@ -79,21 +108,28 @@ class SelectMeals extends React.Component {
                   </label>
                   <ul className="search-meals-list">
                      {meals.map(meal => (
-                        <li key = {meal._id}>
-                           <div>Title:{meal.title}</div>
-                           <div>Category:{meal.category}</div>
-                           {/* <div><img src={meal.photoUrl} /></div> */}
-                           {/* <button
-                              className="delete-button"
-                              type="button"
-                              onClick={() => this.props.addSelectMeal(this.props.match.params.childId, meal._id)}>
-                                 select meal
-                           </button> */}
+                        <li
+                           key={meal._id}
+                           className="search-list-element">
+                           <div className="search-food-image"><img src={meal.photoUrl} /></div>
+                           <div className="seach-food-info">
+                              <div>{meal.title}</div>
+                              <button
+                                 className="select-button"
+                                 type="button"
+                                 onClick={() => this.props.addSelectMeal(this.props.match.params.childId, meal._id, meal.title, 
+                                 meal.category, meal.photoUrl, meal.ingredients, meal.cookingInstruction, meal.nutritionFacts)}>
+                                    select meal
+                              </button>
+                           </div>
                         </li>
                      ))}
                   </ul>
                </aside>
             </section>
+            <button className="generate-input" type="submit" onClick={this.saveMealstoDB}>
+               Confim meals
+            </button>
          </main>
       );
    }
