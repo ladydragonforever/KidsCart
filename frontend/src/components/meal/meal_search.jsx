@@ -13,10 +13,6 @@ class MealSearch extends React.Component {
         this.props.history.push(path)
     }
 
-    componentWillUnmount(){
-        this.props.clearMeals()
-    }
-
     render(){
         const { meals, query, url } = this.props;
         const result = meals.length === 0 ? (
