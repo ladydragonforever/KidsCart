@@ -167,7 +167,8 @@ class ChoseItemIndex extends React.Component {
     }
 
     addToVegBox(e) {
-        let src = e.target.src.slice(21)
+        // let src = e.target.src.slice(21)
+        let src = e.target.src;
         if (this.props.typeFood === "AMERICAN") {
             if(this.state.AVegBox.length < 2) {
                 this.setState({
@@ -202,7 +203,8 @@ class ChoseItemIndex extends React.Component {
     }
 
     addToEntreeBox(e) {
-        let src = e.target.src.slice(21)
+        // let src = e.target.src.slice(21)
+        let src =e.target.src;
         if (this.props.typeFood === "AMERICAN") {
             if (this.state.AEntreeBox.length < 2) {
                 this.setState({
