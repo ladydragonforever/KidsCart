@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import './nav/navbar.css';
 import { Link } from 'react-router-dom';
 
 class Footer extends React.Component {
