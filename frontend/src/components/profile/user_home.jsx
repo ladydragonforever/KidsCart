@@ -15,7 +15,8 @@ class UserHome extends React.Component {
         this.props.fetchUser(this.props.userId)
     }
 
-    deleteChild(childId) {
+    deleteChild(e,childId) {
+        e.stopPropagation()
         this.props.deleteAChild(childId)
         .then(() => {
             this.props.fetchUser(this.props.userId)
@@ -55,6 +56,7 @@ class UserHome extends React.Component {
                                 <div className="user-text-handle">{this.props.user.handle}</div>
                                 <div className="user-text-handle">{this.props.user.email}</div>
                             </div>
+                            <img alt='' src={process.env.PUBLIC_URL + '/veg-heart.png'} style={{ width: "200px", marginLeft: "30px"}} />
                         </div>
                         <div className='children-container'>
                             {
@@ -65,7 +67,7 @@ class UserHome extends React.Component {
                                             <div className="baby-text">{child.name}</div>
                                             <div className="baby-text">{child.age} year old</div>
                                             <button className="button-profile" onClick={() => this.props.history.push(`/generate-meals/${child._id}`)}>Edit the Lunch Plan</button>
-                                            <button className="button-profile" onClick={() => this.deleteChild(child._id)}>Delete the Child</button>
+                                            <button className="button-profile" onClick={(e) => this.deleteChild(e,child._id)}>Delete the Child</button>
                                         </div>
                                         <div ref={el => this[`popout-${i}`] = el} style={{display: 'none'}}>
                                                 {   
@@ -74,7 +76,7 @@ class UserHome extends React.Component {
                                                             <div style={{ display: "flex", alignItems: "center", marginBottom:"20px"}}>
                                                                 <b style={{marginRight:"20px"}}>{i + 1}.</b>
                                                                 <img alt='' src={`${each.meal_relation.photoUrl}`} style={{ width: "100px", borderRadius: "10px", marginRight:"30px" }}></img>
-                                                                <div className="user-meal-text">{each.title}</div>
+                                                                <div className="user-meal-text">{each.meal_relation.title}</div>
                                                             </div>
                                                         </div>
                                                     )) 
@@ -85,6 +87,7 @@ class UserHome extends React.Component {
                                 ))
                             }
                         </div>
+                        {/* <img alt='' src={process.env.PUBLIC_URL + '/footer-veg.png'} style={{ width: "200px", marginLeft: "30px" }} /> */}
                     </div>
                 </div>
             )

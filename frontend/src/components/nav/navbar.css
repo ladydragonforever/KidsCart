@@ -46,10 +46,23 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 30px;
+    border-top: 1px solid #dad9d9;
+    font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    color:grey;
+}
+
+.footer-linked {
+    background-color:rgb(253, 253, 253);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
     margin-top: 100px;
     border-top: 1px solid #dad9d9;
     font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     color:grey;
+    padding-bottom: 48px;
 }
 
 .logo-footer {
@@ -140,4 +153,22 @@ body {
     clip: rect(120px, calc(100vw), 725px, 0px);
     width: 100%;
     top: -21px;
+}
+.linked-link {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 40px;
+}
+
+.a-tage {
+    text-decoration: none;
+    color: #758e75;
+    font-size: 14px;
+}
+
+.a-tage:hover {
+     color: #378f37;
+     text-decoration: underline;
 }

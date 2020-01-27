@@ -3,6 +3,7 @@ import React from 'react';
 import './navbar.css';
 import { withRouter } from 'react-router';
 import { faSearch, faUser} from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class NavBar extends React.Component {
@@ -102,6 +103,7 @@ class NavBar extends React.Component {
         return (
             <div className="nav-bar-container">
                 <img alt='' src={process.env.PUBLIC_URL + '/kidscart_logo.png'} className="logo" onClick={this.backToHome}/>
+                <a href="https://github.com/ladydragonforever/KidsCart" style={{ color:"#505050", cursor:"pointer"}}><FontAwesomeIcon icon={faGithub} style={{ fontSize: "30px" }} /></a>
                 <div style={{ flex: "0.7"}}>
                     <label className="search-label">
                         <input className="search-input" type="text" placeholder="Discover by category: Japanese, Chinese..." 
