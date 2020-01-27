@@ -1,7 +1,7 @@
  .initial {
     display: flex;
     background-color: #c2cbd8; 
-    width: 150px;
+    min-width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 1px solid #fff;
@@ -22,13 +22,14 @@
  }
 
  .children-container {
-    width: 60%;
+   width: 60%;
+   margin-bottom: 70px;
  }
 
  .initial-baby {
     background-color: #686f7a; 
     height: 46px;
-    width: 46px;
+    min-width: 46px;
     border-radius: 50%;
     border: 1px solid #fff;
     color: #fff;
@@ -66,7 +67,7 @@
  }
 
  .user-meal-text {
-    text-align: center;
+    /* text-align: center; */
     font-size: 20px;
     margin-bottom: 8px;
     color: #0f346c;
