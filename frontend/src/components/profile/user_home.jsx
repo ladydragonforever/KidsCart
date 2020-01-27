@@ -1,5 +1,6 @@
-import React from 'react'
-import './user.css'
+import React from 'react';
+import './user.css';
+import Loader from "react-loader-spinner";
 
 class UserHome extends React.Component {
     constructor(props){
@@ -88,7 +89,21 @@ class UserHome extends React.Component {
                 </div>
             )
         } else {
-            return null
+            return (
+                <div className="loading-main">
+                    <p>We are adding meals to your account!</p>
+                    <Loader
+                        className="loader"
+                        type="Audio"
+                        color="#f26226"
+                        height={50}
+                        width={50}
+                        timeout={30000} //3 secs
+
+                    /> 
+                </div>
+               
+            )
         }
     }
 }
