@@ -15,8 +15,8 @@ class Footer extends React.Component {
                         <div>Software Engineer Team</div>
                     </div>
                     <div style={{ display: "flex", alignItems:"space-between", flexDirection:"column"}}>
-                        <div className="linked-link"><a className="a-tage" href="https://www.linkedin.com/in/linda-liu-b700261a1/">Linda Liu's Linked Profile</a><a className="a-tage" href="https://www.linkedin.com/in/lingxiaowen/">Xiaowen Ling's Linked Profile</a></div>
-                        <div className="linked-link"><a className="a-tage" href="https://www.linkedin.com/in/ian-franklin-dechow/">Ian Dechow's Linked Profile</a><a className="a-tage"href="https://www.linkedin.com/in/dan-li-15074934/">Dan Li's Linked Profile</a></div>
+                        <div className="linked-link"><a className="a-tage" href="https://www.linkedin.com/in/linda-liu-b700261a1/">Linda Liu's LinkedIn Profile</a><a className="a-tage" href="https://www.linkedin.com/in/lingxiaowen/">Xiaowen Ling's LinkedIn Profile</a></div>
+                        <div className="linked-link"><a className="a-tage" href="https://www.linkedin.com/in/ian-franklin-dechow/">Ian Dechow's LinkedIn Profile</a><a className="a-tage"href="https://www.linkedin.com/in/dan-li-15074934/">Dan Li's LinkedIn   Profile</a></div>
                     </div>
                 </div>
                 <div className="footer">
