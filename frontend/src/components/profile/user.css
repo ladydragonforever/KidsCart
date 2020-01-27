@@ -127,3 +127,10 @@
 .button-profile:hover {
     background-color: #245091;
 }
+
+.loading-main {
+   text-align: center;
+   color: #0f346c;
+   font-size: 30px;
+   font-weight: 600;
+}
