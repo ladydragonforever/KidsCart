@@ -19,7 +19,7 @@
    display: flex;
    flex-direction: column;
    padding-left: 27px;
-   width: 50%;
+   width: 380px;
    height: 100%;
    /* position: absolute; */
 }
@@ -284,6 +284,9 @@
     font-size: 18px;
     font-weight: 600;
     text-align: center;
+    width: 500px;
+    margin-right: 25px;
+    margin-left: 25px;
     font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
 }
 
