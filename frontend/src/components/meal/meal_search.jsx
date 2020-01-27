@@ -15,7 +15,6 @@ class MealSearch extends React.Component {
 
     render(){
         const { meals, query, url } = this.props;
-
         const result = meals.length === 0 ? (
             <div className="unfound">
                 <img className="img-reference"
