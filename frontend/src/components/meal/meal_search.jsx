@@ -17,8 +17,10 @@ class MealSearch extends React.Component {
         const { meals, query, url } = this.props;
         const result = meals.length === 0 ? (
             <div>
+                <img className="img-reference"
+                    src="https://cdn.sstatic.net/Img/magnifying.svg?v=f06250fb4fbb" />
                 <div>
-                    Sorry, we couldn't find any meal for <span>{query}</span>!
+                    Sorry, we couldn't find any meal for <span className="unkown">{query}</span>!
                 </div>
                 <div>
                     Please try a different type.
