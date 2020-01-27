@@ -152,6 +152,9 @@
     max-width: calc(50% - 30px);
     border-radius: 10px;
     box-shadow: rgba(48, 48, 48, .6) 5px 2.5px 10px;
+    width: 50vw;
+    height: 40vw;
+    object-fit: cover;
 }
 
 .recipe-heading-title {
