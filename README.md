@@ -73,3 +73,6 @@ The KidsCart app is built with the MERN stack (MongoDB, Express, React, and Node
   * React with Redux for state management
   * Axios for sending HTTP requests
   * Styling and animations done with CSS
+
+## Software engineering team
+  Contributors: [XiaoWen Lin](https://github.com/shmily40686), [Linda Liu](https://github.com/linlinliu03), [Ian Dechow](https://github.com/idechow), and [Dan Li](https://github.com/ladydragonforever)
