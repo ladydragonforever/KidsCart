@@ -23,6 +23,12 @@ class Home extends React.Component {
             id: null
         }
         this.changeImg = this.changeImg.bind(this)
+        this.randomPicture = this.randomPicture.bind(this)
+    }
+
+    randomPicture() {
+        let res = this.state.backgroundImages[Math.floor(this.state.backgroundImages.length * Math.random())]
+        return res
     }
 
     requireLogin() {
