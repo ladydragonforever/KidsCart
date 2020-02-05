@@ -76,7 +76,7 @@ class UserHome extends React.Component {
                         <div className='children-container'>
                             {
                                 this.props.user.childs.map((child,i) => (
-                                    <div key={i}>
+                                    <div key={child._id}>
                                         <div className="baby-box" onClick={this.addClass} data-index={i}  >
                                             <FontAwesomeIcon className="icon" icon={faPlus} style={{ display: 'block' }}/> 
                                             <FontAwesomeIcon className="icon" icon={faMinus} style={{ display: 'none' }}/> 
