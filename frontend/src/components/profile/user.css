@@ -22,8 +22,11 @@
  }
 
  .children-container {
-   width: 60%;
+   width: 70%;
    margin-bottom: 70px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
  }
 
  .initial-baby {
@@ -42,18 +45,19 @@
 .baby-box {
    display: flex;
    align-items: center;
-   justify-content: space-between;
+   /* justify-content: space-between; */
    padding: 10px 10px;
-   border-radius: 1px;
+   border-radius: 5px;
    border-bottom: 2px solid #ffffff;
 }
  .baby-box:hover {
-    background: #fffdfd;
+    background: #f5f4f4;
     border-bottom: 2px solid #dad9d9;
+    cursor: pointer;
  }
 
  .baby-text {
-     margin-left: 20px;
+     margin-left: 22px;
  }
 
  .user-text {
@@ -73,6 +77,10 @@
     color: #0f346c;
     font-weight: 600;
     font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+ }
+
+ .user-meal-text:hover {
+   color: #f26226;
  }
 
  .user-text-handle {
@@ -95,7 +103,7 @@
 
  .baby-text {
     text-align: center;
-    font-size: 19px;
+    font-size: 22px;
     margin-bottom: 8px;
     color: #6386bb;
     font-weight: 500;
@@ -105,7 +113,7 @@
 
  .list-box {
     border-bottom: 1px solid #dad9d9;
-    padding: 50px;
+    padding: 20px;
     border-radius: 5px;
  }
 
@@ -130,8 +138,30 @@
 }
 
 .loading-main {
+   margin: 200px;
    text-align: center;
    color: #0f346c;
    font-size: 30px;
    font-weight: 600;
 }
+
+.icon {
+   margin-right: 20px;
+   color: #0f346c;
+}
+
+.add-child {
+    margin-top: 70px;
+   font-weight: 500;
+    text-align: center;
+    color: #fff;
+    background-color: #245091;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 47.88px;
+    height: 47.88px;
+    padding: 0 40px;
+    border-radius: 5px;
+}
+

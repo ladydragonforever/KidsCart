@@ -1,6 +1,8 @@
 import React from 'react';
 import './user.css';
 import Loader from "react-loader-spinner";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class UserHome extends React.Component {
     constructor(props){
@@ -17,6 +19,8 @@ class UserHome extends React.Component {
 
     deleteChild(e,childId) {
         e.stopPropagation()
+        e.currentTarget.innerHTML = "Deleting........   "
+        e.currentTarget.style.backgroundColor = "#f26226"
         this.props.deleteAChild(childId)
         .then(() => {
             this.props.fetchUser(this.props.userId)
@@ -42,6 +46,17 @@ class UserHome extends React.Component {
         ele.style.display = ele.style.display === 'none'
             ? 'block'
             : 'none';
+
+       const icon = document.getElementsByClassName("icon")
+        let indexIcon = index * 2
+        if (icon[indexIcon].style.display === "none" ) {
+            icon[indexIcon].style.display = 'block'
+            icon[indexIcon + 1].style.display = 'none'
+        } else {
+            icon[indexIcon + 1].style.display = 'block'
+            icon[indexIcon].style.display = 'none'
+        }
+
     }
 
     render() {
@@ -62,20 +77,26 @@ class UserHome extends React.Component {
                             {
                                 this.props.user.childs.map((child,i) => (
                                     <div key={i}>
-                                        <div className="baby-box" onClick={this.addClass} data-index={i}>
-                                            <div className="initial-baby">{child.name.slice(0,1).toUpperCase()}</div>
-                                            <div className="baby-text">{child.name}</div>
-                                            <div className="baby-text">{child.age} year old</div>
-                                            <button className="button-profile" onClick={() => this.props.history.push(`/generate-meals/${child._id}`)}>Edit the Lunch Plan</button>
-                                            <button className="button-profile" onClick={(e) => this.deleteChild(e,child._id)}>Delete the Child</button>
+                                        <div className="baby-box" onClick={this.addClass} data-index={i}  >
+                                            <FontAwesomeIcon className="icon" icon={faPlus} style={{ display: 'block' }}/> 
+                                            <FontAwesomeIcon className="icon" icon={faMinus} style={{ display: 'none' }}/> 
+                                            <div className="initial-baby">{child.name.slice(0, 1).toUpperCase()}</div>
+                                            <div>
+                                                <div className="baby-text">{child.name}</div>
+                                                <div className="baby-text" style={{ fontSize: "15px", color:"#85868a"}}>{child.age} year old</div>
+                                            </div>
+                                            <div style={{ display: "flex", marginLeft: "100px"}}>
+                                                <button className="button-profile" onClick={() => this.props.history.push(`/generate-meals/${child._id}`)}>Edit the Lunch Plan</button>
+                                                <button className="button-profile" onClick={(e) => this.deleteChild(e, child._id)}> Delete the Child</button>
+                                            </div>
                                         </div>
                                         <div ref={el => this[`popout-${i}`] = el} style={{display: 'none'}}>
                                                 {   
                                                     child.selectedMeal ? child.selectedMeal.meals.map((each,i) => (
                                                         <div className="list-box" key={i}>
-                                                            <div style={{ display: "flex", alignItems: "center", marginBottom:"20px"}}>
+                                                            <div className="meals-list-each"style={{ display: "flex", alignItems: "center", marginBottom: "20px", cursor: "pointer" }} onClick={() => this.props.history.push(`/meals/${each.meal_relation._id}`)} >
                                                                 <b style={{marginRight:"20px"}}>{i + 1}.</b>
-                                                                <img alt='' src={`${each.meal_relation.photoUrl}`} style={{ width: "100px", borderRadius: "10px", marginRight:"30px" }}></img>
+                                                                <img alt='' src={`${each.meal_relation.photoUrl}`} style={{ width: "100px", borderRadius: "10px", marginRight: "30px", height: "60px", objectFit: "cover"}}></img>
                                                                 <div className="user-meal-text">{each.meal_relation.title}</div>
                                                             </div>
                                                         </div>
@@ -86,6 +107,7 @@ class UserHome extends React.Component {
                                     </div>
                                 ))
                             }
+                            <button onClick={() => this.props.history.push('/choseGender')}className="add-child">Add Child</button>
                         </div>
                         {/* <img alt='' src={process.env.PUBLIC_URL + '/footer-veg.png'} style={{ width: "200px", marginLeft: "30px" }} /> */}
                     </div>
@@ -97,10 +119,10 @@ class UserHome extends React.Component {
                     <p>We are adding meals to your account!</p>
                     <Loader
                         className="loader"
-                        type="Audio"
+                        type="Hearts"
                         color="#f26226"
-                        height={50}
-                        width={50}
+                        height={150}
+                        width={150}
                         timeout={30000} //3 secs
 
                     /> 
