@@ -116,7 +116,7 @@ class UserHome extends React.Component {
         } else {
             return (
                 <div className="loading-main">
-                    <p>We are adding meals to your account!</p>
+                    <p>We are preparing your weekly lunch box plan!</p>
                     <Loader
                         className="loader"
                         type="Hearts"
