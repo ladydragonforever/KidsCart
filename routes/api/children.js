@@ -13,7 +13,11 @@ router.get('/:child_id/matching-meals', async (req, res) => {
    const childCategoryRe = "(" + child.category.join(")|(") + ")";
    console.log(childCategoryRe);
    const re = new RegExp(childCategoryRe, "i");
-   const select_meals = await Meal.find({ category: re }).limit(5);
+   // const select_meals = await Meal.find({ category: re }).limit(5);
+   const select_meals = await Meal.aggregate([
+      { $match: { 'category': re } },
+      { $sample: { size: 5 } }
+   ])
 
    res.status(200).json(select_meals);
 });
