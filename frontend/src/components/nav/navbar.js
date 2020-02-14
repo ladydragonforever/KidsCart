@@ -29,6 +29,7 @@ class NavBar extends React.Component {
         this.startSearch = this.startSearch.bind(this)
         this.inputFocus = this.inputFocus.bind(this)
         this.inputUnFocus = this.inputUnFocus.bind(this)
+        this.debounceSearch = this.debounceSearch.bind(this)
     }
 
 
@@ -54,6 +55,15 @@ class NavBar extends React.Component {
                 this.startSearch(e.target.value)
             }
         }
+    }
+
+    debounceSearch(func, delay) {
+        let inDebounce;
+        return (e) => {
+            e.persist();
+            clearTimeout(inDebounce);
+            inDebounce = setTimeout(func.bind(this, e), delay);
+        };
     }
 
     backToHome(){
@@ -112,9 +122,12 @@ class NavBar extends React.Component {
                             onKeyUp={this.getSearchInput}   
                             value={this.state.word}
                             onChange={this.update()}
-                            onKeyPress={this.searchFunc()}
+                            // onKeyPress={this.searchFunc()}
+                            onKeyPress={this.debounceSearch(this.searchFunc(), 250)}
                          />
-                        <FontAwesomeIcon icon={faSearch} className={this.state.iconClassName} onClick={() => this.startSearch(this.state.word)} />
+                        
+                        {/* <FontAwesomeIcon icon={faSearch} className={this.state.iconClassName} onClick={() => this.startSearch(this.state.word)} /> */}
+                        <FontAwesomeIcon icon={faSearch} className={this.state.iconClassName} onClick={() => this.debounceSearch(this.startSearch(this.state.word), 250)} />
                     </label>
                 </div>
                 {this.getLinks()}
