@@ -18,6 +18,26 @@ KidsCart has:
   * tailored receipes are automatically generated based on user's preferences; 
   * user can add, replace, edit, delete, and create their lunchbox with ease.
   
+## Technologies used
+
+The KidsCart app is built with the MERN stack (MongoDB, Express, React, and Node.js). It features a back-end HTTP API used for retrieving user records in conjunction with client side rendering with React/Redux. Node.js and Express are used for backend routing. Considering the low-latency and scalability, we chose MongoDB as the database and Mongoose to manage schemas and queries.
+
+- Backend
+  * Express (the main framework)
+  * Mongoose (to connect and interact with MongoDB)
+  * Passport (for authentication)
+  * Passport-jwt (for JSON web tokens)
+  * JsonWebToken (to generate the tokens)
+  * Body-parser (to parse data from requests)
+  * Bcryptjs (for securing the password with hashing and salting)
+  * Validator (for database validations)
+  * Nodemon for watching the changes and updating instantly
+  
+- Frontend
+  * React with Redux for state management
+  * Axios for sending HTTP requests
+  * Styling and animations done with CSS
+  
 ## Functionalities and Highlights 
 
 ### Features
