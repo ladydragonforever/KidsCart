@@ -9,14 +9,16 @@ class MealItem extends React.Component {
         const {meal} = this.props;
         const display = meal ? (
             <div className="recipe-container">
+                <div className="recipe-image-wrapper">
                 <img className="recipe-image-container" alt="" src={meal.photoUrl} />
+                </div>
                 <div className="recipe-details-panel">
                     <div className="recipe-heading-title" style={{fontSize:"30px",fontWeight:"600"}}>{meal.title}</div>
                     <div className="recipe-subheading-category">{meal.category}</div>
                     <div className="recipe-heading">Ingredients
-                        {meal.ingredients.map(ingredient => (
+                        {meal.ingredients.map((ingredient,idx) => (
                             <ul className="recipe-detail-ul">
-                                <li className="recipe-subheading">{ingredient}</li>
+                                <li className="recipe-subheading" key={idx}>{ingredient}</li>
                             </ul>
                         ))}
                     </div>
