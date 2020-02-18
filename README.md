@@ -40,6 +40,53 @@ The KidsCart app is built with the MERN stack (MongoDB, Express, React, and Node
   
 ## Functionalities and Highlights 
 
+### Highlights
+ Media query
+  * we used media query throughout the whole application to ensure front-end user experience even with small screens.
+  ```javascript
+  @media only screen and (max-width: 370px) {
+    .grid-container {
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (min-width: 371px) and (max-width: 720px) {
+    .grid-container {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media only screen and (min-width: 721px) and (max-width: 868px) {
+    .grid-container {
+        grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+}
+
+@media only screen and (min-width: 869px) {
+    .grid-container {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+```
+JavaScript Promise/Async/Await and Mongoose aggregate method
+ * We utilised JavaScript Promise/Await/Async to fetch children's matched meals based on preference.
+ * We utilised Mongoose aggregate method to fetch randomly 5 meals that match with preference.
+ 
+ ```JavaScript
+ router.get('/:child_id/matching-meals', async (req, res) => {
+   const child = await Child.findById( req.params.child_id );
+   const childCategoryRe = "(" + child.category.join(")|(") + ")";
+   console.log(childCategoryRe);
+   const re = new RegExp(childCategoryRe, "i");
+   const select_meals = await Meal.aggregate([
+      { $match: { category: re } },
+      { $sample: { size: 5 } }
+   ])
+
+   res.status(200).json(select_meals);
+})
+
+
 ### Features
 
 Search
@@ -57,10 +104,10 @@ SelectedReceipes
 Profile and summary
  * Users can add more or delete child forms
  * Users can create their user profile
- * Users can see the summary of their selected meals, and can see the detail of each meal through links.
+ * Users can see the summary of their selected meals, and can see the detail of each meal through links. 
 
 ### Bonus Features
-
+Here are the features we plan to work on in the future:
 - Edit and create a new lunch box receipe by the user
 - Compiled shopping list
 - Integration with Instacart
