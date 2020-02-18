@@ -16,6 +16,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .title-form-gender {
@@ -39,45 +40,52 @@
 .gender-container {
     display: flex;
     justify-content: center;
+    margin-bottom: 5vh;
 }
 
 .gender-box-girl {
-    width: 250px;
-    height: 250px;
+    width: 25vw;
+    height: 25vw;
     border: 1px solid #0f346c;
     /* background-color: aliceblue; */
     border-radius: 50%;
-    margin: 30px 40px 120px;
+    margin: 30px 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    min-width: 150px;
+    min-height: 150px;
 }
 
 
 .gender-box-boy {
-    width: 250px;
-    height: 250px;
+    width: 25vw;
+    height: 25vw;
     border: 1px solid #0f346c;
     border-radius: 50%;
-    margin: 30px 40px 120px;
+    margin: 30px 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    min-width: 150px;
+    min-height: 150px;
 }
 
 
 .gender-box-boy-active {
-    width: 250px;
-    height: 250px;
+    width: 25vw;
+    height: 25vw;
     border-radius: 50%;
-    margin: 30px 40px 120px;
+    margin: 30px 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(224, 241, 255);
     border: 1px solid rgb(224, 241, 255);
+    min-width: 150px;
+    min-height: 150px;
 }
 
 .gender-box-boy:hover {
@@ -91,15 +99,17 @@
 }
 
 .gender-box-girl-active {
-    width: 250px;
-    height: 250px;
+    width: 25vw;
+    height: 25vw;
     border-radius: 50%;
-    margin: 30px 40px 120px;
+    margin: 30px 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 222, 239);
     border: 1px solid rgb(255, 222, 239);
+    min-width: 150px;
+    min-height: 150px;
 }
 
 .gender-button {

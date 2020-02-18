@@ -4,7 +4,8 @@ body {
 }
 
 .logo {
-    width: 200px;
+    width: 20vw;
+    min-width: 100px;
     height: 100%;
     cursor: pointer;
 }
@@ -144,7 +145,6 @@ body {
  .user-profile-icon {
      display: flex;
      justify-content: space-between;
-     width: 15%;
      align-items: center;
      cursor: pointer;
  }
