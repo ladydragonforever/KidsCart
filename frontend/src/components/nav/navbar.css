@@ -137,7 +137,7 @@ body {
     padding-left: 12px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 85px;
+    text-overflow: ellipsis;
  }
 
  .user-profile-icon {
