@@ -52,7 +52,7 @@ class SelectMeals extends React.Component {
                      // onClick={this.props.fetchSelectMeals(this.props.match.params.childId)}>
                      Generate new meals
                   </button> */}
-                  <p className="select-meal-text-5">Deselect a meal first if you want to add a new one. <p>5 meals per week!</p> </p>
+                  <p className="select-meal-text-5">Deselect a meal first if you want to add a new one.<br/>5 meals per week!</p>
                   <ul className="selected-meals-list" >
                      {selectMeals.map(meal => (
                            <li 
