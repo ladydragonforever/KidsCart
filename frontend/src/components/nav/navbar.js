@@ -73,7 +73,7 @@ class NavBar extends React.Component {
                     {/* <NavLink to={'/profile'}>Profile</NavLink> */}
                     {/* <NavLink to={'/new_meal'}>Create a Meal</NavLink> */}
                     {/* <div style={{ display:"flex"}}> */}
-                    <FontAwesomeIcon icon={faUser} style={{ fontSize: "30px", color: "grey", cursor: "pointer" }} onClick={() => this.props.history.push("/user")} />
+                    <FontAwesomeIcon icon={faUser} style={{ fontSize: "30px", color: "grey", cursor: "pointer", marginRight: "20px" }} onClick={() => this.props.history.push("/user")} />
                     <button className="loginButton" onClick={this.logoutUser}>Logout</button>
                 </div>
             );
