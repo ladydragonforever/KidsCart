@@ -7,6 +7,7 @@ class MealItem extends React.Component {
 
     render(){
         const {meal} = this.props;
+        let i = 0;
         const display = meal ? (
             <div className="recipe-container">
                 <div className="recipe-image-wrapper">
@@ -17,14 +18,14 @@ class MealItem extends React.Component {
                     <div className="recipe-subheading-category">{meal.category}</div>
                     <div className="recipe-heading">Ingredients
                         {meal.ingredients.map((ingredient,idx) => (
-                            <ul className="recipe-detail-ul">
+                            <ul className="recipe-detail-ul" key={idx}>
                                 <li className="recipe-subheading" key={idx}>{ingredient}</li>
                             </ul>
                         ))}
                     </div>
                     <div className="recipe-heading">Cooking Instruction
-                        {meal.cookingInstruction.map(instruction => (
-                            <ul className="recipe-detail-ul">
+                        {meal.cookingInstruction.map((instruction,idx) => (
+                            <ul className="recipe-detail-ul" key={idx}>
                                 <li className="recipe-subheading">{instruction}</li>
                             </ul>
                         ))}
