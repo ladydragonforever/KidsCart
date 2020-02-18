@@ -145,6 +145,10 @@
     position: relative;
 }
 
+.recipe-image-wrapper {
+    position: fixed;
+}
+
 .recipe-image-container {
     position: fixed;
     left: calc(50% - 30px);
@@ -155,6 +159,7 @@
     width: 50vw;
     height: 40vw;
     object-fit: cover;
+    height: 45%;
 }
 
 .recipe-heading-title {
