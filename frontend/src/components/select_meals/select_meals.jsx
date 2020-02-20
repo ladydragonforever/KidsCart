@@ -8,13 +8,14 @@ class SelectMeals extends React.Component {
       super(props);
       this.state = {
          word: '',
-         meals: {}
+         // meals: {}
       }
       this.startSearch = this.startSearch.bind(this);
       this.saveMealstoDB = this.saveMealstoDB.bind(this);
    }
 
    componentDidMount(){
+      this.props.clearMeals();
       this.props.fetchSelectMeals(this.props.match.params.childId)
    
    }
@@ -42,6 +43,30 @@ class SelectMeals extends React.Component {
 
    render() {
       const {meals, selectMeals} = this.props;
+
+      const searchResults = Object.values(meals).length !== 0 
+      ? <ul className="search-meals-list">
+         {meals.map(meal => (
+            <li
+               key={meal._id}
+               className="search-list-element">
+               <div className="search-food-image"><img alt='' src={meal.photoUrl} /></div>
+               <div className="seach-food-info">
+                  <div>{meal.title}</div>
+                  <button
+                     className="select-button"
+                     type="button"
+                     onClick={() => this.props.addSelectMeal(this.props.match.params.childId, meal._id, meal.title,
+                        meal.category, meal.photoUrl, meal.ingredients, meal.cookingInstruction, meal.nutritionFacts)}>
+                     select meal
+                              </button>
+               </div>
+            </li>
+         ))}
+      </ul>
+      : null
+
+
       // const fiveSelectMeals = selectMeals.length > 5 ? selectMeals.slice(selectMeals.length - 5) : selectMeals;
       return(
          <main className="selected-shell">
@@ -107,25 +132,7 @@ class SelectMeals extends React.Component {
                      />
                      {/* <FontAwesomeIcon icon={faSearch} className={this.state.iconClassName} onClick={() => this.startSearch(this.state.word)} /> */}
                   </label>
-                  <ul className="search-meals-list">
-                     {meals.map(meal => (
-                        <li
-                           key={meal._id}
-                           className="search-list-element">
-                           <div className="search-food-image"><img alt='' src={meal.photoUrl} /></div>
-                           <div className="seach-food-info">
-                              <div>{meal.title}</div>
-                              <button
-                                 className="select-button"
-                                 type="button"
-                                 onClick={() => this.props.addSelectMeal(this.props.match.params.childId, meal._id, meal.title, 
-                                 meal.category, meal.photoUrl, meal.ingredients, meal.cookingInstruction, meal.nutritionFacts)}>
-                                    select meal
-                              </button>
-                           </div>
-                        </li>
-                     ))}
-                  </ul>
+                  {searchResults}
                </aside>
             </section>
             <button className="generate-input" type="submit" onClick={this.saveMealstoDB}>
