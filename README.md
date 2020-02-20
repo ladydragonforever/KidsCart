@@ -43,7 +43,7 @@ The KidsCart app is built with the MERN stack (MongoDB, Express, React, and Node
 ### Highlights
  Media query
   * we used media query throughout the whole application to ensure front-end user experience even with small screens.
-  ```javascript
+  ```CSS
   @media only screen and (max-width: 370px) {
     .grid-container {
         grid-template-columns: 100%;
