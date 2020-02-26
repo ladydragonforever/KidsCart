@@ -121,25 +121,5 @@ We made the food preference selection an interactive feature. In order to accomp
 We have four models where we store the date for meal receipes, user account, user's children, and selected meals. In the selected meals collection, we only store the mealID that points to the meal receipes collection instead of storing redundant meal receipe data. The structure is quite flexible and can face future scalability.  
 ![alt text](https://github.com/ladydragonforever/KidsCart/blob/master/Kidscart%20architecture%20backend.png)
 
-## Technologies used
-
-The KidsCart app is built with the MERN stack (MongoDB, Express, React, and Node.js). It features a back-end HTTP API used for retrieving user records in conjunction with client side rendering with React/Redux. Node.js and Express are used for backend routing. Considering the low-latency and scalability, we chose MongoDB as the database and Mongoose to manage schemas and queries.
-
-- Backend
-  * Express (the main framework)
-  * Mongoose (to connect and interact with MongoDB)
-  * Passport (for authentication)
-  * Passport-jwt (for JSON web tokens)
-  * JsonWebToken (to generate the tokens)
-  * Body-parser (to parse data from requests)
-  * Bcryptjs (for securing the password with hashing and salting)
-  * Validator (for database validations)
-  * Nodemon for watching the changes and updating instantly
-  
-- Frontend
-  * React with Redux for state management
-  * Axios for sending HTTP requests
-  * Styling and animations done with CSS
-
 ## Software engineering team
   Contributors: [Xiaowen Ling](https://github.com/shmily40686), [Linda Liu](https://github.com/linlinliu03), [Ian Dechow](https://github.com/idechow), and [Dan Li](https://github.com/ladydragonforever)
