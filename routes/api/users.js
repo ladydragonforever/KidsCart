@@ -3,7 +3,6 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const User = require('../../models/User');
 const jwt = require('jsonwebtoken');
-// const keys = require('../../config/keys');
 const secretOrKey = process.env.SECRET_OR_KEY || require('../../config/keys').secretOrKey;
 const passport = require('passport');
 const validateRegisterInput = require('../../validation/register');
